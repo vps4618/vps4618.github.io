@@ -13,7 +13,7 @@ li {
 }
 
 li a {
-    font-size: 2.5vw;
+    font-size: 20px;
     display: block;
     color: white;
     text-align: center;
@@ -25,20 +25,19 @@ li a:hover:not(.active) {
     background-color: #112;
 }
 footer{
+    display: inline-block;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3vw;
+    font-size: 15px;
     padding: 0.1vw 0vw 0.1vw 0vw;
     background-color: rgb(97, 100, 97);
     color: white;
-    bottom:0px;
     margin: 0px;
     width: 100%;
-    left: 0;
     }
 
     .heading{
-        font-size: 4vw;
+        font-size: 35px;
         text-align: center;
         color: #858282;
     }
