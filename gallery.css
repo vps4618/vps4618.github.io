@@ -10,8 +10,7 @@
 .btn{
     margin-top: 3%;
     font-size: 18px;
-    margin-left: 20%;
-    float: left;
+    
     margin-bottom: 2%;
     background-color: gainsboro;
     border: 0.1px solid black;
@@ -22,12 +21,8 @@
 }
 #name{
     text-align: center;
-    float: right;
-    margin-top: 3%;
-    margin-right: 10%;
+    margin-top: 2%;
     font-size: 20px;
-    background-color:lightgray;
-    padding: 0px 5px 0px 5px;
     font-family: 'Montserrat', sans-serif;
 }
 html {
