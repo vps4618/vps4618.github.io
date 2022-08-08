@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+.placehead{
+    font-size: 23px;
+    color:#65647a;
+}
+.placeimg{
+    width: 80%;
+}
+.placepara{
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+html {
+    scroll-behavior:smooth;
+    }
+
+
+.upimg{
+    width: 5%;
+    margin-left: 80%;
+    position: fixed;
+    bottom: 10%;
+}

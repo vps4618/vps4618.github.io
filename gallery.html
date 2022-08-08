@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery of hiking places</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+</head>
+<body>
+    <header>
+        <ul id="up">
+            <li><a href="index.html"style="background-color: green;" class="active">Home</a></li>
+            <li><a href="places.html">Places</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="things_to_do.html">Things to do</a></li>
+            <li><a href="about_us.html">About us</a></li>
+        </ul>  
+        
+        </header>
+        <h1 class="heading">Gallery of hiking places</h1>
+        <img src="images/gallery/bakersfall1.jpg" class="img" id="img"  onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <button class="btn" onclick="change()">change</button>
+        <p id="name"></p>
+        <br>
+                  <!--1 instance-->
+      <table width="100%">
+          <!--1 instance-->
+          <tr align="center">      
+              <td>
+                    <img src="images/gallery/bakersfall1.jpg" class="tblimg" onclick="insertImg(this,'Bakers Fall')">
+                    <img src="images/gallery/ella1.jpg" class="tblimg" onclick="insertImg(this,'Ella')">
+                    <img src="images/gallery/hiking1.jpg" class="tblimg" onclick="insertImg(this,'Hiking')">
+                </td>
+            </tr>
+            <tr align="center">      
+                <td>
+                      <img src="images/gallery/knuckles1.jpg" class="tblimg" onclick="insertImg(this,'Knuckles Mountain')">
+                      <img src="images/gallery/little_adams_peak1.webp" class="tblimg" onclick="insertImg(this,'Little Adams Peak')">
+                      <img src="images/gallery/mahaweli1.jpg" class="tblimg" onclick="insertImg(this,'Mahaweli River')">
+                  </td>
+              </tr>           
+              <tr align="center">      
+                <td>
+                      <img src="images/gallery/pidurangala_and_sigiriya1.webp" class="tblimg" onclick="insertImg(this,'Pidurangala and Sigiriya')">
+                      <img src="images/gallery/sinharaja1.jpg" class="tblimg" onclick="insertImg(this,'Sinharaja Forest')">
+                      <img src="images/gallery/worldendcliff1.jpg" class="tblimg" onclick="insertImg(this,'World End Cliff')">
+                  </td>
+              </tr> 
+
+          <!--2 instance-->
+          <tr align="center">      
+            <td>
+                  <img src="images/gallery/bakersfall2.jpg" class="tblimg" onclick="insertImg(this,'Bakers Fall')">
+                  <img src="images/gallery/ella2.jpg" class="tblimg" onclick="insertImg(this,'Ella')">
+                  <img src="images/gallery/hiking2.jpg" class="tblimg" onclick="insertImg(this,'Hiking')">
+              </td>
+          </tr>
+          <tr align="center">      
+              <td>
+                    <img src="images/gallery/knuckles2.jpg" class="tblimg" onclick="insertImg(this,'Knuckles Mountain')">
+                    <img src="images/gallery/little_adams_peak2.jpg" class="tblimg" onclick="insertImg(this,'Little Adams Peak')">
+                    <img src="images/gallery/mahaweli2.jpg" class="tblimg" onclick="insertImg(this,'Mahaweli River')">
+                </td>
+            </tr>           
+            <tr align="center">      
+              <td>
+                    <img src="images/gallery/pidurangala_and_sigiriya2.jpg" class="tblimg" onclick="insertImg(this,'Pidurangala and Sigiriya')">
+                    <img src="images/gallery/sinharaja2.webp" class="tblimg" onclick="insertImg(this,'Sinharaja Forest')">
+                    <img src="images/gallery/worldendcliff2.jpg" class="tblimg" onclick="insertImg(this,'World End Cliff')">
+                </td>
+            </tr>               
+
+          <!--3 instance-->
+          <tr align="center">      
+            <td>
+                  <img src="images/gallery/bakersfall3.jpg" class="tblimg" onclick="insertImg(this,'Bakers Fall')">
+                  <img src="images/gallery/ella3.jpg" class="tblimg" onclick="insertImg(this,'Ella')">
+                  <img src="images/gallery/hiking3.jpg" class="tblimg" onclick="insertImg(this,'Hiking')">
+              </td>
+          </tr>
+          <tr align="center">      
+              <td>
+                    <img src="images/gallery/knuckles3.jpg" class="tblimg" onclick="insertImg(this,'Knuckles Mountain')">
+                    <img src="images/gallery/little_adams_peak3.jpg" class="tblimg" onclick="insertImg(this,'Little Adams Peak')">
+                    <img src="images/gallery/mahaweli3.jpg" class="tblimg" onclick="insertImg(this,'Mahaweli River')">
+                </td>
+            </tr>           
+            <tr align="center">      
+              <td>
+                    <img src="images/gallery/pidurangala_and_sigiriya3.jpg" class="tblimg" onclick="insertImg(this,'Pidurangala and Sigiriya')">
+                    <img src="images/gallery/sinharaja3.jpg" class="tblimg" onclick="insertImg(this,'Sinharaja Forest')">
+                    <img src="images/gallery/worldendcliff3.jpg" class="tblimg" onclick="insertImg(this,'World End Cliff')">
+                </td>
+            </tr>            
+
+          <!--4 instance-->
+          <tr align="center">      
+            <td>
+                  <img src="images/gallery/bakersfall4.jpg" class="tblimg" onclick="insertImg(this,'Bakers Fall')">
+                  <img src="images/gallery/ella4.webp" class="tblimg" onclick="insertImg(this,'Ella')">
+                  <img src="images/gallery/hiking4.jpg" class="tblimg" onclick="insertImg(this,'Hiking')">
+              </td>
+          </tr>
+          <tr align="center">      
+              <td>
+                    <img src="images/gallery/knuckles4.jpg" class="tblimg" onclick="insertImg(this,'Knuckles Mountain')">
+                    <img src="images/gallery/little_adams_peak4.jpg" class="tblimg" onclick="insertImg(this,'Little Adams Peak')">
+                    <img src="images/gallery/mahaweli4.jpg" class="tblimg" onclick="insertImg(this,'Mahaweli River')">
+                </td>
+            </tr>           
+            <tr align="center">      
+              <td>
+                    <img src="images/gallery/pidurangala_and_sigiriya4.webp" class="tblimg" onclick="insertImg(this,'Pidurangala and Sigiriya')">
+                    <img src="images/gallery/sinharaja4.jpg" class="tblimg" onclick="insertImg(this,'Sinharaja Forest')">
+                    <img src="images/gallery/worldendcliff4.jpg" class="tblimg" onclick="insertImg(this,'World End Cliff')">
+                </td>
+            </tr>                             
+
+          <!--5 instance-->
+          <tr align="center">      
+            <td>
+                  <img src="images/gallery/bakersfall5.jpg" class="tblimg" onclick="insertImg(this,'Bakers Fall')">
+                  <img src="images/gallery/ella5.jpg" class="tblimg" onclick="insertImg(this,'Ella')">
+                  <img src="images/gallery/hiking5.webp" class="tblimg" onclick="insertImg(this,'Hiking')">
+              </td>
+          </tr>
+          <tr align="center">      
+              <td>
+                    <img src="images/gallery/knuckles5.jpg" class="tblimg" onclick="insertImg(this,'Knuckles Mountain')">
+                    <img src="images/gallery/little_adams_peak5.webp" class="tblimg" onclick="insertImg(this,'Little Adams Peak')">
+                    <img src="images/gallery/mahaweli5.jpg" class="tblimg" onclick="insertImg(this,'Mahaweli River')">
+                </td>
+            </tr>           
+            <tr align="center">      
+              <td>
+                    <img src="images/gallery/pidurangala_and_sigiriya5.webp" class="tblimg" onclick="insertImg(this,'Pidurangala and Sigiriya')">
+                    <img src="images/gallery/sinharaja5.jpg" class="tblimg" onclick="insertImg(this,'Sinharaja Forest')">
+                    <img src="images/gallery/worldendcliff5.jpg" class="tblimg" onclick="insertImg(this,'World End Cliff')">
+                </td>
+            </tr>  
+            
+       </table>     
+
+        <a href="#up"><img src="images/up.png" class="upimg"></a>
+        <footer>
+            <p>&copy;2022. VPS</p>
+        </footer>
+        <script src="gallery.js"></script>
+ 
+</body>
+</html>
