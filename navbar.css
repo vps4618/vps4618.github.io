@@ -41,3 +41,20 @@ footer{
         text-align: center;
         color: #858282;
     }
+    html {
+        scroll-behavior:smooth;
+        }
+    
+    
+    .upimg{
+        width: 50px;
+        margin-left: 80%;
+        position: fixed;
+        bottom: 20%;
+    }
+    .downimg{
+        width: 50px;
+        margin-left: 80%;
+        position: fixed;
+        bottom: 10%;
+    }    

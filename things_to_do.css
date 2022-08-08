@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.tblhead{
+    text-align: center;
+    font-size: 23px;
+    color: rgb(79, 113, 143);
+}
+
+.tblimg{
+    margin-top: 2%;
+    width: 30%;
+}
+
+.tblpara{
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+table{
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}

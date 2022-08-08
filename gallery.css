@@ -25,17 +25,7 @@
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
-html {
-    scroll-behavior:smooth;
-    }
 
-
-.upimg{
-    width: 50px;
-    margin-left: 80%;
-    position: fixed;
-    bottom: 10%;
-}
 
 .tblimg{
     width: 32%;
