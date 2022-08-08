@@ -24,7 +24,7 @@
     text-align: center;
     float: right;
     margin-top: 3%;
-    margin-right: 20%;
+    margin-right: 10%;
     font-size: 20px;
     background-color:lightgray;
     padding: 0px 5px 0px 5px;
@@ -36,7 +36,7 @@ html {
 
 
 .upimg{
-    width: 5%;
+    width: 50px;
     margin-left: 80%;
     position: fixed;
     bottom: 10%;
@@ -48,5 +48,3 @@ html {
 .tblimg:hover{
     transform: scale(0.99,0.99);
 }
-
-
