@@ -51,6 +51,7 @@ footer{
         margin-left: 80%;
         position: fixed;
         bottom: 20%;
+        margin-bottom: 30px;
     }
     .downimg{
         width: 50px;
