@@ -4,11 +4,17 @@ MIT
 @angular/core
 MIT
 
+@angular/forms
+MIT
+
 @angular/platform-browser
 MIT
 
 @angular/router
 MIT
+
+font-awesome
+(OFL-1.1 AND MIT)
 
 rxjs
 Apache-2.0
