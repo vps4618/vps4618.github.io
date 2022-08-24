@@ -12,16 +12,18 @@
 <body>
     <div class="container">
         <br>
-	<h3>
+	<center>
+        <div class="shadow-none p-3 mb-5 bg-light rounded" style="border: 1px solid grey;border-radius: 20px !important">
+    <h3>
   	Vps Pos
-  	<small class="text-muted">Items</small>
+  	<small class="text-muted ">Items</small>
 	</h3>
-	<br>
+    </div>
+    </center>
         <div class="row">
             <div class="col">
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="selector">
-            <option selected>Open this select menu</option>
-            <option value="1">Name</option>
+        <select class="form-select form-select-m" aria-label=".form-select-sm example" id="selector">
+            <option value="1" selected>Name</option>
             <option value="2">Sinhala name</option>
             <option value="3">Barcode</option>
             <option value="4">Cost price</option>
@@ -38,7 +40,7 @@
         </div>
         </div>
 	<div class="table-responsive">
-        	<table class="table table-striped" id="fake">
+        	<table class="table table-striped">
             	<thead>
                 	<tr>
                 	<th scope="col">Item Id</th>
@@ -51,10 +53,11 @@
                 	<th scope="col">Sale Price</th>
                 	</tr>
             	</thead>
-        	</table>    
-                  	<div id="tbldata">
+                <tbody id="data">
 
-                      	</div>
+                </tbody>
+        	</table>    
+
                 	<!-- <tr>
                   	<th scope="row"></th>
                   	<td></td>
