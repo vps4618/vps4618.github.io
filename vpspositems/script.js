@@ -9,7 +9,7 @@ $(document).ready(() => {
                 $.ajax({
                     type:'get',
                     contentType: 'application/json',
-                        url : `http://vpsposapi.herokuapp.com/items/name/${input}`,
+                        url : `https://vpsposapi.herokuapp.com/items/name/${input}`,
                         success : function(result){
                             let items ="";
                             items+=`        <table class="table table-striped">
@@ -53,7 +53,7 @@ $(document).ready(() => {
                     $.ajax({
                         type:'get',
                         contentType: 'application/json',
-                            url : `http://vpsposapi.herokuapp.com/items/barcode/${input}`,
+                            url : `https://vpsposapi.herokuapp.com/items/barcode/${input}`,
                             success : function(result){
                                 let items ="";
                                 items+=`        <table class="table table-striped">
@@ -97,7 +97,7 @@ $(document).ready(() => {
                     $.ajax({
                         type:'get',
                         contentType: 'application/json',
-                            url : `http://vpsposapi.herokuapp.com/items/sinhalaname/${input}`,
+                            url : `https://vpsposapi.herokuapp.com/items/sinhalaname/${input}`,
                             success : function(result){
                                 let items ="";
                                 items+=`        <table class="table table-striped">
@@ -141,7 +141,7 @@ $(document).ready(() => {
                     $.ajax({
                         type:'get',
                         contentType: 'application/json',
-                            url : `http://vpsposapi.herokuapp.com/items/costprice/${input}`,
+                            url : `https://vpsposapi.herokuapp.com/items/costprice/${input}`,
                             success : function(result){
                                 let items ="";
                                 items+=`        <table class="table table-striped">
@@ -185,7 +185,7 @@ $(document).ready(() => {
                     $.ajax({
                         type:'get',
                         contentType: 'application/json',
-                            url : `http://vpsposapi.herokuapp.com/items/wholesaleprice/${input}`,
+                            url : `https://vpsposapi.herokuapp.com/items/wholesaleprice/${input}`,
                             success : function(result){
                                 let items ="";
                                 items+=`        <table class="table table-striped">
@@ -229,7 +229,7 @@ $(document).ready(() => {
                     $.ajax({
                         type:'get',
                         contentType: 'application/json',
-                            url : `http://vpsposapi.herokuapp.com/items/billprice/${input}`,
+                            url : `https://vpsposapi.herokuapp.com/items/billprice/${input}`,
                             success : function(result){
                                 let items ="";
                                 items+=`        <table class="table table-striped">
@@ -273,7 +273,7 @@ $(document).ready(() => {
                     $.ajax({
                         type:'get',
                         contentType: 'application/json',
-                            url : `http://vpsposapi.herokuapp.com/items/saleprice/${input}`,
+                            url : `https://vpsposapi.herokuapp.com/items/saleprice/${input}`,
                             success : function(result){
                                 let items ="";
                                 items+=`        <table class="table table-striped">
