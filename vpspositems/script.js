@@ -1,4 +1,5 @@
 "use strict";
+
 $(document).ready(() => {
     $('#input').keyup((e)=>{
         setTimeout(() => {
@@ -13,7 +14,7 @@ $(document).ready(() => {
                             let items ="";
     
                             for (const item of result) {
-                                items+=`<tr>
+                                items+=`<tr onclick="viewDetails(${item.ITEM_ID})">
                                         <th scope="row">${item.ITEM_ID}</th>
                                         <td>${item.ItemName}</td>
                                         <td>${item.SinhalaName}</td>
@@ -24,10 +25,12 @@ $(document).ready(() => {
                                         <td>${item.Price}</td>
                                         </tr>`;
                             }
+                            //items+="<script>function viewDetails(id){$('#search').hide();$.ajax({type:'get',contentType: 'application/json',url : `https://vpsposapi.herokuapp.com/items/id/${id}`,success : function(result){document.getElementById('details').innerHTML = `<div class='card border-dark mb-3' style='max-width: 18rem;'><div class='card-header'>Id : ${result[0].ITEM_ID}</div><div class='card-body text-dark'><h5 class='card-title'>${result[0].ItemName}</h5><ul class='list-group list-group-flush'><li class='list-group-item'>Sinhala Name : ${result[0].SinhalaName}</li><li class='list-group-item'>Barcode : ${result[0].Barcode}</li><li class='list-group-item'>Cost Price : ${result[0].Cost}</li><li class='list-group-item'>Wholesale Price : ${result[0].Wholesale}</li><li class='list-group-item'>Bill Price : ${result[0].BillPrice}</li><li class='list-group-item'>Sale Price : ${result[0].Price}</li></ul><button type='button' class='btn btn-secondary' onclick='goBack()'>Back to items page</button></div></div>`;}});function goBack(){$('#details').hide();$('#search').show();}}</script>";
                             document.getElementById('data').innerHTML = items;
+
                         }
                     }
-                );                
+                );            
             }
             if(selection == "1"){
                 try{
@@ -77,4 +80,5 @@ $(document).ready(() => {
         },1000)
 
     });
+
 });

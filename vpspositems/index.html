@@ -12,66 +12,59 @@
 <body>
     <div class="container">
         <br>
-	<center>
+	    <center>
         <div class="shadow-none p-3 mb-5 bg-light rounded" style="border: 1px solid grey;border-radius: 20px !important">
-    <h3>
-  	Vps Pos
-  	<small class="text-muted ">Items</small>
-	</h3>
-    </div>
-    </center>
-        <div class="row">
-            <div class="col">
-        <select class="form-select form-select-m" aria-label=".form-select-sm example" id="selector">
-            <option value="1" selected>Name</option>
-            <option value="2">Sinhala name</option>
-            <option value="3">Barcode</option>
-            <option value="4">Cost price</option>
-            <option value="5">Wholesale price</option>
-            <option value="6">Bill price</option>
-            <option value="7">Sale price</option>
-        </select>
+            <h3>
+  	        Vps Pos
+  	        <small class="text-muted ">Items</small>
+	        </h3>
         </div>
-        <br>
-        <div class="col">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" aria-describedby="button-addon2" id="input">
-              </div>
-        </div>
-        </div>
-	<div class="table-responsive">
-        	<table class="table table-striped table-bordered">
-            	<thead>
-                	<tr>
-                	<th scope="col">Item Id</th>
-               	 	<th scope="col">Name</th>
-                	<th scope="col">Sinhala Name</th>
-                	<th scope="col">Barcode</th>
-                	<th scope="col">Cost Price</th>
-                	<th scope="col">Wholesale Price</th>
-                	<th scope="col">Bill Price</th>
-                	<th scope="col">Sale Price</th>
-                	</tr>
-            	</thead>
-                <tbody id="data">
+        </center>
+        <div  id="search" >
+            <div class="row">
+                <div class="col">
+                    <select class="form-select form-select-m" aria-label=".form-select-sm example" id="selector">
+                        <option value="1" selected>Name</option>
+                        <option value="2">Sinhala name</option>
+                        <option value="3">Barcode</option>
+                        <option value="4">Cost price</option>
+                        <option value="5">Wholesale price</option>
+                        <option value="6">Bill price</option>
+                        <option value="7">Sale price</option>
+                    </select>
+                </div>
+                <br>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" aria-describedby="button-addon2" id="input">
+                    </div>
+                </div>
+            </div>
+	        <div class="table-responsive">
+        	    <table class="table table-striped table-bordered">
+            	    <thead>
+                	    <tr>
+                            <th scope="col">Item Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Sinhala Name</th>
+                            <th scope="col">Barcode</th>
+                            <th scope="col">Cost Price</th>
+                            <th scope="col">Wholesale Price</th>
+                            <th scope="col">Bill Price</th>
+                            <th scope="col">Sale Price</th>
+                	    </tr>
+            	    </thead>
+                    <tbody id="data">
 
-                </tbody>
-        	</table>    
-
-                	<!-- <tr>
-                  	<th scope="row"></th>
-                  	<td></td>
-                  	<td></td>
-                  	<td></td>
-                  	<td></td>
-                  	<td></td>
-                  	<td></td>
-                	</tr> -->
-	</div>
+                    </tbody>
+        	    </table>    
+	        </div>
+        </div>
+        <div id="details">
+        </div>    
     </div>    
-    <!-- <script src="script.js"> -->
-     <script src="script.js">
-
+    <script src="script.js">
+  
     </script>
 </body>
 </html>
