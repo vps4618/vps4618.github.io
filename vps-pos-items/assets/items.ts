@@ -1,4 +1,4 @@
-﻿let json!:string;
+let json!:string;
 
 var items:any = [];
 
