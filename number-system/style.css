@@ -1,0 +1,28 @@
+div{
+    width: 100%;
+}
+select{
+    width: 30%;
+    font-size: 2vw;
+}
+input{
+    width: 30%;
+    font-size: 2vw;
+}
+h5{
+    font-size: 2vw;
+}
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    font-size: 1.8vw;
+}
+p{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    font-size: 2vw;
+}
