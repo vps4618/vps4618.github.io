@@ -18,3 +18,6 @@
 <br>
 <br>
 7. <a href="https://vps4618.github.io/number-system"><button>Number system converter</button></a>
+<br>
+<br>
+8. <a href="https://vps4618.github.io/beach-web/website"><button>Beach Website</button></a>
