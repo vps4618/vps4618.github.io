@@ -27,6 +27,7 @@
   font-size: 1.9vw;
   border-radius: 15px 15px 0px 0px;
   background: linear-gradient(to right top,rgba(255, 255, 255, 0.9),rgba(255,255,255,0.1));
+
 }
 
 /* content sections styles */
@@ -42,6 +43,8 @@
   width: 50%;
   border-radius: 10%;
   border: 5px solid rgba(177, 177, 177, 0.288);
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  
 }
 
 .content-1-paragraph,.content-2-paragraph,.content-3-paragraph,.content-4-paragraph{
@@ -55,5 +58,7 @@
   background: linear-gradient(to right top,rgba(255, 255, 255, 0.9),rgba(255,255,255,0.3));
   text-align: justify;
   margin: 3%;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  
 }
 
