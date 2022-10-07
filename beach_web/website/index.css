@@ -1,0 +1,59 @@
+@font-face {
+  font-family: poppins-light-thin;
+  src: url(fonts/Poppins-LightItalic.ttf);
+}
+@font-face {
+  font-family: poppins-regular;
+  src: url(fonts/Poppins-Regular.ttf);
+}
+/*navbar color changing*/
+.link-1{
+    background: linear-gradient(
+        to right bottom,
+        rgb(255, 255, 255),
+        rgba(161, 152, 152, 0.801)
+      );
+}
+
+/*main heading styles*/
+.main-header{
+  font-family: poppins-light-thin;
+  color:rgba(148, 48, 143, 0.986);
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.9vw;
+  border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(to right top,rgba(255, 255, 255, 0.9),rgba(255,255,255,0.1));
+}
+
+/* content sections styles */
+.content-section-1,.content-section-2,.content-section-3,.content-section-4{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.content-section-1 img, .content-section-2 img, .content-section-3 img, .content-section-4 img{
+  width: 50%;
+  border-radius: 10%;
+  border: 5px solid rgba(177, 177, 177, 0.288);
+}
+
+.content-1-paragraph,.content-2-paragraph,.content-3-paragraph,.content-4-paragraph{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4vw;
+  width: 40%;
+  border-radius: 15px;
+  font-family: poppins-regular;
+  padding: 4.5%;
+  background: linear-gradient(to right top,rgba(255, 255, 255, 0.9),rgba(255,255,255,0.3));
+  text-align: justify;
+  margin: 3%;
+}
+

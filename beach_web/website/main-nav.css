@@ -1,0 +1,129 @@
+
+@font-face {
+    font-family: poppins;
+    src: url(fonts/Poppins-Bold.ttf);
+  }
+  /*screen width : 1024 ,
+     screen height : 768*/
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  /*background styles*/
+  
+  body {
+    background: linear-gradient(to right top, #67cdf5, #98daf5);
+  }
+  
+  main {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right top, #67cdf5, #98daf5);
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-glass-window {
+    width: 85%;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 10px;
+    backdrop-filter: blur(2rem);
+    z-index: 1;
+    height: fit-content;
+    margin-top: 2%;
+  }
+
+  .circle-1,
+  .circle-2 {
+    background: White;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.3)
+    );
+    height: 25%;
+    width: 25%;
+    position: absolute;
+    border-radius: 360%;
+  }
+  .circle-1 {
+    top: 1%;
+    right: 5%;
+  }
+  .circle-2 {
+    bottom: 1%;
+    left: 5%;
+  }
+  
+  /* navbar styles inside main glass window */
+  .navbar {
+    width: 100%;
+    border-radius: 15px;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.3)
+    );
+  }
+  .navbar img {
+    width: 100%;
+  }
+  
+  .links-bar {
+    display: flex;
+    padding: 0% 2% 2% 2%;
+  }
+  .link-1,
+  .link-2,
+  .link-3,
+  .link-4,
+  .link-5 {
+    border: 1px solid #6bafca;
+    flex: 1;
+    padding: 1%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: dashed;
+    font-family: poppins;
+    color: #0985b6;
+    font-size: 2vw;
+  }
+  
+  .link-1 {
+    border-radius: 10px 0px 0px 10px; 
+  }
+  .link-5 {
+    border-radius: 0px 10px 10px 0px;
+  }
+  a{
+    text-decoration: none;
+    color: #0985b6;
+  }
+
+  /*content window styles*/
+  .content-main-window{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+  }
+
+  .content-window{
+    width: 95%;
+    padding-bottom: 10%;
+    border-radius: 15px;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    margin-bottom: 5%;
+  }
