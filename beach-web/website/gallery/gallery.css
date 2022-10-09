@@ -1,8 +1,823 @@
 
-.link-2{
+/* font import */
+@font-face {
+  font-family: poppins-light-thin;
+  src: url(fonts/Poppins-LightItalic.ttf);
+}
+
+/* nav link style when init */
+.link-2 {
   background: linear-gradient(
     to right bottom,
     rgb(255, 255, 255),
     rgba(161, 152, 152, 0.801)
   );
+}
+
+/*main image container styles*/
+.main-images-container {
+  width: 100%;
+  height: fit-content;
+}
+
+/*image section styles */
+.images-section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+/*Image container styles*/
+.image-container-1,
+.image-container-2,
+.image-container-3,
+.image-container-4,
+.image-container-5,
+.image-container-6,
+.image-container-7,
+.image-container-8,
+.image-container-9,
+.image-container-10,
+.image-container-11,
+.image-container-12,
+.image-container-13,
+.image-container-14,
+.image-container-15,
+.image-container-16,
+.image-container-17,
+.image-container-18,
+.image-container-19,
+.image-container-20,
+.image-container-21,
+.image-container-22,
+.image-container-23,
+.image-container-24,
+.image-container-25,
+.image-container-26,
+.image-container-27,
+.image-container-28,
+.image-container-29,
+.image-container-30 {
+  position: relative;
+  width: 30%;
+  height: fit-content;
+  cursor: pointer;
+}
+
+/* images inside image container styles */
+.image-container-1 img,
+.image-container-2 img,
+.image-container-3 img,
+.image-container-4 img,
+.image-container-5 img,
+.image-container-6 img,
+.image-container-7 img,
+.image-container-8 img,
+.image-container-9 img,
+.image-container-10 img,
+.image-container-11 img,
+.image-container-12 img,
+.image-container-13 img,
+.image-container-14 img,
+.image-container-15 img,
+.image-container-16 img,
+.image-container-17 img,
+.image-container-18 img,
+.image-container-19 img,
+.image-container-20 img,
+.image-container-21 img,
+.image-container-22 img,
+.image-container-23 img,
+.image-container-24 img,
+.image-container-25 img,
+.image-container-26 img,
+.image-container-27 img,
+.image-container-28 img,
+.image-container-29 img,
+.image-container-30 img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+}
+
+/* Image 1 animation */
+.image-container-1::after {
+  content: "Diving place";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-1:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 2 animation */
+.image-container-2::after {
+  content: "Vollyball playground";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-2:hover::after {
+  opacity: 0.8;
+}
+
+/*Image 3 animation*/
+.image-container-3::after {
+  content: "Sea Boat";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-3:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 4 animation*/
+.image-container-4::after {
+  content: "Walking on river";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-4:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 5 animation */
+.image-container-5::after {
+  content: "Massage on beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-5:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 6 animation */
+.image-container-6::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-6:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 7 animation */
+.image-container-7::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-7:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 8 animation */
+.image-container-8::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-8:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 9 animation */
+.image-container-9::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-9:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 10 animation */
+.image-container-10::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-10:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 11 animation */
+.image-container-11::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-11:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 12 animation */
+.image-container-12::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-12:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 13 animation */
+.image-container-13::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-13:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 14 animation */
+.image-container-14::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-14:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 15 animation */
+.image-container-15::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-15:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 16 animation */
+.image-container-16::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-16:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 17 animation */
+.image-container-17::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-17:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 18 animation */
+.image-container-18::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-18:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 19 animation */
+.image-container-19::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-19:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 20 animation */
+.image-container-20::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-20:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 21 animation */
+.image-container-21::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-21:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 22 animation */
+.image-container-22::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-22:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 23 animation */
+.image-container-23::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-23:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 24 animation */
+.image-container-24::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-24:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 25 animation */
+.image-container-25::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-25:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 26 animation */
+.image-container-26::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-26:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 27 animation */
+.image-container-27::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-27:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 28 animation */
+.image-container-28::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-28:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 29 animation */
+.image-container-29::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-29:hover::after {
+  opacity: 0.8;
+}
+
+/* Image 30 animation */
+.image-container-30::after {
+  content: "A Top View of Beach";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-family: poppins-light-thin;
+  background: black;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container-30:hover::after {
+  opacity: 0.8;
 }

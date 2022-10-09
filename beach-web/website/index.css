@@ -15,21 +15,6 @@
       );
 }
 
-/*main heading styles*/
-.main-header{
-  font-family: poppins-light-thin;
-  color:rgba(148, 48, 143, 0.986);
-  width: 100%;
-  padding: 1%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.9vw;
-  border-radius: 15px 15px 0px 0px;
-  background: linear-gradient(to right top,rgba(255, 255, 255, 0.9),rgba(255,255,255,0.1));
-
-}
-
 /* content sections styles */
 .content-section-1,.content-section-2,.content-section-3,.content-section-4{
   width: 100%;
@@ -61,4 +46,6 @@
   box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
   
 }
+
+
 
