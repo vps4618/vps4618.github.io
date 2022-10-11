@@ -1,7 +1,64 @@
+@font-face {
+  font-family: poppins-regular;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
 .link-3{
-    background: linear-gradient(
-      to right bottom,
-      rgb(255, 255, 255),
-      rgba(161, 152, 152, 0.801)
-    );
-  }
+  background: linear-gradient(
+  to right bottom,
+  rgb(255, 255, 255),
+  rgba(161, 152, 152, 0.801)
+  );
+}
+
+.header-1-section{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin-top: 1.5%;
+}
+
+.header-1{
+  font-family: poppins-regular;
+  font-size: 2.5vw;
+  font-weight:bold;
+  color:rgba(56, 84, 136, 0.89);
+  padding: 1.5%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(122,122,122,0.212);
+}
+
+.section-2{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+
+.section-2 img{
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 3px 3px 20px rgba(122,122,122,0.212); 
+}
+
+.section-3{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+
+.section-3 p{
+  text-align: justify;
+  font-family: poppins-regular;
+  font-size: 1.8vw;
+  box-shadow: 6px 6px 100px rgba(122,122,122,0.212);
+  padding: 2%;
+  border-radius: 10px;
+}
