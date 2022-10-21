@@ -26,4 +26,4 @@
 9. <a href="https://vps4618.github.io/react-todo-app"><button>Todo App</button></a>
 <br>
 <br>
-10. <a href="https://vps4618.github.io/car-simulator"><button>Car Simulator</button></a>
+10. <a href="https://vps4618.github.io/pc-game-download"><button>PC(Windows) game download</button></a>
