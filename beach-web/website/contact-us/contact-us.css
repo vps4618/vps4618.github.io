@@ -1,3 +1,7 @@
+@font-face {
+  font-family: poppins-regular;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
 .link-4{
     background: linear-gradient(
       to right bottom,
@@ -5,3 +9,100 @@
       rgba(161, 152, 152, 0.801)
     );
   }
+  
+  .form-window{
+    width: 100%;
+    height: fit-content;
+    padding: 5%;
+  }
+  form{
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(18, 22, 80);
+    background:  linear-gradient(
+      to right bottom,
+      rgba(147, 170, 180, 0.2),
+      rgba(158, 195, 230, 0.1)
+    );
+    border-radius: 2%;
+    padding: 2%;
+  }
+
+  .name,.email,.message,.country,.newsletter,.travellor,.visit,.submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2% 20% 2% 20%;
+  }
+
+  input,textarea{
+    flex: 1;
+    font-size: 2vw;
+    font-family: poppins-regular;
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 5px;
+    padding: 1%;
+  }
+
+  input:focus,textarea:focus,select:focus{
+    outline: none;
+  }
+  label{
+    flex: 1;
+    font-size: 2vw;
+    font-family: poppins-regular;
+  }
+
+  .travellor input,.visit input,.newsletter input{
+    height:2vw;
+  }
+
+  .submit{
+    padding-left:30%;
+    padding-right: 30%;
+  }
+  .submit .submitbtn{
+    background: rgb(32, 184, 235);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 2%;
+    cursor: pointer;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .submit .reset{
+    background: rgb(235, 96, 32);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 2%;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-right: 2%;
+  }
+  .message textarea{
+    height: 10vw;
+  }
+  select{
+    font-size: 2vw;
+    font-family: poppins-regular;
+    color:  rgb(63, 102, 76);
+    cursor: pointer;
+  }
+
+  
+.agree{
+  color: rgb(142, 33, 175);
+}
+.disagree{
+  color: rgb(175, 33, 33);
+}
+
+.submit input:hover{
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}

@@ -129,3 +129,31 @@
 .where-to{
   margin-top: 2%;
 }
+
+.list-of-tips{
+  width: 100%;
+  height: fit-content;
+  padding: 5%;
+  font-size: 1.6vw;
+  font-family: poppins-regular;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 20px;
+  margin-top: 2%;
+}
+
+.list-of-tips p{
+  padding:2%;
+}
+
+.list-of-tips h2{
+  color: rgba(151, 104, 104, 0.705);
+}
+
+.credit{
+  margin-top: 5%;
+  font-size: 1.5vw;
+}
