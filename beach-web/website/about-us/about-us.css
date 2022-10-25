@@ -30,6 +30,7 @@
   font-size: 1.7vw;
   font-family: poppins-regular;
   color: black;
+  text-align: justify;
 }
 
 .para-2-combined{
@@ -50,6 +51,7 @@
   justify-content: space-around;
   padding-left: 2%;
   padding-right: 2%;
+  margin-top: 5%;
 }
 
 .images img{
@@ -62,6 +64,7 @@
 .details-para-2{
   width: 100%;
   padding: 3%;
+  margin-top: 2%;
 }
 .combined-para{
   width: 100%;
@@ -82,6 +85,7 @@
   font-size: 1.7vw;
   font-family: poppins-regular;
   color:black;
+  text-align: justify;
 }
 
 .visit-para{
@@ -90,10 +94,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top:8%;
 }
 
 .visit-para p{
   font-size: 1.7vw;
+  font-weight: bold;
   font-family: poppins-regular;
   color:black;
   background: linear-gradient(
@@ -106,16 +112,166 @@
   padding: 2%;
 }
 
+
+/*follow*/
+.follow-section{
+  width: 100%;
+  padding: 10% 10% 2% 10%;
+}
+
+.follow{
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.7vw;
+  font-family: poppins-regular;
+  color:black;
+  background: linear-gradient(
+    to right bottom,
+    rgba(207, 83, 83, 0.3),
+    rgba(207, 205, 83, 0.2)
+  );
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  padding: 2%;
+}
+.follow a{
+  color: black;
+}
+.facebook{
+  width: 30%;
+  font-size: 1.5vw;
+}
+.instagram{
+  width: 30%;
+  font-size: 1.5vw;
+}
+.follow-para{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facebook img{
+  width: 50%;
+}
+
+.instagram img{
+  width: 30%;
+  margin-left: 10%;
+}
+
+/*message*/
+.message-section{
+  width: 100%;
+  padding: 2% 10% 2% 10%;
+}
+
+.message{
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.7vw;
+  font-family: poppins-regular;
+  color:black;
+  background: linear-gradient(
+    to right bottom,
+    rgba(207, 83, 131, 0.3),
+    rgba(83, 207, 145, 0.2)
+  );
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  padding: 2%;
+}
+.message a{
+  color: black;
+}
+.whatsapp{
+  width: 30%;
+  font-size: 1.5vw;
+}
+.telegram{
+  width: 30%;
+  font-size: 1.5vw;
+  margin-top: 0.8%;
+}
+.message-para{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whatsapp img{
+  width: 40%;
+  margin-left: 8%;
+}
+
+.telegram img{
+  width: 60%;
+}
+
+/*call*/
+.call-section{
+  width: 100%;
+  padding: 2% 10% 2% 10%;
+}
+
+.call{
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.7vw;
+  font-family: poppins-regular;
+  color:black;
+  background: linear-gradient(
+    to right bottom,
+    rgba(83, 85, 207, 0.3),
+    rgba(207, 108, 83, 0.2)
+  );
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  padding: 2%;
+}
+.call a{
+  color: black;
+}
+.phone{
+  width: 30%;
+  font-size: 1.5vw;
+}
+.phone2{
+  width: 30%;
+  font-size: 1.5vw;
+}
+.call-para{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone img{
+  width: 40%;
+  margin-left: 5%;
+}
+
+.phone2 img{
+  width: 40%;
+  margin-left: 10%;
+}
+
 .thank-image{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5%;
+  padding: 5% 5% 5% 5%;
 }
 
 .thank-image img{
-  width:50%;
+  width:60%;
   border-radius: 10px;
   box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
 }
