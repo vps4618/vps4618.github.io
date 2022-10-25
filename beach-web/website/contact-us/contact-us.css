@@ -30,6 +30,8 @@
     );
     border-radius: 2%;
     padding: 2%;
+    box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  
   }
 
   .name,.email,.message,.country,.newsletter,.travellor,.visit,.submit{

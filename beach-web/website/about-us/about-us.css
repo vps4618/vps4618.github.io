@@ -1,3 +1,7 @@
+@font-face {
+  font-family: poppins-regular;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
 .link-5{
     background: linear-gradient(
       to right bottom,
@@ -5,3 +9,113 @@
       rgba(161, 152, 152, 0.801)
     );
   }
+.introduction{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  margin: 3%;
+}
+
+.introduction img{
+  width:40%;
+  border-radius: 5px;
+  margin-right: 5%;
+  margin-left: 2%;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  
+}
+
+.introduction .para-2-combined{
+  width: 45%;
+  font-size: 1.7vw;
+  font-family: poppins-regular;
+  color: black;
+}
+
+.para-2-combined{
+  background: linear-gradient(
+    to right bottom,
+    rgba(162, 209, 186, 0.3),
+    rgba(162, 209, 186, 0.2)
+  );
+  padding: 2%;
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  
+}
+.images{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.images img{
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  
+}
+
+.details-para-2{
+  width: 100%;
+  padding: 3%;
+}
+.combined-para{
+  width: 100%;
+  height: fit-content;
+  padding: 2%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(188, 162, 209, 0.3),
+    rgba(188, 162, 209, 0.2)
+  );
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  
+}
+
+.details-para-2 p{
+  width: 100%;
+  font-size: 1.7vw;
+  font-family: poppins-regular;
+  color:black;
+}
+
+.visit-para{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visit-para p{
+  font-size: 1.7vw;
+  font-family: poppins-regular;
+  color:black;
+  background: linear-gradient(
+    to right bottom,
+    rgba(83, 151, 207, 0.3),
+    rgba(83, 151, 207, 0.2)
+  );
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+  padding: 2%;
+}
+
+.thank-image{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.thank-image img{
+  width:50%;
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+}
