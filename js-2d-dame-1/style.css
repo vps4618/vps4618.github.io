@@ -1,0 +1,16 @@
+.x{
+    width: 20vh;
+    margin-top:65vh;
+}
+
+.b{
+    width: 100%;
+    height: 100vh;
+    background-image: url("background.png");
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+
+.y{
+    margin: 0px;
+}

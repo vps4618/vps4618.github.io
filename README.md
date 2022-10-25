@@ -27,3 +27,6 @@
 <br>
 <br>
 10. <a href="https://vps4618.github.io/pc-game-download"><button>PC(Windows) game download</button></a>
+<br>
+<br>
+11. <a href="https://vps4618.github.io/js-2d-game-1"><button>JS 2D Game 1</button></a>
