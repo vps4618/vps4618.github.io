@@ -1,0 +1,246 @@
+@font-face {
+font-family: poppins-regular;
+src: url(../fonts/Poppins-Regular.ttf);
+}
+.link-4{
+  background: linear-gradient(
+    to right bottom,
+    rgb(255, 255, 255),
+    rgba(161, 152, 152, 0.801)
+  );
+}
+
+.form-window{
+  width: 100%;
+  height: fit-content;
+  padding: 5%;
+}
+form{
+  width: 100%;
+  height:fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(18, 22, 80);
+  background:  linear-gradient(
+    to right bottom,
+    rgba(147, 170, 180, 0.2),
+    rgba(158, 195, 230, 0.1)
+  );
+  border-radius: 2%;
+  padding: 2%;
+  box-shadow: 6px 6px 20px rgba(122,122,122,0.212);
+
+}
+
+.name,.email,.message,.country,.id,.school,.guardiansName,.guardiansMobile,.dateofbirth,.telephone-number-content,.address,.telephone-number-text,.newsletter,.travellor,.visit,.submit,.gender,.followIct,.language,.day-selection-1,.git-course{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:2% 5% 2% 5%;
+}
+
+input,textarea{
+  flex: 1;
+  font-size: 2vw;
+  font-family: poppins-regular;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 5px;
+  padding: 1%;
+}
+
+input:focus,textarea:focus,select:focus{
+  outline: none;
+}
+label{
+  flex: 1;
+  font-size: 2vw;
+  font-family: poppins-regular;
+}
+
+.travellor input,.visit input,.gender input,.newsletter input,.followIct input,.language input,.day-selection-3 input{
+  height:2vw;
+}
+
+.submit{
+  padding-left:30%;
+  padding-right: 30%;
+}
+.submit .submitbtn{
+  background: rgb(32, 184, 235);
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 2%;
+  cursor: pointer;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.submit .reset{
+  background: rgb(235, 96, 32);
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 2%;
+  cursor: pointer;
+  margin-left: 10%;
+  margin-right: 2%;
+}
+.message textarea{
+  height: 10vw;
+}
+select{
+  font-size: 2vw;
+  font-family: poppins-regular;
+  color:  rgb(63, 102, 76);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgb(172, 172, 172);
+}
+
+  
+.agree{
+  color: rgb(142, 33, 175);
+}
+.disagree{
+  color: rgb(175, 33, 33);
+}
+
+.neutral{
+  color: rgb(43, 33, 175) ;
+}
+.submit input:hover{
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* header*/
+.header-1,.header-2{
+  padding: 0.5%;
+}
+
+.header-1 label{
+  font-size: 2.2vw;
+  color: rgb(57, 18, 80);
+}
+
+.header-2 label{
+  font-size: 2.1vw;
+  color: rgb(80, 32, 18);
+}
+
+.email-container label{
+  color: rgb(18, 50, 80);
+  font-size: 1.8vw;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.header-3{
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+.header-3 label{
+  font-size: 1.9vw;
+  color: black;
+  text-decoration: underline;
+}
+
+/*telephone*/
+.telephone-number-content label{
+    font-size: 1.5vw;
+}
+.telephone-number-content input{
+  font-size: 1.5vw;
+}
+.home{
+  padding-left: 4%;
+}
+.homeInput{
+  margin-left:-6%;
+}
+.whatsappMobile{
+  margin-left: 2%;
+}
+
+/*guardians mobile*/
+.guardiansMobileLabel{
+  padding-left: 4%;
+}
+
+.guardiansMobile input{
+  padding-right: 5%;
+}
+
+.sinhalaLabel{
+  margin-left: 8%;
+}
+.radioButtons{
+  display: flex;
+  flex-direction: column;
+}
+
+.day-selection-1{
+  
+  margin-top: 3%;
+}
+/*day select table*/
+.day-select{
+  width: 100%;
+  margin-left: 10%;
+  padding: 2%;
+}
+
+.day-select input{
+  height: 2vw;
+}
+
+/*git course*/
+.git-course{
+  margin-top: 3%;
+}
+
+.git-name{
+  display: flex;
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+
+.git-select-day{
+  width: 100%;
+  margin-left:10% ;
+  display: flex;
+}
+
+.git-radios{
+  padding-right: 15%;
+  display: flex;
+  justify-content: space-around;
+}
+.git-radios label{
+  margin-right: 8%;
+}
+.git-radios input{
+  margin-right: 4%;
+  margin-top: 1%;
+}
+
+.git-time{
+  display: flex;
+  width: 100%;
+  margin-left:10% ;
+}
+
+/*agreement*/
+.agreement{
+  display: flex;
+  width:100%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.agreement input{
+  height: 2.5vw;
+}
