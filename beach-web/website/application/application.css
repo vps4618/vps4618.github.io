@@ -149,11 +149,11 @@ select{
 
 /*telephone*/
 .telephone-number-content label{
-    font-size: 1.5vw;
+    font-size: 1.8vw;
 }
 .telephone-number-content input{
-  font-size: 1.5vw;
-  width: 30%;
+  font-size: 1.8vw;
+  width: 100%;
 }
 .home{
   padding-left: 4%;
@@ -221,7 +221,7 @@ select{
   justify-content: space-around;
 }
 .git-radios label{
-  margin-right: 8%;
+  margin-right: 3%;
 }
 .git-radios input{
   margin-right: 2%;
