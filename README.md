@@ -30,3 +30,6 @@
 <br>
 <br>
 11. <a href="https://vps4618.github.io/js-2d-game-1"><button>JS 2D Game 1</button></a>
+<br>
+<br>
+12. <a href="https://vps4618.github.io/rock-paper-scissors-game"><button>Rock Paper Scissors game</button></a>
