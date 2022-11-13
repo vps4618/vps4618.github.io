@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(103, 105, 114);
+}
+
+.headerBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.mainHeading {
+    font-size: 4vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(151, 223, 223);
+    text-align: center;
+    color: rgb(53, 90, 124);
+    padding: 2%;
+    border-radius: 100vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+}
+
+.projectsList {
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectsList li {
+    margin-bottom: 2%;
+    padding: 2%;
+    width: 80%;
+    background-color: rgb(170, 192, 212);
+    list-style-position: inside;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3vw;
+    color: rgb(92, 92, 92);
+}
+
+.listItem1 {
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+}
+
+.listItem2 {
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+button {
+    cursor: pointer;
+    font-family: Verdana, sans-serif;
+    font-size: 3vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 1vw;
+    -webkit-border-radius: 1vw;
+    -moz-border-radius: 1vw;
+    -ms-border-radius: 1vw;
+    -o-border-radius: 1vw;
+    padding: 1vw;
+    color: rgb(92, 92, 92);
+}
+
+img {
+    width: 15vw;
+    margin-left: 2vw;
+}
+
+.mainButtonBox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.labelBox{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
