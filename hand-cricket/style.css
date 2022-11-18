@@ -18,3 +18,11 @@ body {
 .ballOrBatContainer {
     display: none;
 }
+
+.cricketGameContainer{
+    display: none;
+}
+
+.endGameContainer{
+    display: none;
+}
