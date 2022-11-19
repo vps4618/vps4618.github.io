@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(to right, rgba(91, 91, 180, 0.521), rgba(156, 80, 80, 0.459));
-    overflow: hidden;
+    overflow: scroll;
 }
 
 
@@ -101,7 +101,7 @@ body {
         font-size: 15px;
     }
 
-    .imgContainer button{
+    .imgContainer button {
         margin-left: 45%;
     }
 
