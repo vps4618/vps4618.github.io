@@ -1,3 +1,6 @@
+// || add sounds
+// || add styles
+
 "use strict";
 // importing functions
 import { addCricketPoints } from "./functions/addCricketPoints.js";
