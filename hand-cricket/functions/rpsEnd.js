@@ -1,5 +1,8 @@
 // end rps game and show final result
 export function rpsEnd() {
+  // play sound
+  rpsResultSound.play();
+
   hideContainer(rpsGameContainer);
   showContainer(rpsGameResultContainer);
 

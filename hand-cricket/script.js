@@ -2,6 +2,9 @@
 // || add styles
 
 "use strict";
+
+alert(window.innerWidth);
+
 // importing functions
 import { addCricketPoints } from "./functions/addCricketPoints.js";
 import { cricketGameStart } from "./functions/cricketGameStart.js";
@@ -14,6 +17,7 @@ import { rpsPointsAdd } from "./functions/rpsPointsAdd.js";
 import { showContainer } from "./functions/showContainer.js";
 import { startGame } from "./functions/startGame.js";
 import { makingCricketGameEnd } from "./functions/makingCricketGameEnd.js";
+import { showImg } from "./functions/showImg.js";
 
 // sounds
 const playerWinRpsRoundSound = new Audio("sounds/playerWinRpsRound.mp3");
@@ -81,6 +85,7 @@ const rpsGameResultContainer = document.getElementById(
 const rpsFinalResultPara = document.getElementById("rpsFinalResultPara");
 const ballOrBatContainer = document.getElementById("ballOrBatContainer");
 const cricketGameContainer = document.getElementById("cricketGameContainer");
+const imgContainer = document.getElementById("imgContainer");
 const whoBat = document.getElementById("whoBat");
 const cricketResult = document.getElementById("cricketResult");
 const rpsButton = document.getElementById("rpsButton");
@@ -107,3 +112,4 @@ window.endOfGame = endOfGame;
 window.cricketGameStart = cricketGameStart;
 window.addCricketPoints = addCricketPoints;
 window.makingCricketGameEnd = makingCricketGameEnd;
+window.showImg = showImg;

@@ -1,5 +1,8 @@
 // starting cricket game
 export function cricketGameStart() {
+  // play sound
+  buttonClickSound.play();
+
   hideContainer(rpsGameResultContainer);
   showContainer(cricketGameContainer);
 

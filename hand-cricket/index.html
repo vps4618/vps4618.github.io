@@ -23,6 +23,16 @@
         <br />
         2.Every input should enter after three 3 seconds from previous one.
       </p>
+      <button onclick="showImg()">Ok</button>
+    </div>
+
+    <!--players image show window-->
+    <div class="hide" id="imgContainer">
+      <p>Your Image is <img src="../images/player.jpg" alt="player image" /></p>
+      <p>
+        Computer Image is
+        <img src="../images/computer.jpg" alt="computer image" />
+      </p>
       <button onclick="rpsGame()">Ok</button>
     </div>
 
@@ -49,7 +59,7 @@
           <option>bat</option>
         </select>
       </div>
-      <button onclick="cricketGameStart()">Enter</button>
+      <button onclick="cricketGameStart()">Ok</button>
     </div>
 
     <!--cricket input window-->
@@ -80,23 +90,28 @@
     </div>
 
     <!-- loading images -->
-    <img src="../images/1.png" alt="counting 1" class="hide">
-    <img src="../images/10.png" alt="counting 10" class="hide">
-    <img src="../images/2.png" alt="counting 2" class="hide">
-    <img src="../images/3.png" alt="counting 3" class="hide">
-    <img src="../images/4.png" alt="counting 4" class="hide">
-    <img src="../images/5.png" alt="counting 5" class="hide">
-    <img src="../images/6.png" alt="counting 6" class="hide">
-    <img src="../images/7.png" alt="counting 7" class="hide">
-    <img src="../images/8.png" alt="counting 8" class="hide">
-    <img src="../images/9.png" alt="counting 9" class="hide">
-    <img src="../images/ball.png" alt="ball image" class="hide">
-    <img src="../images/bat.png" alt="bat image" class="hide">
-    <img src="../images/computer.jpg" alt="computer image" class="hide">
-    <img src="../images/paper.png" alt="paper image" class="hide">
-    <img src="../images/player.jpg" alt="player image" class="hide">
-    <img src="../images/rock.png" alt="rock image" class="hide">
-    <img src="../images/scissors.png" alt="scissors image" class="hide">
+
+    <!-- image file source error occur when "../images" when website online
+        in js files. but that error doesn't occur when developing offline.
+        So images folder for both root directory and this directory.-->
+
+    <img src="../images/1.png" alt="counting 1" class="hide" />
+    <img src="../images/10.png" alt="counting 10" class="hide" />
+    <img src="../images/2.png" alt="counting 2" class="hide" />
+    <img src="../images/3.png" alt="counting 3" class="hide" />
+    <img src="../images/4.png" alt="counting 4" class="hide" />
+    <img src="../images/5.png" alt="counting 5" class="hide" />
+    <img src="../images/6.png" alt="counting 6" class="hide" />
+    <img src="../images/7.png" alt="counting 7" class="hide" />
+    <img src="../images/8.png" alt="counting 8" class="hide" />
+    <img src="../images/9.png" alt="counting 9" class="hide" />
+    <img src="../images/ball.png" alt="ball image" class="hide" />
+    <img src="../images/bat.png" alt="bat image" class="hide" />
+    <img src="../images/computer.jpg" alt="computer image" class="hide" />
+    <img src="../images/paper.png" alt="paper image" class="hide" />
+    <img src="../images/player.jpg" alt="player image" class="hide" />
+    <img src="../images/rock.png" alt="rock image" class="hide" />
+    <img src="../images/scissors.png" alt="scissors image" class="hide" />
 
     <script type="module" src="script.js"></script>
   </body>

@@ -88,6 +88,9 @@ export function addCricketPoints() {
 
     // checking player value and computer value equal
     if (playerChoice === computerChoice) {
+      // play sound
+      playerOutSound.play();
+
       cricketResult.innerHTML = `
       
           <img src="../images/player.jpg" alt="player image">
@@ -127,6 +130,9 @@ export function addCricketPoints() {
 
       // 1 point added to player
     } else if (playerChoice === "1") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 1;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -139,6 +145,9 @@ export function addCricketPoints() {
 
       // 2 point added to player
     } else if (playerChoice === "2") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 2;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -151,6 +160,9 @@ export function addCricketPoints() {
 
       // 3 points added to player
     } else if (playerChoice === "3") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 3;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -163,6 +175,9 @@ export function addCricketPoints() {
 
       // 4 points added to player
     } else if (playerChoice === "4") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 4;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -175,6 +190,9 @@ export function addCricketPoints() {
 
       // 5 point added to player
     } else if (playerChoice === "5") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 5;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -187,6 +205,9 @@ export function addCricketPoints() {
 
       // 6 point added to player
     } else if (playerChoice === "6") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 6;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -199,6 +220,9 @@ export function addCricketPoints() {
 
       // 7 point added to player
     } else if (playerChoice === "7") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 7;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -211,6 +235,9 @@ export function addCricketPoints() {
 
       // 8 point added to player
     } else if (playerChoice === "8") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 8;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -223,6 +250,9 @@ export function addCricketPoints() {
 
       // 9 point added to player
     } else if (playerChoice === "9") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 9;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -235,6 +265,9 @@ export function addCricketPoints() {
 
       // 10 point added to player
     } else {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 10;
       cricketResult.innerHTML = returnResultOfCricket(
         "you",
@@ -302,6 +335,9 @@ export function addCricketPoints() {
     }
 
     if (playerChoice === computerChoice) {
+      // play sound
+      computerOutSound.play();
+
       cricketResult.innerHTML = `
            
       <img src="../images/player.jpg" alt="player image">
@@ -341,6 +377,9 @@ export function addCricketPoints() {
 
       // 1 points added to computer
     } else if (computerChoice === "1") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 1;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -353,6 +392,9 @@ export function addCricketPoints() {
 
       // 2 points added to computer
     } else if (computerChoice === "2") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 2;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -365,6 +407,9 @@ export function addCricketPoints() {
 
       // 3 points added to computer
     } else if (computerChoice === "3") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 3;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -377,6 +422,9 @@ export function addCricketPoints() {
 
       // 4 points added to computer
     } else if (computerChoice === "4") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 4;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -389,6 +437,9 @@ export function addCricketPoints() {
 
       // 5 points added to computer
     } else if (computerChoice === "5") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 5;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -401,6 +452,12 @@ export function addCricketPoints() {
 
       // 6 points added to computer
     } else if (computerChoice === "6") {
+      // play sound
+      buttonClickSound.play();
+
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 6;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -413,6 +470,9 @@ export function addCricketPoints() {
 
       // 7 points added to computer
     } else if (computerChoice === "7") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 7;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -425,6 +485,9 @@ export function addCricketPoints() {
 
       // 8 points added to computer
     } else if (computerChoice === "8") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 8;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -437,6 +500,9 @@ export function addCricketPoints() {
 
       // 9 points added to computer
     } else if (computerChoice === "9") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 9;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -449,6 +515,9 @@ export function addCricketPoints() {
 
       // 10 points added to computer
     } else {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 10;
       cricketResult.innerHTML = returnResultOfCricket(
         "computer",
@@ -518,6 +587,9 @@ export function addCricketPoints() {
 
     // if computer value equal to player value ending gameby letting user to click see result button
     if (playerChoice === computerChoice) {
+      // play sound
+      computerOutSound.play();
+
       makingCricketGameEnd(
         playerChoice,
         computerChoice,
@@ -532,6 +604,9 @@ export function addCricketPoints() {
 
       // 1 points added to computer
     } else if (computerChoice === "1") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 1;
 
       // checking whether computer already passed player, then end game.
@@ -560,6 +635,9 @@ export function addCricketPoints() {
 
       // 2 points added to computer
     } else if (computerChoice === "2") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 2;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -586,6 +664,9 @@ export function addCricketPoints() {
       }
       // 3 points added to computer
     } else if (computerChoice === "3") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 3;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -612,6 +693,9 @@ export function addCricketPoints() {
       }
       // 4 points added to computer
     } else if (computerChoice === "4") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 4;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -638,6 +722,9 @@ export function addCricketPoints() {
       }
       // 5 points added to computer
     } else if (computerChoice === "5") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 5;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -664,6 +751,9 @@ export function addCricketPoints() {
       }
       // 6 points added to computer
     } else if (computerChoice === "6") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 6;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -690,6 +780,9 @@ export function addCricketPoints() {
       }
       // 7 points added to computer
     } else if (computerChoice === "7") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 7;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -716,6 +809,9 @@ export function addCricketPoints() {
       }
       // 8 points added to computer
     } else if (computerChoice === "8") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 8;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -742,6 +838,9 @@ export function addCricketPoints() {
       }
       // 9 points added to computer
     } else if (computerChoice === "9") {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 9;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -768,6 +867,9 @@ export function addCricketPoints() {
       }
       // 10 points added to computer
     } else {
+      // play sound
+      buttonClickSound.play();
+
       computerCricketPoints += 10;
 
       if (computerCricketPoints > playerCricketPoints) {
@@ -851,6 +953,9 @@ export function addCricketPoints() {
 
     // if computer input equals to player input then game end and user can see result
     if (playerChoice === computerChoice) {
+      // play sound
+      playerOutSound.play();
+
       makingCricketGameEnd(
         playerChoice,
         computerChoice,
@@ -865,6 +970,9 @@ export function addCricketPoints() {
 
       // 1 points added to player
     } else if (playerChoice === "1") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 1;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -891,6 +999,9 @@ export function addCricketPoints() {
       }
       // 2 points added to player
     } else if (playerChoice === "2") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 2;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -917,6 +1028,9 @@ export function addCricketPoints() {
       }
       // 3 points added to player
     } else if (playerChoice === "3") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 3;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -943,6 +1057,9 @@ export function addCricketPoints() {
       }
       // 4 points added to player
     } else if (playerChoice === "4") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 4;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -969,6 +1086,9 @@ export function addCricketPoints() {
       }
       // 5 points added to player
     } else if (playerChoice === "5") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 5;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -995,6 +1115,9 @@ export function addCricketPoints() {
       }
       // 6 points added to player
     } else if (playerChoice === "6") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 6;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -1021,6 +1144,9 @@ export function addCricketPoints() {
       }
       // 7 points added to player
     } else if (playerChoice === "7") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 7;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -1047,6 +1173,9 @@ export function addCricketPoints() {
       }
       // 8 points added to player
     } else if (playerChoice === "8") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 8;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -1073,6 +1202,9 @@ export function addCricketPoints() {
       }
       // 9 points added to player
     } else if (playerChoice === "9") {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 9;
 
       if (playerCricketPoints > computerCricketPoints) {
@@ -1099,6 +1231,9 @@ export function addCricketPoints() {
       }
       // 10 points added to player
     } else {
+      // play sound
+      buttonClickSound.play();
+
       playerCricketPoints += 10;
 
       if (playerCricketPoints > computerCricketPoints) {

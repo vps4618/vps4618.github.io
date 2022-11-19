@@ -5,6 +5,9 @@ export function endOfGame() {
 
   // processing final result of handcricket game
   if (playerCricketPoints > computerCricketPoints) {
+    // play sound
+    playerWinningCricketSound.play();
+
     endResultPara.innerHTML = `
         <img src="../images/player.jpg" alt="player image">
         
@@ -25,7 +28,10 @@ export function endOfGame() {
           playerCricketPoints - computerCricketPoints
         } points!!!
       `;
-  } else {
+  } else if(playerCricketPoints < computerCricketPoints) {
+    // play sound
+    playerLosingCricketSound.play();
+
     endResultPara.innerHTML = `
         <img src="../images/player.jpg" alt="player image">
 
@@ -41,16 +47,38 @@ export function endOfGame() {
         
         Final Result - 
         
-        <img src="../images/player.jpg" alt="player image">
+        <img src="../images/computer.jpg" alt="computer image">
 
         <b>Computer</b> won this handCricket Game by ${
           computerCricketPoints - playerCricketPoints
         } points.
       `;
+  }else{
+    // play sound
+    buttonClickSound.play();
+
+    endResultPara.innerHTML = `
+    <img src="../images/player.jpg" alt="player image">
+
+    Your Total Points - ${playerCricketPoints}
+    
+    <br>
+
+    <img src="../images/computer.jpg" alt="computer image">
+
+    Computer Total Points - ${computerCricketPoints}
+    
+    <br>
+    
+    Final Result - Draw Game !!!
+  `;
   }
 
   // adding click event listener to replay button
   document.getElementById("replayButton").addEventListener("click", () => {
+    // play sound
+    yesSound.play();
+
     // reset global variables
     rpsCount = 1;
     playerRpsPoints = 0;
