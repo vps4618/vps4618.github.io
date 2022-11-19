@@ -26,3 +26,7 @@ body {
 .endGameContainer{
     display: none;
 }
+img{
+    width: 10%;
+}
+/* :nth-child(1) */

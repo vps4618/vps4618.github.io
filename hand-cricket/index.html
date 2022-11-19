@@ -8,20 +8,25 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
+    <!--Welcome screen-->
     <div class="welcomeScreenContainer" id="welcomeScreenContainer">
-      <h2>Welcome to hand cricket !</h2>
+      <h2>Welcome to hand cricket Game !</h2>
       <p>Click below button to start game.</p>
-      <button onclick="startGame()">start</button>
+      <button onclick="startGame()">Start</button>
     </div>
 
+    <!--Information window-->
     <div id="infoContainer" class="infoContainer">
       <p id="infoPara">
-        winner of 3 round rock,paper or scissors,will choose who first bat or
+        1.Winner of 3 round rock,paper or scissors, will choose who first bat or
         ball.
+        <br />
+        2.Every input should enter after three 3 seconds from previous one.
       </p>
       <button onclick="rpsGame()">Ok</button>
     </div>
 
+    <!-- rock paper scissors input window -->
     <div id="rpsGameContainer" class="rpsGameContainer">
       <p>Enter rock,paper or scissors below.</p>
       <select id="rpsInputSelect">
@@ -29,10 +34,12 @@
         <option>paper</option>
         <option>scissors</option>
       </select>
-      <button onclick="rpsPointsAdd()" id="rpsButton">Ok</button>
+      <button onclick="rpsPointsAdd()" id="rpsButton">Enter</button>
       <p id="rpsResultPara"></p>
+      <p id="rpsCounterPara"></p>
     </div>
 
+    <!--rock paper scissors final result show here-->
     <div id="rpsGameResultContainer" class="rpsGameResultContainer">
       <p id="rpsFinalResultPara"></p>
       <div class="ballOrBatContainer" id="ballOrBatContainer">
@@ -42,9 +49,10 @@
           <option>bat</option>
         </select>
       </div>
-      <button onclick="cricketGameStart()">Ok</button>
+      <button onclick="cricketGameStart()">Enter</button>
     </div>
 
+    <!--cricket input window-->
     <div id="cricketGameContainer" class="cricketGameContainer">
       <p id="whoBat"></p>
       <p>Enter choice</p>
@@ -60,17 +68,17 @@
         <option>9</option>
         <option>10</option>
       </select>
-      <button onclick="addCricketPoints()" id="cricketButton">
-        Ok
-      </button>
+      <button onclick="addCricketPoints()" id="cricketButton">Enter</button>
       <p id="cricketResult"></p>
+      <p id="cricketCounterPara"></p>
     </div>
 
+    <!--final game result window-->
     <div id="endGameContainer" class="endGameContainer">
       <p id="endResultPara"></p>
       <button id="replayButton">Replay</button>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
