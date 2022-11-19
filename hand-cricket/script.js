@@ -3,8 +3,6 @@
 
 "use strict";
 
-alert(window.innerWidth);
-
 // importing functions
 import { addCricketPoints } from "./functions/addCricketPoints.js";
 import { cricketGameStart } from "./functions/cricketGameStart.js";

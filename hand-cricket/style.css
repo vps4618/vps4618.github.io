@@ -1,14 +1,109 @@
-body {
-    background-color: rgb(49, 48, 48);
-    color: whitesmoke;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0px;
 }
 
 .hide {
     display: none;
 }
 
-img {
-    width: 10%;
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, rgba(91, 91, 180, 0.521), rgba(156, 80, 80, 0.459));
+    overflow: hidden;
 }
 
+
 /* :nth-child(1) */
+
+@media screen and (min-width:320px) {
+
+    /* first screen */
+    .logoContainer img {
+        width: 200px;
+        margin-top: 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(91, 91, 180, 0.4);
+        padding: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        color: rgb(228, 239, 248);
+    }
+
+    .welcomeScreenContainer h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+        margin-top: 10px;
+        color: rgb(60, 69, 110);
+    }
+
+    .welcomeScreenContainer p {
+        font-family: 'Poppins', sans-serif;
+        margin-left: 8%;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .welcomeScreenContainer button,
+    .infoContainer button,
+    .imgContainer button {
+        font-family: 'Poppins', sans-serif;
+        margin-left: 40%;
+        margin-top: 10px;
+        background-color: rgb(176, 197, 207);
+        border-radius: 8px;
+        color: rgb(29, 44, 112);
+        border: 1px solid grey;
+        font-size: 15px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+    }
+
+
+    .logoContainer {
+        margin-top: 80px;
+    }
+
+    /*second screen*/
+    .infoContainer {
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        margin-left: 8%;
+    }
+
+    /*third screen*/
+    .imgContainer img {
+        width: 50px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .imgContainer {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+    }
+
+    .imgContainer button{
+        margin-left: 45%;
+    }
+
+    /* fourth screen */
+}

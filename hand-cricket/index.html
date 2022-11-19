@@ -8,26 +8,32 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
+    <!--logo-->
+    <div class="logoContainer">
+      <img src="./images/logo.png" alt="logo image" />
+    </div>
+
     <!--Welcome screen-->
-    <div id="welcomeScreenContainer">
+    <div id="welcomeScreenContainer" class="welcomeScreenContainer">
       <h2>Welcome to hand cricket Game !</h2>
       <p>Click below button to start game.</p>
       <button onclick="startGame()">Start</button>
     </div>
 
     <!--Information window-->
-    <div id="infoContainer" class="hide">
+    <div id="infoContainer" class="hide infoContainer">
       <p id="infoPara">
         1.Winner of 3 round rock,paper or scissors, will choose who first bat or
         ball.
         <br />
-        2.Every input should enter after three 3 seconds from previous one.
+        <br />
+        2.Every input should enter after three seconds from previous one.
       </p>
       <button onclick="showImg()">Ok</button>
     </div>
 
     <!--players image show window-->
-    <div class="hide" id="imgContainer">
+    <div class="hide imgContainer" id="imgContainer">
       <p>Your Image is <img src="../images/player.jpg" alt="player image" /></p>
       <p>
         Computer Image is
@@ -113,6 +119,8 @@
     <img src="../images/rock.png" alt="rock image" class="hide" />
     <img src="../images/scissors.png" alt="scissors image" class="hide" />
 
+    <!-- footer -->
+    <footer>&copy;2022 VPS</footer>
     <script type="module" src="script.js"></script>
   </body>
 </html>
