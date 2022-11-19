@@ -62,6 +62,9 @@ export function rpsPointsAdd() {
 
     // check whether playerChoice === computerChoice then tie that round
     if (playerChoice === computerChoice) {
+      //play sound
+      buttonClickSound.play();
+
       result = `
       <img src="../images/computer.jpg" alt="computer image">
 
@@ -89,6 +92,9 @@ export function rpsPointsAdd() {
       // checking playerChoice === paper
     } else if (playerChoice === "paper") {
       if (computerChoice === "scissors") {
+        //play sound
+        playerLossRpsRoundSound.play();
+
         // computer wins this round
         result = `
         <img src="../images/computer.jpg" alt="computer image">
@@ -147,6 +153,9 @@ export function rpsPointsAdd() {
           rpsButton.setAttribute("onclick", "rpsEnd()");
         }
       } else {
+        //play sound
+        playerWinRpsRoundSound.play();
+
         // player wins this round
         result = `
         <img src="../images/computer.jpg" alt="computer image">
@@ -203,6 +212,9 @@ export function rpsPointsAdd() {
       }
     } else if (playerChoice === "rock") {
       if (computerChoice === "paper") {
+        //play sound
+        playerLossRpsRoundSound.play();
+
         // computer wins this round
         result = `
         <img src="../images/computer.jpg" alt="computer image">
@@ -257,6 +269,9 @@ export function rpsPointsAdd() {
           rpsButton.setAttribute("onclick", "rpsEnd()");
         }
       } else {
+        //play sound
+        playerWinRpsRoundSound.play();
+
         // player wins this round
         result = `
         <img src="../images/computer.jpg" alt="computer image">
@@ -313,6 +328,9 @@ export function rpsPointsAdd() {
       }
     } else {
       if (computerChoice === "rock") {
+        //play sound
+        playerLossRpsRoundSound.play();
+
         // computer wins this round
         result = `
         <img src="../images/computer.jpg" alt="computer image">
@@ -367,6 +385,9 @@ export function rpsPointsAdd() {
           rpsButton.setAttribute("onclick", "rpsEnd()");
         }
       } else {
+        //play sound
+        playerWinRpsRoundSound.play();
+
         // player wins this round
         result = `
         <img src="../images/computer.jpg" alt="computer image">

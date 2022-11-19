@@ -15,7 +15,29 @@ import { showContainer } from "./functions/showContainer.js";
 import { startGame } from "./functions/startGame.js";
 import { makingCricketGameEnd } from "./functions/makingCricketGameEnd.js";
 
-alert(window.innerWidth);
+// sounds
+const playerWinRpsRoundSound = new Audio("sounds/playerWinRpsRound.mp3");
+const playerLossRpsRoundSound = new Audio("sounds/playerLossRpsRound.mp3");
+const buttonClickSound = new Audio("sounds/buttonClick.mp3");
+const computerOutSound = new Audio("sounds/computerOut.mp3");
+const okSound = new Audio("sounds/ok.mp3");
+const playerLosingCricketSound = new Audio("sounds/playerLosingCricket.wav");
+const playerOutSound = new Audio("sounds/playerOut.mp3");
+const playerWinningCricketSound = new Audio("sounds/playerWinningCricket.mp3");
+const rpsResultSound = new Audio("sounds/rpsResult.wav");
+const yesSound = new Audio("sounds/yes.mp3");
+
+// sounds exposing to window
+window.buttonClickSound = buttonClickSound;
+window.playerLossRpsRoundSound = playerLossRpsRoundSound;
+window.playerWinRpsRoundSound = playerWinRpsRoundSound;
+window.computerOutSound = computerOutSound;
+window.okSound = okSound;
+window.playerLosingCricketSound = playerLosingCricketSound;
+window.playerOutSound = playerOutSound;
+window.playerWinningCricketSound = playerWinningCricketSound;
+window.rpsResultSound = rpsResultSound;
+window.yesSound = yesSound;
 
 // rps global variables
 let rpsCount = 1;
