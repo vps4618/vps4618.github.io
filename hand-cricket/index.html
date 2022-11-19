@@ -23,8 +23,8 @@
     <!--Information window-->
     <div id="infoContainer" class="hide infoContainer">
       <p id="infoPara">
-        1. Winner of 3 round rock,paper or scissors, will choose who first bat or
-        ball.
+        1. Winner of 3 round rock,paper or scissors, will choose who first bat
+        or ball.
         <br />
         <br />
         2. Every input should enter after three seconds from previous one.
@@ -45,7 +45,7 @@
     <!-- rock paper scissors input window -->
     <div id="rpsGameContainer" class="hide rpsGameContainer">
       <p>Enter rock,paper or scissors below.</p>
-      
+
       <p id="rpsCounterPara"></p>
       <select id="rpsInputSelect">
         <option>rock</option>
@@ -73,6 +73,7 @@
     <div id="cricketGameContainer" class="hide">
       <p id="whoBat"></p>
       <p>Enter choice</p>
+      <p id="cricketCounterPara"></p>
       <select id="cricketSelect">
         <option>1</option>
         <option>2</option>
@@ -87,7 +88,6 @@
       </select>
       <button onclick="addCricketPoints()" id="cricketButton">Enter</button>
       <p id="cricketResult"></p>
-      <p id="cricketCounterPara"></p>
     </div>
 
     <!--final game result window-->
@@ -121,7 +121,10 @@
     <img src="../images/scissors.png" alt="scissors image" class="hide" />
 
     <!-- footer -->
-    <footer>&copy;2022 VPS<br><abbr title="Date Last Updated">DLU</abbr> - 2022/11/19</footer>
+    <footer>
+      &copy;2022 VPS<br /><abbr title="Date Last Updated">DLU</abbr> -
+      2022/11/19
+    </footer>
     <script type="module" src="script.js"></script>
   </body>
 </html>

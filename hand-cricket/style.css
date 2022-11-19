@@ -60,7 +60,8 @@ body {
     .welcomeScreenContainer button,
     .infoContainer button,
     .imgContainer button,
-    .rpsGameContainer button {
+    .rpsGameContainer button,
+    #rpsGameResultContainer button {
         font-family: 'Poppins', sans-serif;
         margin-left: 40%;
         margin-top: 10px;
@@ -112,7 +113,8 @@ body {
     }
 
     /* fourth screen */
-    .rpsGameContainer p {
+    .rpsGameContainer p,
+    #rpsGameResultContainer p {
         font-family: 'Poppins', sans-serif;
         font-size: 15px;
     }
@@ -146,10 +148,11 @@ body {
     }
 
     #rpsResultPara {
-        margin-top:-130px;
+        margin-top: -130px;
     }
 
-    #rpsResultPara img {
+    #rpsResultPara img,
+    #rpsGameResultContainer img {
         width: 50px;
         margin: 10px 7px 0px 7px;
         border-radius: 5px;
@@ -157,12 +160,24 @@ body {
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-}
+    }
 
     #rpsCounterPara {
         margin-left: 30%;
         font-weight: bold;
         color: rgb(182, 41, 31);
         margin-top: 10px;
+    }
+
+    /*
+    fifth screen
+    */
+    #rpsGameResultContainer {
+        margin-top: -30px;
+        padding: 10px;
+    }
+
+    #rpsGameResultContainer button{
+        margin-left: 45%;
     }
 }
