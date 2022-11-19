@@ -79,7 +79,7 @@ body {
 
 
     .logoContainer {
-        margin-top: 80px;
+        margin-top: 50px;
         margin-bottom: 30px;
     }
 
@@ -181,4 +181,7 @@ body {
     #rpsGameResultContainer button{
         margin-left: 45%;
     }
+
+    /* 6th screen */
+
 }
