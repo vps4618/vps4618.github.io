@@ -3,30 +3,12 @@ body {
     color: whitesmoke;
 }
 
-.infoContainer {
+.hide {
     display: none;
 }
 
-.rpsGameContainer {
-    display: none;
-}
-
-.rpsGameResultContainer {
-    display: none;
-}
-
-.ballOrBatContainer {
-    display: none;
-}
-
-.cricketGameContainer{
-    display: none;
-}
-
-.endGameContainer{
-    display: none;
-}
-img{
+img {
     width: 10%;
 }
+
 /* :nth-child(1) */
