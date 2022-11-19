@@ -146,15 +146,18 @@ body {
     }
 
     #rpsResultPara {
-        position: absolute;
-        bottom: -25px;
-        right: 15px;
+        margin-top:-130px;
     }
 
     #rpsResultPara img {
         width: 50px;
         margin: 10px 7px 0px 7px;
-    }
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
 
     #rpsCounterPara {
         margin-left: 30%;
