@@ -43,8 +43,10 @@
     </div>
 
     <!-- rock paper scissors input window -->
-    <div id="rpsGameContainer" class="hide">
+    <div id="rpsGameContainer" class="hide rpsGameContainer">
       <p>Enter rock,paper or scissors below.</p>
+      
+      <p id="rpsCounterPara"></p>
       <select id="rpsInputSelect">
         <option>rock</option>
         <option>paper</option>
@@ -52,7 +54,6 @@
       </select>
       <button onclick="rpsPointsAdd()" id="rpsButton">Enter</button>
       <p id="rpsResultPara"></p>
-      <p id="rpsCounterPara"></p>
     </div>
 
     <!--rock paper scissors final result show here-->
@@ -120,7 +121,7 @@
     <img src="../images/scissors.png" alt="scissors image" class="hide" />
 
     <!-- footer -->
-    <footer>&copy;2022 VPS</footer>
+    <footer>&copy;2022 VPS<br><abbr title="Date Last Updated">DLU</abbr> - 2022/11/19</footer>
     <script type="module" src="script.js"></script>
   </body>
 </html>
