@@ -175,6 +175,7 @@ body {
     #rpsGameResultContainer {
         margin-top: -30px;
         padding: 10px;
+        margin-left: 5%;
     }
 
     #rpsGameResultContainer button{
