@@ -242,9 +242,5 @@ body {
     nav div:hover {
         background-color: rgba(43, 63, 80, 0.705);
     }
-
-    nav div:active {
-        background-color: rgba(43, 63, 80, 0.705);
-
-    }
+    
 }
