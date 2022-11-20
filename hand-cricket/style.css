@@ -242,5 +242,16 @@ body {
     nav div:hover {
         background-color: rgba(43, 63, 80, 0.705);
     }
-    
+
+}
+
+@media screen and (min-width:320px) and (orientation: landscape) {
+    footer {
+        position: absolute;
+        margin-bottom: -300px;
+    }
+
+    nav {
+        position: absolute;
+    }
 }
