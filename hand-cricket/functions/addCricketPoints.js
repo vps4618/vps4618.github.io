@@ -38,6 +38,25 @@ export function addCricketPoints() {
     let randomInt = Math.floor(Math.random() * 10);
     let computerChoice = computerChoices[randomInt].toString();
 
+    // taking wicket of player when player input same value three times in row
+    if (threeInputsPlayerEnteredInRow.length !== 3) {
+      threeInputsPlayerEnteredInRow.push(playerChoice);
+    }
+
+    if (threeInputsPlayerEnteredInRow.length === 3) {
+      if (
+        threeInputsPlayerEnteredInRow[0] === threeInputsPlayerEnteredInRow[1] &&
+        threeInputsPlayerEnteredInRow[1] === threeInputsPlayerEnteredInRow[2]
+      ) {
+        computerChoice = playerChoice;
+      } else {
+
+        // remove first element
+        threeInputsPlayerEnteredInRow.shift();
+      }
+    }
+
+
     // getting hand sign image according player and computer inputs
     let playerChoiceImg = "";
     let computerChoiceImg = "";
@@ -902,6 +921,25 @@ export function addCricketPoints() {
     let computerChoices = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
     let randomInt = Math.floor(Math.random() * 10);
     let computerChoice = computerChoices[randomInt].toString();
+
+    // taking wicket of player when player input same value three times in row
+    if (threeInputsPlayerEnteredInRow.length !== 3) {
+      threeInputsPlayerEnteredInRow.push(playerChoice);
+    }
+
+    if (threeInputsPlayerEnteredInRow.length === 3) {
+      if (
+        threeInputsPlayerEnteredInRow[0] === threeInputsPlayerEnteredInRow[1] &&
+        threeInputsPlayerEnteredInRow[1] === threeInputsPlayerEnteredInRow[2]
+      ) {
+        computerChoice = playerChoice;
+      } else {
+        // remove first element
+        threeInputsPlayerEnteredInRow.shift();
+      }
+    }
+
+    console.log(threeInputsPlayerEnteredInRow);
 
     // getting hand sign image according player and computer inputs
     let playerChoiceImg = "";

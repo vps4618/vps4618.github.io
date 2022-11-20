@@ -29,7 +29,7 @@
     />
     <meta
       name="keywords"
-      content="vps4618,vps4618 projects,projects vps4618,vps418 github,vps 4618,vps 4618 github,vps,hand cricket,vps4618 hand cricket game,hand cricket game,handcricket,handcricketgame,cricket,js game,hand,vps hand cricket,cricket hand"
+      content="vps4618,vps4618 projects,projects vps4618,vps418 github,vps 4618,vps 4618 github,vps,hand cricket,hand cricket online,online hand cricket,online handcricket,HandCricket,handCricket,hand-cricket,vps4618 hand cricket game,hand cricket game,handcricket,handcricketgame,cricket,js game,hand,vps hand cricket,cricket hand"
     />
     <meta name="author" content="vps4618" />
     <title>Hand Cricket Game</title>
@@ -37,20 +37,33 @@
     <link rel="icon" href="./images/icon.png" type="image/x-icon" />
   </head>
   <body>
+    <!--navbar-->
+    <nav>
+      <div>
+        Game
+      </div>
+      <div>
+        Changelog
+      </div>
+      <div>
+        Comment
+      </div>
+    </nav>
+    
     <!--logo-->
     <div class="logoContainer">
       <img src="./images/logo.png" alt="logo image" />
     </div>
 
     <!--Welcome screen-->
-    <div id="welcomeScreenContainer" class="welcomeScreenContainer">
+    <div id="welcomeScreenContainer" class="welcomeScreenContainer bottomMargin">
       <h2>Welcome to hand cricket Game !</h2>
       <p>Click below button to start game.</p>
       <button onclick="startGame()">Start</button>
     </div>
 
     <!--Information window-->
-    <div id="infoContainer" class="hide infoContainer">
+    <div id="infoContainer" class="hide infoContainer bottomMargin">
       <p id="infoPara">
         1. Winner of 3 round rock,paper or scissors, will choose who first bat
         or ball.
@@ -62,7 +75,7 @@
     </div>
 
     <!--players image show window-->
-    <div class="hide imgContainer" id="imgContainer">
+    <div class="hide imgContainer bottomMargin" id="imgContainer">
       <p>Your Image is <img src="../images/player.jpg" alt="player image" /></p>
       <p>
         Computer Image is
@@ -72,8 +85,8 @@
     </div>
 
     <!-- rock paper scissors input window -->
-    <div id="rpsGameContainer" class="hide rpsGameContainer">
-      <p>Enter rock,paper or scissors below.</p>
+    <div id="rpsGameContainer" class="hide rpsGameContainer bottomMargin">
+      <p>Enter rock,paper or scissors below : </p>
 
       <p id="rpsCounterPara"></p>
       <select id="rpsInputSelect">
@@ -86,10 +99,10 @@
     </div>
 
     <!--rock paper scissors final result show here-->
-    <div id="rpsGameResultContainer" class="hide">
+    <div id="rpsGameResultContainer" class="hide bottomMargin">
       <p id="rpsFinalResultPara"></p>
       <div class="hide" id="ballOrBatContainer">
-        <p id="ballOrBatSelectPara">Enter your choice of bat or ball below</p>
+        <p id="ballOrBatSelectPara">Enter your choice of bat or ball below : </p>
         <select id="ballOrBatSelect">
           <option>ball</option>
           <option>bat</option>
@@ -99,9 +112,9 @@
     </div>
 
     <!--cricket input window-->
-    <div id="cricketGameContainer" class="hide">
+    <div id="cricketGameContainer" class="hide bottomMargin">
       <p id="whoBat"></p>
-      <p>Enter choice</p>
+      <p>Enter choice : </p>
       <p id="cricketCounterPara"></p>
       <select id="cricketSelect">
         <option>1</option>
@@ -120,7 +133,7 @@
     </div>
 
     <!--final game result window-->
-    <div id="endGameContainer" class="hide">
+    <div id="endGameContainer" class="hide bottomMargin">
       <p id="endResultPara"></p>
       <button id="replayButton">Replay</button>
     </div>
@@ -152,7 +165,7 @@
     <!-- footer -->
     <footer>
       &copy;2022 VPS<br /><abbr title="Date Last Updated">DLU</abbr> -
-      2022/11/19
+      2022/11/20 V.1.02
     </footer>
     <script type="module" src="script.js"></script>
   </body>

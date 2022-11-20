@@ -60,6 +60,8 @@ let whoWonRps;
 let playerFirstBatAndFailed = false;
 let computerFirstBatAndFailed = false;
 
+let threeInputsPlayerEnteredInRow = [];
+
 // fixing reference errors after import functions
 window.playerCricketPoints = playerCricketPoints;
 window.computerCricketPoints = computerCricketPoints;
@@ -68,6 +70,7 @@ window.whoBallFirst = whoBallFirst;
 window.whoWonRps = whoWonRps;
 window.playerFirstBatAndFailed = playerFirstBatAndFailed;
 window.computerFirstBatAndFailed = computerFirstBatAndFailed;
+window.threeInputsPlayerEnteredInRow = threeInputsPlayerEnteredInRow;
 
 // element imports
 // these variables didn't throw errors eventhough functions imported, beacuse these are belong to window object

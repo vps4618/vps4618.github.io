@@ -28,7 +28,7 @@ export function endOfGame() {
           playerCricketPoints - computerCricketPoints
         } points!!!
       `;
-  } else if(playerCricketPoints < computerCricketPoints) {
+  } else if (playerCricketPoints < computerCricketPoints) {
     // play sound
     playerLosingCricketSound.play();
 
@@ -53,7 +53,7 @@ export function endOfGame() {
           computerCricketPoints - playerCricketPoints
         } points.
       `;
-  }else{
+  } else {
     // play sound
     buttonClickSound.play();
 
@@ -91,6 +91,8 @@ export function endOfGame() {
     whoWonRps = "";
     playerFirstBatAndFailed = false;
     computerFirstBatAndFailed = false;
+
+    threeInputsPlayerEnteredInRow = [];
 
     hideContainer(endGameContainer);
     showContainer(rpsGameContainer);

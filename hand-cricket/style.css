@@ -22,8 +22,8 @@ body {
 
     /* first screen */
     .logoContainer img {
-        width: 200px;
-        margin-top: 10px;
+        width: 150px;
+        margin-top: 45px;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -39,21 +39,19 @@ body {
         background-color: rgba(91, 91, 180, 0.4);
         padding: 5px;
         font-family: 'Poppins', sans-serif;
-        font-size: 15px;
+        font-size: 14px;
         color: rgb(228, 239, 248);
     }
 
     .welcomeScreenContainer h2 {
         font-family: 'Poppins', sans-serif;
         font-size: 18px;
-        margin-top: 10px;
         color: rgb(60, 69, 110);
     }
 
     .welcomeScreenContainer p {
         font-family: 'Poppins', sans-serif;
         margin-left: 8%;
-        margin-top: 5px;
         font-size: 15px;
     }
 
@@ -77,12 +75,7 @@ body {
         -ms-border-radius: 8px;
         -o-border-radius: 8px;
         margin-bottom: 150px;
-    }
-
-
-    .logoContainer {
-        margin-top: 10px;
-        margin-bottom: 30px;
+        cursor: pointer;
     }
 
     /*second screen*/
@@ -97,7 +90,7 @@ body {
     .imgContainer img {
         width: 50px;
         margin-left: 20px;
-        margin-top: 20px;
+        margin-top: 10px;
         border-radius: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -217,4 +210,31 @@ body {
         margin-top: -30px;
         margin-left: 5%;
     }
+
+    .bottomMargin{
+        margin-bottom: 150px;
+    }
+
+    /*navbar*/
+    nav{
+        position: fixed;
+        top:0px;
+        width: 100%;
+        background-color: rgba(91, 91, 180, 0.4);
+        padding: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: rgb(245, 245, 245);
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    nav div{
+        flex: 1;
+        text-align: center;
+        border: 0.5px solid grey;
+        padding: 1%;
+        background-color: rgba(104, 154, 197, 0.705);
+        cursor: pointer;
+}
 }
