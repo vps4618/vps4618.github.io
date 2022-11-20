@@ -282,7 +282,7 @@ a {
 
 }
 
-@media only screen and (max-width: 425px) and (orientation : landscape) {
+@media only screen and (max-width: 915px) and (orientation : landscape) {
     footer {
         position: absolute;
         margin-bottom: -300px;
