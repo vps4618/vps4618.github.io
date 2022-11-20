@@ -2,6 +2,14 @@
 // add functions when nav link clicked
 // add comment section
 
+// changelog 
+// v.1.01 
+// Game initial release
+
+// v.1.02
+// navbar added.functions not added yet.
+// if player input a value three times in a row when batting computer will take his wicket 
+
 "use strict";
 
 // importing functions
