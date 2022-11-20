@@ -16,6 +16,11 @@ body {
     background: linear-gradient(to right, rgba(91, 91, 180, 0.521), rgba(156, 80, 80, 0.459));
 }
 
+a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+}
+
 /* :nth-child(1) */
 
 @media only screen and (min-width:320px) {
@@ -242,6 +247,38 @@ body {
     nav div:hover {
         background-color: rgba(43, 63, 80, 0.705);
     }
+
+    /*change log styles*/
+    .changeLogContainer{
+        margin-top: 50px;
+        width: 80%;
+    }
+
+    .changeLogContainer h2{
+        font-family: 'Poppins',sans-serif;
+        font-size: 18px;
+        color: rgba(54, 54, 70, 0.678);
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .changeLogContainer dt{
+        font-family: 'Poppins',sans-serif;
+        margin: 2%;
+        font-size: 15px;
+        color: rgb(36, 51, 119);
+    }
+
+    .changeLogContainer dd{
+        font-family: 'Poppins',sans-serif;
+        font-size: 12px;
+        margin-left: 5%;
+    }
+    .changeLogContainer dd::before{
+        content: '# ';
+    }
+
+    /* || TODO : comment section*/
 
 }
 

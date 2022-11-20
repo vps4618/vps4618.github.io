@@ -39,24 +39,21 @@
   <body>
     <!--navbar-->
     <nav>
-      <div onclick="gameNavLinkClick()">
-        Game
-      </div>
-      <div onclick="changeLogNavLinkClick()">
-        Changelog
-      </div>
-      <div>
-        Comment
-      </div>
+      <div><a href="index.html">Game</a></div>
+      <div><a href="changeLog.html">Changelog</a></div>
+      <div><a href="comment.html">Comment</a></div>
     </nav>
-    
+
     <!--logo-->
-    <div class="logoContainer">
+    <div class="logoContainer" id="logoContainer">
       <img src="./images/logo.png" alt="logo image" />
     </div>
 
     <!--Welcome screen-->
-    <div id="welcomeScreenContainer" class="welcomeScreenContainer bottomMargin">
+    <div
+      id="welcomeScreenContainer"
+      class="welcomeScreenContainer bottomMargin"
+    >
       <h2>Welcome to hand cricket Game !</h2>
       <p>Click below button to start game.</p>
       <button onclick="startGame()">Start</button>
@@ -86,7 +83,7 @@
 
     <!-- rock paper scissors input window -->
     <div id="rpsGameContainer" class="hide rpsGameContainer bottomMargin">
-      <p>Enter rock,paper or scissors below : </p>
+      <p>Enter rock,paper or scissors below :</p>
 
       <p id="rpsCounterPara"></p>
       <select id="rpsInputSelect">
@@ -102,7 +99,7 @@
     <div id="rpsGameResultContainer" class="hide bottomMargin">
       <p id="rpsFinalResultPara"></p>
       <div class="hide" id="ballOrBatContainer">
-        <p id="ballOrBatSelectPara">Enter your choice of bat or ball below : </p>
+        <p id="ballOrBatSelectPara">Enter your choice of bat or ball below :</p>
         <select id="ballOrBatSelect">
           <option>ball</option>
           <option>bat</option>
@@ -114,7 +111,7 @@
     <!--cricket input window-->
     <div id="cricketGameContainer" class="hide bottomMargin">
       <p id="whoBat"></p>
-      <p>Enter choice : </p>
+      <p>Enter choice :</p>
       <p id="cricketCounterPara"></p>
       <select id="cricketSelect">
         <option>1</option>

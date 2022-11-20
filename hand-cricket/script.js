@@ -25,8 +25,6 @@ import { showContainer } from "./functions/showContainer.js";
 import { startGame } from "./functions/startGame.js";
 import { makingCricketGameEnd } from "./functions/makingCricketGameEnd.js";
 import { showImg } from "./functions/showImg.js";
-import { gameNavLinkClick } from "./functions/gameNavLinkClick.js";
-import { changeLogNavLinkClick } from "./functions/changeLogNavLinkClick.js";
 
 // sounds
 const playerWinRpsRoundSound = new Audio("sounds/playerWinRpsRound.mp3");
@@ -73,6 +71,7 @@ let computerFirstBatAndFailed = false;
 
 let threeInputsPlayerEnteredInRow = [];
 
+
 // fixing reference errors after import functions
 window.playerCricketPoints = playerCricketPoints;
 window.computerCricketPoints = computerCricketPoints;
@@ -83,11 +82,16 @@ window.playerFirstBatAndFailed = playerFirstBatAndFailed;
 window.computerFirstBatAndFailed = computerFirstBatAndFailed;
 window.threeInputsPlayerEnteredInRow = threeInputsPlayerEnteredInRow;
 
+
 // element imports
 // these variables didn't throw errors eventhough functions imported, beacuse these are belong to window object
 const welcomeScreenContainer = document.getElementById(
   "welcomeScreenContainer"
 );
+
+welcomeScreenContainer.style.display = "block";
+
+const logoContainer = document.getElementById("logoContainer");
 const infoContainer = document.getElementById("infoContainer");
 const rpsGameContainer = document.getElementById("rpsGameContainer");
 const rpsResultPara = document.getElementById("rpsResultPara");
@@ -125,5 +129,3 @@ window.cricketGameStart = cricketGameStart;
 window.addCricketPoints = addCricketPoints;
 window.makingCricketGameEnd = makingCricketGameEnd;
 window.showImg = showImg;
-window.gameNavLinkClick = gameNavLinkClick;
-window.changeLogNavLinkClick = changeLogNavLinkClick;
