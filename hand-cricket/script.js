@@ -1,5 +1,6 @@
-// || add sounds
-// || add styles
+// || TODO
+// add functions when nav link clicked
+// add comment section
 
 "use strict";
 
