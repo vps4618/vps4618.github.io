@@ -137,6 +137,12 @@ a {
         margin-top: 10px;
     }
 
+    .rpsGameContainer select:focus,
+    #cricketGameContainer select:focus,
+    #ballOrBatSelect:focus{
+        outline: none;
+    }
+
     .rpsGameContainer,
     #cricketGameContainer,
     #endGameContainer {

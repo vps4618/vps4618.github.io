@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.form{
+    margin-top: 50px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
+    display: none;
+}
+
+.commentButton{
+    margin-top: 60px;
+    margin-right: 150px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(214, 229, 236);
+    border-radius: 8px;
+    color: rgb(29, 44, 112);
+    border: 1px solid grey;
+    font-size: 13px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    cursor: pointer;
+}
+.form input{
+    border-radius: 5px;
+    border:1px solid grey;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 5px 0px 5px 0px;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+.form button{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(214, 229, 236);
+    border-radius: 8px;
+    color: rgb(29, 44, 112);
+    border: 1px solid grey;
+    font-size: 13px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    cursor: pointer;
+    margin-left: 130px;
+    margin-top: 10px;
+}
+
+/*comment section*/
+.commentsSection{
+    width: 80%;
+    font-family: 'Poppins',sans-serif;
+    margin-top: 15px;
+}
+.item{
+    width: 100%;
+    display: flex;
+    margin: 10px 0px 10px 0px;
+}
+.name{
+    font-size: 13px;
+    font-weight: bold;
+    /*warp text*/
+    word-break: break-all;
+    flex: 1;
+    background-color: rgba(202, 154, 178, 0.63);
+    padding: 10px;
+}
+.comment{
+    font-size: 12px;
+    word-break: break-all;
+    flex: 1;
+    font-style: italic;
+    background-color: rgb(199, 205, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.id{
+    font-size: 13px;
+    font-weight: bold;
+    background-color: rgb(223, 220, 235);
+    padding: 0px 5px 0px 5px;
+    flex: .2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.error{
+    color: rgb(207, 0, 0);
+    margin: 10px 0px 0px 50px;
+    text-align: center;
+}
+
+.info{
+    color: rgb(182, 39, 151);
+    margin: 10px 0px 0px 10px;
+    text-align: center;
+}
+
+small{
+    display: block;
+    font-weight: 100;
+    font-size: 10px;
+}

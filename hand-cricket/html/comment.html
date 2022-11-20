@@ -33,22 +33,45 @@
     />
     <meta name="author" content="vps4618" />
     <title>Hand Cricket Game</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="icon" href="./images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/comment.css" type="text/css">
+    <link rel="icon" href="../images/icon.png" type="image/x-icon" />
   </head>
   <body>
     <!--navbar-->
     <nav>
-      <div><a href="index.html">Game</a></div>
+      <div><a href="../index.html">Game</a></div>
       <div><a href="changeLog.html">Changelog</a></div>
       <div><a href="comment.html">Comment</a></div>
     </nav>
-   
+
+    <!--comment section-->
+    <div class="form" id="form">
+      <div>
+        <label for="firstNameInput">First Name : </label>
+        <input type="text" id="firstNameInput" />
+      </div>
+      <div>
+        <label for="lastNameInput">Last Name : </label>
+        <input type="text" id="lastNameInput" />
+      </div>
+      <div>
+        <label for="commentInput">Comment : </label>
+        <input type="text" id="commentInput" />
+      </div>
+      <button onclick="submitComment()">Submit</button>
+      <p class="message" id="message"></p>
+    </div>
+
+    <button class="commentButton" onclick="showForm()" id="commentButton">Comment</button>
+    <div class="commentsSection" id="commentsSection">
+    </div>
+
     <!-- footer -->
     <footer>
       &copy;2022 VPS<br /><abbr title="Date Last Updated">DLU</abbr> -
       2022/11/20 V.1.02
     </footer>
-    <script type="module" src="script.js"></script>
+    <script src="../js/comment.js"></script>
   </body>
 </html>
