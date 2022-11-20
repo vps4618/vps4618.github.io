@@ -16,6 +16,8 @@ import { showContainer } from "./functions/showContainer.js";
 import { startGame } from "./functions/startGame.js";
 import { makingCricketGameEnd } from "./functions/makingCricketGameEnd.js";
 import { showImg } from "./functions/showImg.js";
+import { gameNavLinkClick } from "./functions/gameNavLinkClick.js";
+import { changeLogNavLinkClick } from "./functions/changeLogNavLinkClick.js";
 
 // sounds
 const playerWinRpsRoundSound = new Audio("sounds/playerWinRpsRound.mp3");
@@ -114,3 +116,5 @@ window.cricketGameStart = cricketGameStart;
 window.addCricketPoints = addCricketPoints;
 window.makingCricketGameEnd = makingCricketGameEnd;
 window.showImg = showImg;
+window.gameNavLinkClick = gameNavLinkClick;
+window.changeLogNavLinkClick = changeLogNavLinkClick;
