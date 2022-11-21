@@ -25,13 +25,25 @@ xhrGet.onload = () => {
                                             }</p>
                                         </div>`;
     });
+  } else if (xhrGet.status === 403) {
+    commentsSection.innerHTML = `<div class="item">
+                                            <p class="id">*</p>
+                                            <p class="name">forbidden</p>
+                                            <p  class="comment">*</p>
+                                        </div>`;
+  } else if (xhrGet.status === 429) {
+    commentsSection.innerHTML = `<div class="item">
+                                            <p class="id">*</p>
+                                            <p class="name">Too many requests</p>
+                                            <p  class="comment">*</p>
+                                        </div>`;
   } else {
     const data = xhrGet.response;
     const error = JSON.parse(data);
     commentsSection.innerHTML = `<div class="item">
-                                            <p class="id">${error}</p>
+                                            <p class="id">*</p>
                                             <p class="name">${error}</p>
-                                            <p  class="comment">${error}</p>
+                                            <p  class="comment">*</p>
                                         </div>`;
   }
 };
@@ -106,8 +118,15 @@ function submitComment() {
               ) {
                 const commentsArray = xhrGet.response.records;
                 commentsSection.innerHTML = "";
-                commentsArray.map((comment) => {
+                if (commentsArray.length === 0) {
                   commentsSection.innerHTML += `<div class="item">
+                  <p class="id">*</p>
+                  <p class="name">No comments</p>
+                  <p  class="comment">*</p>
+              </div>`;
+                } else {
+                  commentsArray.map((comment) => {
+                    commentsSection.innerHTML += `<div class="item">
                                                     <p class="id">${
                                                       comment.id
                                                     }</p>
@@ -116,21 +135,34 @@ function submitComment() {
                                                       " " +
                                                       comment.lastName
                                                     } <small>${
-                    comment.dateTime
-                  }</small></p>
+                      comment.dateTime
+                    }</small></p>
                                                     <p  class="comment">${
                                                       comment.comment
                                                     }</p>
                                                 </div>`;
-                });
+                  });
+                }
+              } else if (xhrGet.status === 403) {
+                commentsSection.innerHTML = `<div class="item">
+                                                        <p class="id">*</p>
+                                                        <p class="name">forbidden</p>
+                                                        <p  class="comment">*</p>
+                                                    </div>`;
+              } else if (xhrGet.status === 429) {
+                commentsSection.innerHTML = `<div class="item">
+                                                        <p class="id">*</p>
+                                                        <p class="name">Too many requests</p>
+                                                        <p  class="comment">*</p>
+                                                    </div>`;
               } else {
                 const data = xhrGet.response;
                 const error = JSON.parse(data);
                 commentsSection.innerHTML = `<div class="item">
-                                                    <p class="id">${error}</p>
-                                                    <p class="name">${error}</p>
-                                                    <p  class="comment">${error}</p>
-                                                </div>`;
+                                                        <p class="id">*</p>
+                                                        <p class="name">${error}</p>
+                                                        <p  class="comment">*</p>
+                                                    </div>`;
               }
             };
 
