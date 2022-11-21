@@ -22,7 +22,7 @@
     -o-border-radius: 8px;
     cursor: pointer;
 }
-.form input{
+.form input,.form textarea{
     border-radius: 5px;
     border:1px solid grey;
     font-family: 'Poppins',sans-serif;
@@ -31,14 +31,14 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    margin: 5px 0px 5px 0px;
+    margin: 10px 0px 5px 0px;
 }
 
-.form input:focus{
+.form input:focus,.form textarea:focus{
     outline: none;
 }
 
-.form button{
+.submitButton{
     font-family: 'Poppins', sans-serif;
     background-color: rgb(214, 229, 236);
     border-radius: 8px;
@@ -50,10 +50,24 @@
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
     cursor: pointer;
-    margin-left: 130px;
+    margin-left: 80px;
     margin-top: 10px;
 }
 
+.cancelButton{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(214, 229, 236);
+    border-radius: 8px;
+    color: rgb(29, 44, 112);
+    border: 1px solid grey;
+    font-size: 13px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    -ms-border-radius:8px;
+    -o-border-radius:8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
 /*comment section*/
 .commentsSection{
     width: 80%;
@@ -116,4 +130,8 @@ small{
     display: block;
     font-weight: 100;
     font-size: 10px;
+}
+
+textarea{
+    width: 158px;
 }
