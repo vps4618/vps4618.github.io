@@ -27,6 +27,7 @@
     border:1px solid grey;
     font-family: 'Poppins',sans-serif;
     font-size: 13px;
+    width: 158px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -130,8 +131,4 @@ small{
     display: block;
     font-weight: 100;
     font-size: 10px;
-}
-
-textarea{
-    width: 158px;
 }
