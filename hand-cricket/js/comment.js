@@ -77,7 +77,7 @@ function showForm() {
 }
 
 function submitComment() {
-  playerWinningCricketSound.play();
+
   let firstName = document.getElementById("firstNameInput").value;
   let lastName = document.getElementById("lastNameInput").value;
   let comment = document.getElementById("commentInput").value;
@@ -117,6 +117,7 @@ function submitComment() {
       });
       xhr.onload = () => {
         if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 201)) {
+          playerWinningCricketSound.play();
           message.innerHTML = JSON.parse(xhr.responseText).message;
           message.className = "info";
 
