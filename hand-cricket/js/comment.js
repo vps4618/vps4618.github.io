@@ -223,6 +223,7 @@ function cancelComment(){
   document.getElementById("firstNameInput").value = "";
   document.getElementById("lastNameInput").value = "";
   document.getElementById("commentInput").value = "";
+  message.innerHTML = "";
   form.style.display = "none";
   commentButton.style.display = "block";
 }
