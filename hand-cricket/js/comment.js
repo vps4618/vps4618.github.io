@@ -11,20 +11,31 @@ xhrGet.onload = () => {
     (xhrGet.status == 200 || xhrGet.status == 201)
   ) {
     const commentsArray = xhrGet.response.records;
-    commentsArray.map((comment) => {
+    if (commentsArray.length === 0) {
       commentsSection.innerHTML += `<div class="item">
-                                            <p class="id">${comment.id}</p>
-                                            <p class="name">${
-                                              comment.firstName +
-                                              " " +
-                                              comment.lastName
-                                            } <small>${comment.dateTime}</small>
-                                            </p>
-                                            <p  class="comment">${
-                                              comment.comment
-                                            }</p>
-                                        </div>`;
-    });
+      <p class="id">*</p>
+      <p class="name">No comments</p>
+      <p  class="comment">*</p>
+  </div>`;
+    } else {
+      commentsArray.map((comment) => {
+        commentsSection.innerHTML += `<div class="item">
+                                        <p class="id">${
+                                          comment.id
+                                        }</p>
+                                        <p class="name">${
+                                          comment.firstName +
+                                          " " +
+                                          comment.lastName
+                                        } <small>${
+          comment.dateTime
+        }</small></p>
+                                        <p  class="comment">${
+                                          comment.comment
+                                        }</p>
+                                    </div>`;
+      });
+    }
   } else if (xhrGet.status === 403) {
     commentsSection.innerHTML = `<div class="item">
                                             <p class="id">*</p>
