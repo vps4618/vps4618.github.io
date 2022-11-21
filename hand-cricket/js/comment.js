@@ -66,12 +66,18 @@ const commentButton = document.getElementById("commentButton");
 const message = document.getElementById("message");
 const commentsSection = document.getElementById("commentsSection");
 
+// sounds
+const buttonClickSound = new Audio("../sounds/buttonClick.mp3");
+const playerWinningCricketSound = new Audio("../sounds/playerWinningCricket.mp3");
+
 function showForm() {
+  buttonClickSound.play();
   form.style.display = "block";
   commentButton.style.display = "none";
 }
 
 function submitComment() {
+  playerWinningCricketSound.play();
   let firstName = document.getElementById("firstNameInput").value;
   let lastName = document.getElementById("lastNameInput").value;
   let comment = document.getElementById("commentInput").value;
@@ -212,6 +218,8 @@ function submitComment() {
 }
 
 function cancelComment(){
+  buttonClickSound.play();
+  
   document.getElementById("firstNameInput").value = "";
   document.getElementById("lastNameInput").value = "";
   document.getElementById("commentInput").value = "";
