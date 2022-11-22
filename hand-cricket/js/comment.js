@@ -1,5 +1,16 @@
 "use strict";
 
+const form = document.getElementById("form");
+const commentButton = document.getElementById("commentButton");
+const message = document.getElementById("message");
+const commentsSection = document.getElementById("commentsSection");
+
+commentsSection.innerHTML += `<div class="item">
+      <p class="id">*</p>
+      <p class="name"><font style="color:royalblue">Loading comments</font></p>
+      <p  class="comment">*</p>
+  </div>`;
+
 // loads comments when page loads
 // get request
 const xhrGet = new XMLHttpRequest();
@@ -12,24 +23,22 @@ xhrGet.onload = () => {
   ) {
     const commentsArray = xhrGet.response.records;
     if (commentsArray.length === 0) {
+      commentsSection.innerHTML = "";
       commentsSection.innerHTML += `<div class="item">
       <p class="id">*</p>
       <p class="name">No comments</p>
       <p  class="comment">*</p>
   </div>`;
     } else {
+      commentsSection.innerHTML = "";
       commentsArray.map((comment) => {
         commentsSection.innerHTML += `<div class="item">
-                                        <p class="id">${
-                                          comment.id
-                                        }</p>
+                                        <p class="id">${comment.id}</p>
                                         <p class="name">${
                                           comment.firstName +
                                           " " +
                                           comment.lastName
-                                        } <small>${
-          comment.dateTime
-        }</small></p>
+                                        } <small>${comment.dateTime}</small></p>
                                         <p  class="comment">${
                                           comment.comment
                                         }</p>
@@ -61,14 +70,11 @@ xhrGet.onload = () => {
 
 xhrGet.send();
 
-const form = document.getElementById("form");
-const commentButton = document.getElementById("commentButton");
-const message = document.getElementById("message");
-const commentsSection = document.getElementById("commentsSection");
-
 // sounds
 const buttonClickSound = new Audio("../sounds/buttonClick.mp3");
-const playerWinningCricketSound = new Audio("../sounds/playerWinningCricket.mp3");
+const playerWinningCricketSound = new Audio(
+  "../sounds/playerWinningCricket.mp3"
+);
 
 function showForm() {
   buttonClickSound.play();
@@ -77,7 +83,6 @@ function showForm() {
 }
 
 function submitComment() {
-
   let firstName = document.getElementById("firstNameInput").value;
   let lastName = document.getElementById("lastNameInput").value;
   let comment = document.getElementById("commentInput").value;
@@ -122,6 +127,12 @@ function submitComment() {
           message.className = "info";
 
           setTimeout(() => {
+            commentsSection.innerHTML = "";
+            commentsSection.innerHTML += `<div class="item">
+                  <p class="id">*</p>
+                  <p class="name"><font style="color:royalblue">Loading comments</font></p>
+                  <p  class="comment">*</p>
+              </div>`;
             // get request
             const xhrGet = new XMLHttpRequest();
             xhrGet.open(
@@ -137,12 +148,14 @@ function submitComment() {
                 const commentsArray = xhrGet.response.records;
                 commentsSection.innerHTML = "";
                 if (commentsArray.length === 0) {
+                  commentsSection.innerHTML = "";
                   commentsSection.innerHTML += `<div class="item">
                   <p class="id">*</p>
                   <p class="name">No comments</p>
                   <p  class="comment">*</p>
               </div>`;
                 } else {
+                  commentsSection.innerHTML = "";
                   commentsArray.map((comment) => {
                     commentsSection.innerHTML += `<div class="item">
                                                     <p class="id">${
@@ -218,9 +231,9 @@ function submitComment() {
   }
 }
 
-function cancelComment(){
+function cancelComment() {
   buttonClickSound.play();
-  
+
   document.getElementById("firstNameInput").value = "";
   document.getElementById("lastNameInput").value = "";
   document.getElementById("commentInput").value = "";
