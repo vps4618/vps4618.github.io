@@ -4,743 +4,728 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Experience</title>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        padding-left: 10px;
-        padding-top: 10px;
-      }
-      #myBtn {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: steelblue;
-        color: white;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 10px;
-      }
-    </style>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <div>
+    <!--header elements-->
+    <header class="header">
+      <div class="header-controls">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+          🌙
+        </button>
+      </div>
+    </header>
 
-    <div class="links">
-      <h3 style="background-color: thistle">Links</h3>
-      <ol>
-        <li><a href="#before-aca">Before Academics</a></li>
-        <li><a href="#aca">After Academics</a></li>
-        <ul>
-          <li><a href="#maths">Mathematics</a></li>
+    <div class="container">
+      <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+
+      <div class="links">
+        <h3>Quick Navigation</h3>
+        <ol>
+          <li><a href="#before-aca">Before Academics</a></li>
+          <li><a href="#aca">After Academics</a></li>
           <ul>
-            <li><a href="#maths-end">End exam</a></li>
+            <li><a href="#maths">Mathematics</a></li>
+            <ul>
+              <li><a href="#maths-end">End exam</a></li>
+            </ul>
+
+            <li><a href="#cs">CS</a></li>
+            <ul>
+              <li><a href="#cs-labs">Labs</a></li>
+              <li><a href="#cs-pp1">PP1</a></li>
+              <li><a href="#cs-pp2">PP2</a></li>
+              <li><a href="#cs-end">End exam</a></li>
+            </ul>
+
+            <li><a href="#electrical">Electrical</a></li>
+            <li><a href="#mechanics">Mechanics</a></li>
+            <li><a href="#material">Material</a></li>
+            <li><a href="#fluid">Fluid</a></li>
           </ul>
+        </ol>
+         <div class="highlight-info">
+          <p style="margin-bottom: 0; font-weight: 500;">
+          (හොදට මේ ටික කියවලා , මතක තියාගෙන, ප්‍රශ්න තිබ්බොත් අහලා, හරියට වැඩ
+          ටික කරගෙන යන්න. එතකොට අන්තිම කාලෙ stress ගොඩක් අඩුයි)
+        </p>
+        </div>
+      </div>
 
-          <li><a href="#cs">CS</a></li>
-          <ul>
-            <li><a href="#cs-labs">Labs</a></li>
-            <li><a href="#cs-pp1">PP1</a></li>
-            <li><a href="#cs-pp2">PP2</a></li>
-            <li><a href="#cs-end">End exam</a></li>
-          </ul>
-
-          <li><a href="#electrical">Electrical</a></li>
-          <li><a href="#mechanics">Mechanics</a></li>
-          <li><a href="#material">Material</a></li>
-          <li><a href="#fluid">Fluid</a></li>
-        </ul>
-      </ol>
-      <p style="font-weight: bold">
-        (හොදට මේ ටික කියවලා , මතක තියාගෙන, ප්‍රශ්න තිබ්බොත් අහලා, හරියට වැඩ ටික
-        කරගෙන යන්න. එතකොට අන්තිම කාලෙ stress ගොඩක් අඩුයි)
-      </p>
-    </div>
-
-    <hr />
-    <br />
-    <br />
-
-    <div class="before-academics">
-      <p
-        style="
-          color: black;
-          font-weight: bold;
-          font-size: 20px;
-          text-decoration: underline;
-        "
-        id="before-aca"
-      >
-        Academics වලට කලින් (පුලුවන් තරම් කරල academics පටන් ගත්තට පස්සෙ වැඩ
-        බෙදාගෙන කරන්න)
-      </p>
-      <br />
-
-      <ol>
-        <li>CS</li>
-        <ul>
-          <li><b>Python</b></li>
-          <p>
-            Code pro lk youtube python playlist (නෝට් එකක් හදල තියාගන්න) -
-            <a
-              href="https://youtube.com/playlist?list=PL495mke12zYC-ZUbzd1Z0Y6WteuvsMf7Z&si=wRra7tn7z6Za_Fv5"
-              target="_blank"
-              >link</a
-            >
-          </p>
-          <p style="text-align: center">හෝ</p>
-          <p>
-            brocode python video (නෝට් එකක් හදල තියාගන්න) –
-            <a
-              href="https://youtu.be/ix9cRaBkVe0?si=pN42sWjITmk-zUm4"
-              target="_blank"
-              >link</a
-            >
-          </p>
-          <p style="text-align: center">හෝ</p>
-          <p>
-            Python (Code with Mosh) (python standard library වගේ වෙනකන් බලන්න)
-            (නෝට් එකක් හදල තියාගන්න) –
-            <a
-              href="https://mega.nz/folder/jnAjxSLI#n-iNbePnNzdPBf_R5meesA"
-              target="_blank"
-              >link</a
-            >
-          </p>
-          <li><b>Data structures and algorithms</b></li>
-          <p>
-            Codeprolk dsa (නෝට් එකක් හදල තියාගන්න)-
-            <a
-              href="https://youtube.com/playlist?list=PL495mke12zYDIwsabzb61OLdBpg3QDcXg&si=KIpK3OSgyZk4Bxfb"
-              target="_blank"
-              >link</a
-            >
-          </p>
-          <li><b>Hakkerrank contest</b></li>
-          <p>
-            (අනිවා academics පටන් ගන්න කලින් මේකේ ප්‍රශ්න ටික කරන්න) (python
-            තියරි පොඩ්ඩක් කවර් වුනු ගමන්ම පටන් අරන් කරන්න try කරන්න) –
-            <a
-              href="https://www.hackerrank.com/contests/24-programming-kuppiya/challenges"
-              target="_blank"
-              >link</a
-            >
-          </p>
-        </ul>
-        <li>Maths</li>
-        <ul>
-          <br />
-          <li>
-            Dasun sir real (මේ විඩියෝ වල කරනවට වඩා අපේ සිලබස් ගොඩක් ලොකුයි.
-            අමාරුයි. ඒත් මේකෙන් හොද අඩිතාලමක් හම්බෙයි) (බලන ගමන් නෝට් එකකුත්
-            හදන්න) –
-            <a
-              href="https://drive.google.com/drive/folders/1r91DJixaOrQk8XE9nwiuWrnw8R115jXG?usp=drive_link"
-              target="_blank"
-              >link</a
-            >
-          </li>
-          <br />
-          <li>
-            Optional (අමතර) – mit real analysis (කැමති අය බලන්න) -
-            <a
-              href="https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/"
-              target="_blank"
-              >link</a
-            >
-          </li>
-          <br />
-          <li>
-            Reimann youtube playlist (reimann මීට වඩා ගොඩක් අමාරුයි. ඒත් මේකෙන්
-            base එක හැදේවි) (බලන ගමන් නෝට් එකකුත් හදන්න) -
-            <a
-              href="https://youtube.com/playlist?list=PLTolGH4M6l9hOCD32Ke_N_lC_DRTA5fa3&si=lRHRmuKndK9dj9Bo"
-              target="_blank"
-              >link</a
-            >
-          </li>
-          <br />
-        </ul>
-        <li>Mechanics</li>
-        <ul>
-          <br />
-          <li>
-            Dynamics lecture video කීපයක් බලන්න (නැත්නම් physical ලෙක්චර්ස්
-            තේරෙන්නෙ නැති වෙයි) -
-            <a
-              href="https://drive.google.com/drive/folders/10ZuVkksFW_8P6AY2vMv_Ub3Rako35UnV?usp=drive_link"
-              target="_blank"
-              >link</a
-            >
-          </li>
-          <br />
-          <li>
-            Lecture slides ටික මේ ලින්ක් එකෙන් ගන්න -
-            <a
-              href="https://drive.google.com/drive/folders/1bC9DZiGvdQ26fzEcwn875orUIrfF2g1V?usp=drive_link"
-              target="_blank"
-              >link</a
-            >
-          </li>
-          <br />
-          <li>
-            Note එකක් හදාගන්න පස්සෙ බලන්න. Note හදන හැටි මේ නෝට් වලින් බලන්න.
-            අලුතින්ම මේ වගේ shortnote හදන්න. නැත්නම් මේකටම අවශ්‍ය දේවල් add
-            කරගන්න.-
-            <a
-              href="https://drive.google.com/drive/folders/1h3Tnm5aCOywStJ67-nheAl7Ui4hAnAeG?usp=drive_link"
-              target="_blank"
-              >link</a
-            >
-          </li>
-        </ul>
-      </ol>
-    </div>
-
-    <br />
-    <div class="academics">
-      <p
-        style="
-          color: black;
-          font-weight: bold;
-          font-size: 20px;
-          text-decoration: underline;
-        "
-        id="aca"
-      >
-        Academics පටන් ගත්තට පස්සෙ
-      </p>
       <hr />
       <br />
-      <p>
-        අන්තිම කාලෙ stress නොවි අනිත් අයටත් බැරි ඒව කියල දීල relax එකේ ප්‍රශ්න
-        කරන්න නම් මුල ඉදල theory cover කරගෙන , shortnote ගහලා , එන end paper
-        structure , ප්‍රශ්න වල හැටි දැනගෙන ඉන්න ඔනේ.
-        <br />
-        Theory විතරක් cover කරල ,අන්තිමම කාලෙ shortnote ගහලා ඒකාලෙම paper කරන්න
-        පටන් ගත්තොත් ලොකු stress එකක් එන්නේ. වැඩක් හරියට කරගන්නත් බැරි වෙනව load
-        එක හොදටම වැඩි නිසා
-      </p>
-
-      <br />
-      <p
-        style="
-          color: darkgoldenrod;
-          text-decoration: underline;
-          font-weight: bolder;
-        "
-      >
-        End paper ගොඩක් අමාරුයි.ප්‍රශ්න හොදට කරලා tricks අදුරගත්තොත් තමයි වෙලාවට
-        හරියට paper එක කරන්න පුලුවන්. ඒකට වෙලාව හදාගන්න මුල ඉදල වැඩකරල කලින්
-        theory cover කරගන්න ඕනේ.
-      </p>
-
       <br />
 
-      <p>
-        තනියෙන් විසදගන්න බැරි ප්‍රශ්නයක් ආවම අනිවා හොද යාලුවෙක්/senior
-        කෙනෙක්ගෙන් අහල විසදගන්න හිතේ තියන් ඉන්නේ නැතුව.
-      </p>
-
-      <br />
-
-      <ul>
-        <li>Lecture යන්න කලින් ගිය සතියෙ ටික අනිවා බලන් යන්න.</li>
-        <li style="color: darkcyan; font-weight: bold">
-          ටැබ් එකක් නැත්නම් lecture යන්න කලින් aca folder එකෙන් lecture slides
-          download කරලා printout අරන් ගිහින් lecture එකේ කියන වැදගත් දේවල්
-          ලියාගන්න.
-        </li>
-      </ul>
-
-      <br />
-
-      <p>
-        (real වල lecture වලදි සර් ලියන නෝට් එක ලියන්න හෝ සර් moodle එකට upload
-        කලාට පස්සේ ඒක බලලා තේරෙන්නේ නැති ඒව බලල අල්ලගන්න.) ඊටපස්සේ සතිය ඇතුලත
-        shortnote එකක් හදාගන්න.
-      </p>
-
-      <br />
-
-      <p>
-        ටැබ් එකක් තියෙනවනම් lecture slides download කරල ඒක උඩ වැදගත් දේවල්
-        annotate කරගන්න.
-      </p>
-
-      <br />
-
-      <p style="color: palevioletred; font-weight: bold">
-        ** end exam තියෙන්නෙ එක දිගට (අපිට හා කලින් බැජ් වලටත් එහෙමයි) . අපිට
-        subject 4ක් එකදිගට තිබ්බා. ඒකනිසා subject 6 ටම කලින් හොදට ලෑස්ති වෙලා
-        ඉන්න ඕනේ. නැත්නම් එක විභාගයක් ඉවර වෙලා අනිත් එකට ලෑස්ති වෙන්න තියෙන්නෙ
-        දවසෙ අනිත් වෙලාව විතරයි නිසා හොදටම stress වෙනවා.
-      </p>
-
-      <h3 id="maths" style="text-decoration: underline">
-        Maths (3 credit module)
-      </h3>
-
-      <ol>
-        <li>
-          සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න. Maths
-          shortnote ගැන අදහසක් මේකෙන් ගන්න. -
-          <a
-            href="https://drive.google.com/drive/folders/1FVC5xvUTa_-7ozy-1knxJZi0BSRUJ5Lz?usp=drive_link"
-            target="_blank"
-            >link</a
-          >
-        </li>
-        <li>
-          <p>
-            Real වල proof ලියල ලියල පුරුදුවෙන්න. AI tool ,අමාරු තැන් තේරුම් ගන්න
-            පාවිච්චි කරන්න. ඒත් සම්පූර්නයයෙන් ඒ මත යැපෙන්න එපා. Proof එක පොඩ්ඩක්
-            බලල ඒක තනියෙන් නොබල ලියන්න try කරන්න. මැත්ස් අනිත් කෑලි වලටත් බර
-            සමානව දීල මේකට වැඩ කරන්න . Real analysis අමාරු තැන් පොත්වලින් හොයල
-            බලන්න. (e.g. U.A. Senevirathna සර්ගෙ real analysis book)
-          </p>
-
-          <br />
-          <p style="color: darkgoldenrod; font-weight: bold">
-            Real lectures සෙම් එකේ අන්තිම වෙනකන් යනව. අන්තිම කොටස් ගොඩක්
-            අමාරුයි. ඒවගින් end එකට ලොකු ලකුනු ප්‍රමානයකුත් එනව. ඒක නිස කලින්
-            කොටස් හොදට අල්ලගෙන proof ලියල ලියල පුරුදු වෙල මේ කොටස් ටිකේ අල්ලගෙන
-            යන්න. අන්තිම tutorial ටිකත් කරන්න. පොත් වලින් තේරෙන්නේ නැති තැන්
-            තේරුම් ගන්න.
-          </p>
-        </li>
-        <li>
-          <p>
-            Reimann වල end exam එකට ප්‍රශ්න වැඩියෙන්ම එන්නේ අන්තිමටම තියෙන කොටස්
-            වලින්.ඒවා කවර් වෙද්දි විබාගෙ ලංවෙලා. එතකොට හරියට ප්‍රශ්න කරන්න වෙලා
-            නෑ. මතක හිටින්නෙත් නෑ.
-          </p>
-          <br />
-          <p
-            style="
-              color: slateblue;
-              text-decoration: underline;
-              font-weight: bold;
-            "
-          >
-            සූත්‍ර ගොඩක් තියෙනවා . ඒව මතක තියාගන්න ලියල ලියල පුරුදු වෙන්න වෙනවා.
-            ඒත් අන්තිම කාලේ වෙලාව මදි.
-          </p>
-          <br />
-          <p>ඒකනිසා reimann theory කලින් කවර් කරන්න බලන්න.</p>
-          <br />
-          <p>
-            Reimann lecture video link(ODE + Reimann) -
-            <a
-              href="https://drive.google.com/drive/folders/1xlcTnuins6YrFYXgslb-KqozG2YejBZY?usp=drive_link"
-              target="_blank"
-              >link</a
-            >
-          </p>
-          <br />
-          <p>ඊටපස්සේ end exam ප්‍රශ්න කරලා tricks අදුරගන්න.</p>
-        </li>
-        <li>
-          <p>
-            ODE , algebra parts ටික ලෙක්චර් ටික එක්ක අල්ලන් යන්න පුලුවන්.
-            Tutorial වල ඒ කොටස් වලදි හම්බෙන විශේශ තැන් වෙනම ලියාගෙන විබාගෙට
-            කලින් බලල යන්න.
-          </p>
-          <br />
-          <p id="maths-end" style="color: peru; font-weight: bold">
-            මැත්ස් වල mcq ගොඩක්ම past paper ප්‍රශ්න වලම අලුත් ප්‍රශ්න නිසා past
-            paper අවුරුදු දෙක තුනක ප්‍රශ්න පාඩම් වලට වෙන් කරල අරන් අවම දෙපාරක්
-            වත් කරල යන්න. Tricks අදුරගෙන ඒවා පාවිච්චි කරන්න.
-          </p>
-
-          <ul>
-            <li>
-              End paper structure (3 hours) – mcq 30 , short answer questions 10
-              (reimann , ode , algebra parts වලින්) (එකකට ලකුනු 6 ගානේ) රචන
-              ප්‍රශ්න 6 (real) (එකකට ලකුනු 20 යි) Final grade එක end එකෙන් 80%
-              යි CA (spot quiz , tutorial) වලින් 20% කින් හැදෙන්නෙ.
-            </li>
-          </ul>
-          <br />
-        </li>
-        <li style="text-decoration: underline">
-          Cw Cal එකෙන් ලොකු ගේමක් ගහන්න පුලුවන් end එකේ. ඒ ක්‍රම ටික අදුරගන්න.
-        </li>
-        <br />
-        <li style="text-decoration: underline">
-          Paper ගොඩක් moderate වෙනවා.ඒකනිසා end එක අමාරු වුනාට කරගන්න බැරි වුනාට
-          එච්චර හිතන්නේ නැතුව අනිත් subject වලට focus එක දෙන්න(end එකේදි)
-        </li>
-      </ol>
-      <br /><br />
-      <h3 id="cs" style="text-decoration: underline">CS (3 credit module)</h3>
-      <ol>
-        <li>
-          සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න. Cs
-          shortnote ගැන අදහසක් මේකෙන් ගන්න. -
-          <a
-            href="https://drive.google.com/drive/folders/1jq5qjFQwTUYCVCW29Q23385iH-7pamw6?usp=drive_link"
-            target="_blank"
-            >link</a
-          >
-        </li>
-        <br />
-        <li>
-          Moodle එකට upload කරන quizzes ටික සතිය ඇතුලත අනිවා කරල වැදගත් දේවල්
-          වෙනම තියාගන්න end එකට බලන්න.
-        </li>
-        <li>
-          සතියේ ලෙක්චර් වල කරපු කොටස් moodle / aca folder තියෙන lecture notes
-          (Book A , Book B , Book C) කියවල තේරුම් ගන්න.
-        </li>
-        <li>ඒ ඒ සතියේ දාන Jupiter note file run කරල test ක‍රල බලන්න.</li>
-        <li id="cs-labs">Hakerrank වල ප්‍රශ්න ටික lab වලට කලින් කරන්න.</li>
-        <li>
-          Cs lab වලට flowchart අදින්න lucid chart වෙබ්සයිට් එක පාවිච්චි කරන්න.
-        </li>
-        <br />
-        <li
+      <div class="section">
+        <p
           style="
-            color: black;
-            text-decoration: underline;
-            background-color: bisque;
-          "
-        >
-          කවුරුත් එක්කවත් lab වල code , flowcharts share කරන්න එපා. Copied
-          වදින්න පුලුවන්.
-        </li>
-        <br />
-        <li id="cs-pp1">
-          p1 , pp2 වලට කලින් කලින් අවුරුදු වල ප්‍රශ්න කීපයක් කරල යන්න. (lecture
-          notes ටිකත් බලල යන්න.) ඒ කාලෙට කරන කුප්පි ටික අනිව බලල යන්න. කලින්
-          අවුරුද්දක වගේ කුප්පිත් බලන්න.
-          <br />
-          <p id="cs-pp2" style="text-decoration: underline">
-            Pp1,pp2 වලට නෝට් අරන් යන්න පුලුවන් නිසා, Points, code snippets
-            ලියාගෙන / ප්‍රින්ට් අවුට් අරන් යන්න.
-          </p>
-          <br />
-          <ul>
-            <li>pp1 කුප්පි</li>
-            <ul>
-              <li>
-                <a
-                  href="https://youtu.be/e0EPCu_XS0A?si=rbdgi9Ruvgx_ISwh"
-                  target="_blank"
-                  >link 1</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/live/AbMpNtDDtik?si=4n37DCfXXQgCXtwN"
-                  target="_blank"
-                  >link 2</a
-                >
-              </li>
-            </ul>
-            <li>pp2 කුප්පි</li>
-            <ul>
-              <li>
-                <a
-                  href="https://www.youtube.com/live/ZKTcOaO0C0k?si=T21il8r_4CUNB87n"
-                  target="_blank"
-                  >link 1</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/live/akePo9RyQjE?si=Owp3lfgMDbCwwVYe"
-                  target="_blank"
-                  >link 2</a
-                >
-              </li>
-            </ul>
-          </ul>
-        </li>
-        <br />
-        <li>
-          Hardware කොටසට book C කියවන්න ඕනේ. ඒ book C එක තේරුම් ගන්න මේ කුප්පිය
-          බලන්න. (කලින් බලල ඉවර කරල තියාගන්න.) -
-          <a
-            href="https://www.youtube.com/live/oi9E6Apjcck?si=C2Vcbjrzzgo9xwWD"
-            target="_blank"
-            >link</a
-          >
-        </li>
-        <br />
-        <li id="cs-end">
-          End වලට එන Algorithms , ADT ප්‍රශ්න ගොඩක් අමාරුයි. ඒකට මුලදි කිව්ව
-          playlist එක බලල මදි. Book B හොදට කියවල ,Past paper ප්‍රශ්න හොදට කරන්න
-          ඕනේ. Lecture slides ටිකත් අනිව බලල තේරුම් ගන්න ප්‍රශ්න කරන ගමන්.
-          <br /><br />
-          (recursion , algorithms , ADT වලින් තමයි පේපර් එකේ වැඩිම ප්‍රශ්න ගානක්
-          එන්නේ. ඒක නිසා ඒ සර් ගේ ලෙක්චර් වලට අනිවාරෙන් යන්න.)
-
-          <br /><br />
-          ADT/sorting මේ කුප්පියත් බලන්න -
-          <a
-            href="https://www.youtube.com/live/YX61Bm5SpWY?si=zXkDa3GxPhrMOSIb"
-            target="_blank"
-            >link</a
-          >
-        </li>
-        <br />
-        <li>
-          End Past paper අවුරුදු 3,4 වගේ කරල යන්න. ඒ කාලෙට කරන කුප්පිත් බලන්න.
-          ඒවා ගොඩක් උදවු වෙයි. කලින් අවුරුදු 2,3 වල paper discussion
-          බලන්න.ඒවගෙන් tricks , point ගොඩක් හම්බෙවි. <br /><br />
-          <ul>
-            <li>
-              <a
-                href="https://www.youtube.com/live/LQ_PVgOPNsc?si=9imkdM8iaz2eaf3j"
-                target="_blank"
-                >23 paper part 1</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://youtu.be/eqOM3Ai4HW0?si=4v66lO-0CJY0vdAU"
-                target="_blank"
-                >23 paper part 2</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/live/fTgRaukxC0A?si=nCk1Pc3NGRqCHzyZ"
-                target="_blank"
-                >24 kuppiya</a
-              >
-            </li>
-          </ul>
-        </li>
-        <br />
-        <li
-          style="
-            color: black;
             font-weight: bold;
-            background-color: blanchedalmond;
+            font-size: 20px;
+            text-decoration: underline;
           "
+          id="before-aca"
         >
-          Cs වල end එකට cal ගෙනියන්න දෙන්නෙ නෑ.
-          <ul>
-            <li>Paper structure – 80 mcqs (3 hours)</li>
-          </ul>
-        </li>
-      </ol>
-      <br />
-      <h3 style="text-decoration: underline" id="electrical">
-        Electrical (2 credit module)
-      </h3>
-      <ol>
-        <li>
-          සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න.
-          Electrical shortnote ගැන අදහසක් මේකෙන් ගන්න. -
-          <a
-            href="https://drive.google.com/drive/folders/1DhQ_gqmGaOeYDvEDJUErfF-_b4DLIx0M?usp=drive_link"
-            target="_blank"
-            >link</a
-          >
-        </li>
-        <li>Moodle tutorial / old tutorial in aca අනිවාරෙන් කරන්න.</li>
-        <li>තව ප්‍රශ්න කරන්න hughes ගෙ පොත බලන්න.</li>
-        <li>
-          Lecture වලට අනිවා යන්න. අපිට end එකට අන්තිම 3 phase lecture ගානක්
-          එහෙමම ආවා.
-        </li>
-      </ol>
+          Academics වලට කලින් (පුලුවන් තරම් කරල academics පටන් ගත්තට පස්සෙ වැඩ
+          බෙදාගෙන කරන්න)
+        </p>
+        <br />
 
-      <h3 style="text-decoration: underline" id="mechanics">
-        Mechanics (2 credit module)
-      </h3>
-      <ol>
-        <li>
-          Static
+        <div class="card">
+          <div class="card-title">CS</div>
           <ul>
-            <li>Lectures ටිකට අනිවා යන්න.</li>
-            <li>
-              සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න.
-              Mechanics shortnote ගැන අදහසක් මේකෙන් ගන්න. -
+            <li><b>Python</b></li>
+            <p>
+              Code pro lk youtube python playlist (නෝට් එකක් හදල තියාගන්න) -
               <a
-                href="https://drive.google.com/drive/folders/1h3Tnm5aCOywStJ67-nheAl7Ui4hAnAeG?usp=drive_link"
+                href="https://youtube.com/playlist?list=PL495mke12zYC-ZUbzd1Z0Y6WteuvsMf7Z&si=wRra7tn7z6Za_Fv5"
+                target="_blank"
+                >link</a
+              >
+            </p>
+            <p style="text-align: center">හෝ</p>
+            <p>
+              brocode python video (නෝට් එකක් හදල තියාගන්න) –
+              <a
+                href="https://youtu.be/ix9cRaBkVe0?si=pN42sWjITmk-zUm4"
+                target="_blank"
+                >link</a
+              >
+            </p>
+            <p style="text-align: center">හෝ</p>
+            <p>
+              Python (Code with Mosh) (python standard library වගේ වෙනකන් බලන්න)
+              (නෝට් එකක් හදල තියාගන්න) –
+              <a
+                href="https://mega.nz/folder/jnAjxSLI#n-iNbePnNzdPBf_R5meesA"
+                target="_blank"
+                >link</a
+              >
+            </p>
+            <li><b>Data structures and algorithms</b></li>
+            <p>
+              Codeprolk dsa (නෝට් එකක් හදල තියාගන්න)-
+              <a
+                href="https://youtube.com/playlist?list=PL495mke12zYDIwsabzb61OLdBpg3QDcXg&si=KIpK3OSgyZk4Bxfb"
+                target="_blank"
+                >link</a
+              >
+            </p>
+            <li><b>Hakkerrank contest</b></li>
+            <p>
+              (අනිවා academics පටන් ගන්න කලින් මේකේ ප්‍රශ්න ටික කරන්න) (python
+              තියරි පොඩ්ඩක් කවර් වුනු ගමන්ම පටන් අරන් කරන්න try කරන්න) –
+              <a
+                href="https://www.hackerrank.com/contests/24-programming-kuppiya/challenges"
+                target="_blank"
+                >link</a
+              >
+            </p>
+          </ul>
+          </div>
+          
+
+           <div class="card">
+          <div class="card-title">Maths</div>
+          <ul>
+            <br />
+            <li>
+              Dasun sir real (මේ විඩියෝ වල කරනවට වඩා අපේ සිලබස් ගොඩක් ලොකුයි.
+              අමාරුයි. ඒත් මේකෙන් හොද අඩිතාලමක් හම්බෙයි) (බලන ගමන් නෝට් එකකුත්
+              හදන්න) –
+              <a
+                href="https://drive.google.com/drive/folders/1r91DJixaOrQk8XE9nwiuWrnw8R115jXG?usp=drive_link"
                 target="_blank"
                 >link</a
               >
             </li>
+            <br />
             <li>
-              Static mid එක අමාරුයි. ඒකට mid past paper time තියල කරල හොදට
-              පුරුදු වෙලා යන්න.
+              Optional (අමතර) – mit real analysis (කැමති අය බලන්න) -
+              <a
+                href="https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/"
+                target="_blank"
+                >link</a
+              >
             </li>
+            <br />
             <li>
-              Static end mcq paper එකේ ප්‍රශ්න වෙලාවට කරන්න ගොඩක් අමාරුයි.
-              ඒකනිසා past paper අවුරුදු 3,4 ක time තියල කරල අඩුපාඩු හදන් යන්න.
+              Reimann youtube playlist (reimann මීට වඩා ගොඩක් අමාරුයි. ඒත්
+              මේකෙන් base එක හැදේවි) (බලන ගමන් නෝට් එකකුත් හදන්න) -
+              <a
+                href="https://youtube.com/playlist?list=PLTolGH4M6l9hOCD32Ke_N_lC_DRTA5fa3&si=lRHRmuKndK9dj9Bo"
+                target="_blank"
+                >link</a
+              >
             </li>
+            <br />
           </ul>
-        </li>
-        <li>
-          Dynamics
+          </div>
+          
+         <div class="card">
+          <div class="card-title">Mechanics</div>
           <ul>
+            <br />
             <li>
-              Dynamics lecture යන්න කලින් dynamic lecture video අදාල lecture එකට
-              කලින් බලලා නොට් එකක් හදන් යන්න. (physical lecture වලින් අල්ලගන්න
-              අමාරු වෙන්න පුලුවන් කලින් කරලා ගියේ නැති වුනොත්.)
-              <br />
-              <b>video</b> -
+              Dynamics lecture video කීපයක් බලන්න (නැත්නම් physical ලෙක්චර්ස්
+              තේරෙන්නෙ නැති වෙයි) -
               <a
                 href="https://drive.google.com/drive/folders/10ZuVkksFW_8P6AY2vMv_Ub3Rako35UnV?usp=drive_link"
                 target="_blank"
                 >link</a
               >
-              <br />
-              <b>shortnotes</b> -
+            </li>
+            <br />
+            <li>
+              Lecture slides ටික මේ ලින්ක් එකෙන් ගන්න -
+              <a
+                href="https://drive.google.com/drive/folders/1bC9DZiGvdQ26fzEcwn875orUIrfF2g1V?usp=drive_link"
+                target="_blank"
+                >link</a
+              >
+            </li>
+            <br />
+            <li>
+              Note එකක් හදාගන්න පස්සෙ බලන්න. Note හදන හැටි මේ නෝට් වලින් බලන්න.
+              අලුතින්ම මේ වගේ shortnote හදන්න. නැත්නම් මේකටම අවශ්‍ය දේවල් add
+              කරගන්න.-
               <a
                 href="https://drive.google.com/drive/folders/1h3Tnm5aCOywStJ67-nheAl7Ui4hAnAeG?usp=drive_link"
                 target="_blank"
                 >link</a
               >
             </li>
-            <br />
-            <li>
-              Theory cover කරගෙන tutorial ගණන් ටික හදන්න.
-              <br />
-              <b>tutorials</b> -
-              <a
-                href="https://drive.google.com/drive/folders/1hKqR9bbfUNHRn8eLrOWA6JpLDCPgMyyQ?usp=drive_link"
-                target="_blank"
-                >link</a
-              >
-              <br />
-              තේරෙන්නේ නැති තැන් වීඩියෝ වලින් අල්ලගන්න.
-              <br />
-              <b>tutorial discussion video</b> -
-              <a
-                href="https://drive.google.com/drive/folders/1hKqR9bbfUNHRn8eLrOWA6JpLDCPgMyyQ?usp=drive_link"
-                target="_blank"
-                >link</a
-              >
-            </li>
-            <br />
-            <li>
-              Past paper dynamic ප්‍රශ්න අවුරුදු 4,5 වගේ අවම දෙපාරක්වත් කරල
-              යන්න.
-            </li>
-            <li>මේ කුප්පියත් බලන්න (dynamic summary) - <a href="https://www.youtube.com/live/b7q3ZpKBm50?si=OPgT-HNLXjN2dTs-" target="_blank">link</a></li>
           </ul>
-        </li>
-      </ol>
+        </div>
+      </div>
 
-      <h3 style="text-decoration: underline" id="material">
-        Material (2 credits module)
-      </h3>
-      <ol>
-        <li style="text-decoration: underline">
-          lectures ටිකට අනිවා යන්න. එකක් වත් මගහරින්න එපා. (lecture recording ත්
-          හොයාගන්න නෑ)
-        </li>
-        <li>
-          lectures වලදි කියන අමතර point අනිවා ලියල තියාගන්න. ඒවගෙන් end එකේ
-          ප්‍රශ්න අහන්න පුලුවන්.
-        </li>
-        <li>
-          සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න. Material
-          shortnote ගැන අදහසක් මේකෙන් ගන්න. -
-          <a
-            href="https://drive.google.com/drive/folders/15dDA56cu1I_nHTx_AypHrwLs7BPO0c9_?usp=drive_link"
-            target="_blank"
-            >link</a
+      
+    </div>
+      <br />
+
+      <div class="section">
+        <p
+          style="
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: underline;
+          "
+          id="aca"
+        >
+          Academics පටන් ගත්තට පස්සෙ
+        </p>
+        <hr />
+        <br />
+        <div class="highlight-warning">
+          <p>
+            අන්තිම කාලෙ stress නොවි අනිත් අයටත් බැරි ඒව කියල දීල relax එකේ ප්‍රශ්න
+            කරන්න නම් මුල ඉදල theory cover කරගෙන , shortnote ගහලා , එන end paper
+            structure , ප්‍රශ්න වල හැටි දැනගෙන ඉන්න ඔනේ.
+            <br />
+            Theory විතරක් cover කරල ,අන්තිමම කාලෙ shortnote ගහලා ඒකාලෙම paper
+            කරන්න පටන් ගත්තොත් ලොකු stress එකක් එන්නේ. වැඩක් හරියට කරගන්නත් බැරි
+            වෙනව load එක හොදටම වැඩි නිසා
+          </p>
+        </div>
+        <br />
+        <div class="highlight-warning">
+          End paper ගොඩක් අමාරුයි.ප්‍රශ්න හොදට කරලා tricks අදුරගත්තොත් තමයි
+          වෙලාවට හරියට paper එක කරන්න පුලුවන්. ඒකට වෙලාව හදාගන්න මුල ඉදල වැඩකරල
+          කලින් theory cover කරගන්න ඕනේ.
+        </p>
+        </div>
+        <br />
+        <div class="highlight-info">
+          <p>
+            තනියෙන් විසදගන්න බැරි ප්‍රශ්නයක් ආවම අනිවා හොද යාලුවෙක්/senior
+            කෙනෙක්ගෙන් අහල විසදගන්න හිතේ තියන් ඉන්නේ නැතුව.
+          </p>
+
+          <br />
+
+          <ul>
+            <li>Lecture යන්න කලින් ගිය සතියෙ ටික අනිවා බලන් යන්න.</li>
+            <li style="color: darkcyan; font-weight: bold">
+              ටැබ් එකක් නැත්නම් lecture යන්න කලින් aca folder එකෙන් lecture slides
+              download කරලා printout අරන් ගිහින් lecture එකේ කියන වැදගත් දේවල්
+              ලියාගන්න.
+            </li>
+          </ul>
+
+          <br />
+
+          <p>
+            (real වල lecture වලදි සර් ලියන නෝට් එක ලියන්න හෝ සර් moodle එකට upload
+            කලාට පස්සේ ඒක බලලා තේරෙන්නේ නැති ඒව බලල අල්ලගන්න.) ඊටපස්සේ සතිය ඇතුලත
+            shortnote එකක් හදාගන්න.
+          </p>
+
+          <br />
+
+          <p>
+            ටැබ් එකක් තියෙනවනම් lecture slides download කරල ඒක උඩ වැදගත් දේවල්
+            annotate කරගන්න.
+          </p>
+        </div>
+        <br />
+        <div class="highlight-warning">
+          <p style="color: palevioletred; font-weight: bold">
+            ** end exam තියෙන්නෙ එක දිගට (අපිට හා කලින් බැජ් වලටත් එහෙමයි) . අපිට
+            subject 4ක් එකදිගට තිබ්බා. ඒකනිසා subject 6 ටම කලින් හොදට ලෑස්ති වෙලා
+            ඉන්න ඕනේ. නැත්නම් එක විභාගයක් ඉවර වෙලා අනිත් එකට ලෑස්ති වෙන්න තියෙන්නෙ
+            දවසෙ අනිත් වෙලාව විතරයි නිසා හොදටම stress වෙනවා.
+          </p>
+        </div>
+        
+        <!-- MATHEMATICS MODULE -->
+        <div class="card">
+          <div class="card-title">Mathematics (3 Credits)</div>
+
+        <ol>
+          <li>
+            සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න. Maths
+            shortnote ගැන අදහසක් මේකෙන් ගන්න. -
+            <a
+              href="https://drive.google.com/drive/folders/1FVC5xvUTa_-7ozy-1knxJZi0BSRUJ5Lz?usp=drive_link"
+              target="_blank"
+              >link</a
+            >
+          </li>
+          <li>
+            <p>
+              Real වල proof ලියල ලියල පුරුදුවෙන්න. AI tool ,අමාරු තැන් තේරුම්
+              ගන්න පාවිච්චි කරන්න. ඒත් සම්පූර්නයයෙන් ඒ මත යැපෙන්න එපා. Proof එක
+              පොඩ්ඩක් බලල ඒක තනියෙන් නොබල ලියන්න try කරන්න. මැත්ස් අනිත් කෑලි
+              වලටත් බර සමානව දීල මේකට වැඩ කරන්න . Real analysis අමාරු තැන්
+              පොත්වලින් හොයල බලන්න. (e.g. U.A. Senevirathna සර්ගෙ real analysis
+              book)
+            </p>
+
+            <br />
+            <p style="color: darkgoldenrod; font-weight: bold">
+              Real lectures සෙම් එකේ අන්තිම වෙනකන් යනව. අන්තිම කොටස් ගොඩක්
+              අමාරුයි. ඒවගින් end එකට ලොකු ලකුනු ප්‍රමානයකුත් එනව. ඒක නිස කලින්
+              කොටස් හොදට අල්ලගෙන proof ලියල ලියල පුරුදු වෙල මේ කොටස් ටිකේ
+              අල්ලගෙන යන්න. අන්තිම tutorial ටිකත් කරන්න. පොත් වලින් තේරෙන්නේ
+              නැති තැන් තේරුම් ගන්න.
+            </p>
+          </li>
+          <li>
+            <p>
+              Reimann වල end exam එකට ප්‍රශ්න වැඩියෙන්ම එන්නේ අන්තිමටම තියෙන
+              කොටස් වලින්.ඒවා කවර් වෙද්දි විබාගෙ ලංවෙලා. එතකොට හරියට ප්‍රශ්න
+              කරන්න වෙලා නෑ. මතක හිටින්නෙත් නෑ.
+            </p>
+            <br />
+            <p
+              style="
+                color: slateblue;
+                text-decoration: underline;
+                font-weight: bold;
+              "
+            >
+              සූත්‍ර ගොඩක් තියෙනවා . ඒව මතක තියාගන්න ලියල ලියල පුරුදු වෙන්න
+              වෙනවා. ඒත් අන්තිම කාලේ වෙලාව මදි.
+            </p>
+            <br />
+            <p>ඒකනිසා reimann theory කලින් කවර් කරන්න බලන්න.</p>
+            <br />
+            <p>
+              Reimann lecture video link(ODE + Reimann) -
+              <a
+                href="https://drive.google.com/drive/folders/1xlcTnuins6YrFYXgslb-KqozG2YejBZY?usp=drive_link"
+                target="_blank"
+                >link</a
+              >
+            </p>
+            <br />
+            <p>ඊටපස්සේ end exam ප්‍රශ්න කරලා tricks අදුරගන්න.</p>
+          </li>
+          <li>
+            <p>
+              ODE , algebra parts ටික ලෙක්චර් ටික එක්ක අල්ලන් යන්න පුලුවන්.
+              Tutorial වල ඒ කොටස් වලදි හම්බෙන විශේශ තැන් වෙනම ලියාගෙන විබාගෙට
+              කලින් බලල යන්න.
+            </p>
+            <br />
+            <p id="maths-end" style="color: peru; font-weight: bold">
+              මැත්ස් වල mcq ගොඩක්ම past paper ප්‍රශ්න වලම අලුත් ප්‍රශ්න නිසා
+              past paper අවුරුදු දෙක තුනක ප්‍රශ්න පාඩම් වලට වෙන් කරල අරන් අවම
+              දෙපාරක් වත් කරල යන්න. Tricks අදුරගෙන ඒවා පාවිච්චි කරන්න.
+            </p>
+
+            <ul>
+              <li>
+                End paper structure (3 hours) – mcq 30 , short answer questions
+                10 (reimann , ode , algebra parts වලින්) (එකකට ලකුනු 6 ගානේ) රචන
+                ප්‍රශ්න 6 (real) (එකකට ලකුනු 20 යි) Final grade එක end එකෙන් 80%
+                යි CA (spot quiz , tutorial) වලින් 20% කින් හැදෙන්නෙ.
+              </li>
+            </ul>
+            <br />
+          </li>
+          <li style="text-decoration: underline">
+            Cw Cal එකෙන් ලොකු ගේමක් ගහන්න පුලුවන් end එකේ. ඒ ක්‍රම ටික අදුරගන්න.
+          </li>
+          <br />
+          <li style="text-decoration: underline">
+            Paper ගොඩක් moderate වෙනවා.ඒකනිසා end එක අමාරු වුනාට කරගන්න බැරි
+            වුනාට එච්චර හිතන්නේ නැතුව අනිත් subject වලට focus එක දෙන්න(end
+            එකේදි)
+          </li>
+        </ol>
+      </div>
+
+        <br /><br />
+        <!-- CS MODULE -->
+        <div class="card">
+          <div class="card-title">CS (3 Credits)</div>
+        
+        <ol>
+          <li>
+            සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න. Cs
+            shortnote ගැන අදහසක් මේකෙන් ගන්න. -
+            <a
+              href="https://drive.google.com/drive/folders/1jq5qjFQwTUYCVCW29Q23385iH-7pamw6?usp=drive_link"
+              target="_blank"
+              >link</a
+            >
+          </li>
+          <br />
+          <li>
+            Moodle එකට upload කරන quizzes ටික සතිය ඇතුලත අනිවා කරල වැදගත් දේවල්
+            වෙනම තියාගන්න end එකට බලන්න.
+          </li>
+          <li>
+            සතියේ ලෙක්චර් වල කරපු කොටස් moodle / aca folder තියෙන lecture notes
+            (Book A , Book B , Book C) කියවල තේරුම් ගන්න.
+          </li>
+          <li>ඒ ඒ සතියේ දාන Jupiter note file run කරල test ක‍රල බලන්න.</li>
+          <li id="cs-labs">Hakerrank වල ප්‍රශ්න ටික lab වලට කලින් කරන්න.</li>
+          <li>
+            Cs lab වලට flowchart අදින්න lucid chart වෙබ්සයිට් එක පාවිච්චි කරන්න.
+          </li>
+          <br />
+          <li
           >
-        </li>
-        <li>
-          Material lecture වලට හරියට ගිහිල්ලා shortnote හදලා pastpaper වෙල තියල
-          කරොත් ගොඩදාගන්න එක ලේසියි.
-        </li>
-        <li>
-          Mid එකට past paper ප්‍රශ්න අවුරුදු පහක වගේ අඩුපාඩු බලල කරල යන්න.
-        </li>
-        <li>
-          End එකට වෙලාව තියලා අන්තිම කාලේ paper 4 ක් වගේ කරලා යන්න. Past paper
-          ප්‍රශ්න වලටම හුරුවෙන්න එපා. රටාව වෙනස් කරල අපිට වගේ අමාරු පේපර් එකක්
-          ලැබෙන්න පුලුවන්.
-        </li>
-      </ol>
+          <div class="highlight-warning" style="margin-top: var(--spacing-sm);">
+            කවුරුත් එක්කවත් lab වල code , flowcharts share කරන්න එපා. Copied
+            වදින්න පුලුවන්.
+            </div>
+          </li>
+          <br />
+          <li id="cs-pp1">
+            p1 , pp2 වලට කලින් කලින් අවුරුදු වල ප්‍රශ්න කීපයක් කරල යන්න.
+            (lecture notes ටිකත් බලල යන්න.) ඒ කාලෙට කරන කුප්පි ටික අනිව බලල
+            යන්න. කලින් අවුරුද්දක වගේ කුප්පිත් බලන්න.
+            <br />
+            <p id="cs-pp2" style="text-decoration: underline">
+              Pp1,pp2 වලට නෝට් අරන් යන්න පුලුවන් නිසා, Points, code snippets
+              ලියාගෙන / ප්‍රින්ට් අවුට් අරන් යන්න.
+            </p>
+            <br />
+            <ul>
+              <li>pp1 කුප්පි</li>
+              <ul>
+                <li>
+                  <a
+                    href="https://youtu.be/e0EPCu_XS0A?si=rbdgi9Ruvgx_ISwh"
+                    target="_blank"
+                    >link 1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/live/AbMpNtDDtik?si=4n37DCfXXQgCXtwN"
+                    target="_blank"
+                    >link 2</a
+                  >
+                </li>
+              </ul>
+              <li>pp2 කුප්පි</li>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.youtube.com/live/ZKTcOaO0C0k?si=T21il8r_4CUNB87n"
+                    target="_blank"
+                    >link 1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/live/akePo9RyQjE?si=Owp3lfgMDbCwwVYe"
+                    target="_blank"
+                    >link 2</a
+                  >
+                </li>
+              </ul>
+            </ul>
+          </li>
+          <br />
+          <li>
+            Hardware කොටසට book C කියවන්න ඕනේ. ඒ book C එක තේරුම් ගන්න මේ
+            කුප්පිය බලන්න. (කලින් බලල ඉවර කරල තියාගන්න.) -
+            <a
+              href="https://www.youtube.com/live/oi9E6Apjcck?si=C2Vcbjrzzgo9xwWD"
+              target="_blank"
+              >link</a
+            >
+          </li>
+          <br />
+          <li id="cs-end">
+            End වලට එන Algorithms , ADT ප්‍රශ්න ගොඩක් අමාරුයි. ඒකට මුලදි කිව්ව
+            playlist එක බලල මදි. Book B හොදට කියවල ,Past paper ප්‍රශ්න හොදට
+            කරන්න ඕනේ. Lecture slides ටිකත් අනිව බලල තේරුම් ගන්න ප්‍රශ්න කරන
+            ගමන්.
+            <br /><br />
+            (recursion , algorithms , ADT වලින් තමයි පේපර් එකේ වැඩිම ප්‍රශ්න
+            ගානක් එන්නේ. ඒක නිසා ඒ සර් ගේ ලෙක්චර් වලට අනිවාරෙන් යන්න.)
+
+            <br /><br />
+            ADT/sorting මේ කුප්පියත් බලන්න -
+            <a
+              href="https://www.youtube.com/live/YX61Bm5SpWY?si=zXkDa3GxPhrMOSIb"
+              target="_blank"
+              >link</a
+            >
+          </li>
+          <br />
+          <li>
+            End Past paper අවුරුදු 3,4 වගේ කරල යන්න. ඒ කාලෙට කරන කුප්පිත් බලන්න.
+            ඒවා ගොඩක් උදවු වෙයි. කලින් අවුරුදු 2,3 වල paper discussion
+            බලන්න.ඒවගෙන් tricks , point ගොඩක් හම්බෙවි. <br />
+            <ul>
+              <li>
+                <a
+                  href="https://www.youtube.com/live/LQ_PVgOPNsc?si=9imkdM8iaz2eaf3j"
+                  target="_blank"
+                  >23 paper part 1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://youtu.be/eqOM3Ai4HW0?si=4v66lO-0CJY0vdAU"
+                  target="_blank"
+                  >23 paper part 2</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/live/fTgRaukxC0A?si=nCk1Pc3NGRqCHzyZ"
+                  target="_blank"
+                  >24 kuppiya</a
+                >
+              </li>
+            </ul>
+          </li>
+          <br />
+          <li
+          >
+            Cs වල end එකට cal ගෙනියන්න දෙන්නෙ නෑ.
+            <ul>
+              <li>Paper structure – 80 mcqs (3 hours)</li>
+            </ul>
+          </li>
+        </ol>
+        <br />
+
+        </div>
+
+        <!-- Electrical MODULE -->
+        <div class="card">
+          <div class="card-title">Electrical (2 Credits)</div>
+        <ol>
+          <li>
+            සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න.
+            Electrical shortnote ගැන අදහසක් මේකෙන් ගන්න. -
+            <a
+              href="https://drive.google.com/drive/folders/1DhQ_gqmGaOeYDvEDJUErfF-_b4DLIx0M?usp=drive_link"
+              target="_blank"
+              >link</a
+            >
+          </li>
+          <li>Moodle tutorial / old tutorial in aca අනිවාරෙන් කරන්න.</li>
+          <li>තව ප්‍රශ්න කරන්න hughes ගෙ පොත බලන්න.</li>
+          <li>
+            Lecture වලට අනිවා යන්න. අපිට end එකට අන්තිම 3 phase lecture ගානක්
+            එහෙමම ආවා.
+          </li>
+        </ol>
+        </div>
+
+        <!-- Mechanics MODULE -->
+        <div class="card">
+          <div class="card-title">Mechanics (2 Credits)</div>
+        <ol>
+          <li>
+            Static
+            <ul>
+              <li>Lectures ටිකට අනිවා යන්න.</li>
+              <li>
+                සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න.
+                Mechanics shortnote ගැන අදහසක් මේකෙන් ගන්න. -
+                <a
+                  href="https://drive.google.com/drive/folders/1h3Tnm5aCOywStJ67-nheAl7Ui4hAnAeG?usp=drive_link"
+                  target="_blank"
+                  >link</a
+                >
+              </li>
+              <li>
+                Static mid එක අමාරුයි. ඒකට mid past paper time තියල කරල හොදට
+                පුරුදු වෙලා යන්න.
+              </li>
+              <li>
+                Static end mcq paper එකේ ප්‍රශ්න වෙලාවට කරන්න ගොඩක් අමාරුයි.
+                ඒකනිසා past paper අවුරුදු 3,4 ක time තියල කරල අඩුපාඩු හදන් යන්න.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Dynamics
+            <ul>
+              <li>
+                Dynamics lecture යන්න කලින් dynamic lecture video අදාල lecture
+                එකට කලින් බලලා නොට් එකක් හදන් යන්න. (physical lecture වලින්
+                අල්ලගන්න අමාරු වෙන්න පුලුවන් කලින් කරලා ගියේ නැති වුනොත්.)
+                <br />
+                <b>video</b> -
+                <a
+                  href="https://drive.google.com/drive/folders/10ZuVkksFW_8P6AY2vMv_Ub3Rako35UnV?usp=drive_link"
+                  target="_blank"
+                  >link</a
+                >
+                <br />
+                <b>shortnotes</b> -
+                <a
+                  href="https://drive.google.com/drive/folders/1h3Tnm5aCOywStJ67-nheAl7Ui4hAnAeG?usp=drive_link"
+                  target="_blank"
+                  >link</a
+                >
+              </li>
+              <br />
+              <li>
+                Theory cover කරගෙන tutorial ගණන් ටික හදන්න.
+                <br />
+                <b>tutorials</b> -
+                <a
+                  href="https://drive.google.com/drive/folders/1hKqR9bbfUNHRn8eLrOWA6JpLDCPgMyyQ?usp=drive_link"
+                  target="_blank"
+                  >link</a
+                >
+                <br />
+                තේරෙන්නේ නැති තැන් වීඩියෝ වලින් අල්ලගන්න.
+                <br />
+                <b>tutorial discussion video</b> -
+                <a
+                  href="https://drive.google.com/drive/folders/1hKqR9bbfUNHRn8eLrOWA6JpLDCPgMyyQ?usp=drive_link"
+                  target="_blank"
+                  >link</a
+                >
+              </li>
+              <br />
+              <li>
+                Past paper dynamic ප්‍රශ්න අවුරුදු 4,5 වගේ අවම දෙපාරක්වත් කරල
+                යන්න.
+              </li>
+              <li>
+                මේ කුප්පියත් බලන්න (dynamic summary) -
+                <a
+                  href="https://www.youtube.com/live/b7q3ZpKBm50?si=OPgT-HNLXjN2dTs-"
+                  target="_blank"
+                  >link</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ol>
+        </div>
+
+        <!-- Material MODULE -->
+        <div class="card">
+          <div class="card-title">Material (2 Credits)</div>
+        <ol>
+          <li style="text-decoration: underline">
+            lectures ටිකට අනිවා යන්න. එකක් වත් මගහරින්න එපා. (lecture recording
+            ත් හොයාගන්න නෑ)
+          </li>
+          <li>
+            lectures වලදි කියන අමතර point අනිවා ලියල තියාගන්න. ඒවගෙන් end එකේ
+            ප්‍රශ්න අහන්න පුලුවන්.
+          </li>
+          <li>
+            සතිය ඇතුලත lecture එකේ කරපු දේවල් වලින් shortnote එකක් හදන්න.
+            Material shortnote ගැන අදහසක් මේකෙන් ගන්න. -
+            <a
+              href="https://drive.google.com/drive/folders/15dDA56cu1I_nHTx_AypHrwLs7BPO0c9_?usp=drive_link"
+              target="_blank"
+              >link</a
+            >
+          </li>
+          <li>
+            Material lecture වලට හරියට ගිහිල්ලා shortnote හදලා pastpaper වෙල
+            තියල කරොත් ගොඩදාගන්න එක ලේසියි.
+          </li>
+          <li>
+            Mid එකට past paper ප්‍රශ්න අවුරුදු පහක වගේ අඩුපාඩු බලල කරල යන්න.
+          </li>
+          <li>
+            End එකට වෙලාව තියලා අන්තිම කාලේ paper 4 ක් වගේ කරලා යන්න. Past paper
+            ප්‍රශ්න වලටම හුරුවෙන්න එපා. රටාව වෙනස් කරල අපිට වගේ අමාරු පේපර් එකක්
+            ලැබෙන්න පුලුවන්.
+          </li>
+        </ol>
+        </div>
+        <br />
+
+
+        <!-- Fluid MODULE -->
+        <div class="card">
+          <div class="card-title">Fluid (2 Credits)</div>
+        <ol>
+          <li>
+            lecture වලට අනිවාරෙන් යන ගමන් shortnote එකක් හදාගන්න. Shortnote ගැන
+            අදහසක් මේකෙන් ගන්න. -
+            <a
+              href="https://drive.google.com/drive/folders/15mOvz95QClQLuGfAJ9s9aKqixq7muHaQ?usp=drive_link"
+              target="_blank"
+              >link</a
+            >
+          </li>
+          <li>
+            practical එක shape එකේ ගොඩදාගන්න පුලුවන්. ඒකට බය වෙන්න දෙයක් නෑ.
+          </li>
+          <li>
+            past paper ප්‍රශ්නම වගේ තමා end එකට එන්නේ.ඒකනිසා past paper ප්‍රශ්න
+            අවුරුදු 4 ක වගේ කරන්න. එවගේ තියන marking scheme වල ක්‍රම ටික
+            අල්ලගන්න.
+          </li>
+        </ol>
+        </div>
+
+      </div>
 
       <br />
-      <h3 style="text-decoration: underline" id="fluid">
-        Fluid (2 credits module)
-      </h3>
-      <ol>
-        <li>
-          lecture වලට අනිවාරෙන් යන ගමන් shortnote එකක් හදාගන්න. Shortnote ගැන
-          අදහසක් මේකෙන් ගන්න. -
-          <a
-            href="https://drive.google.com/drive/folders/15mOvz95QClQLuGfAJ9s9aKqixq7muHaQ?usp=drive_link"
-            target="_blank"
-            >link</a
-          >
-        </li>
-        <li>
-          practical එක shape එකේ ගොඩදාගන්න පුලුවන්. ඒකට බය වෙන්න දෙයක් නෑ.
-        </li>
-        <li>
-          past paper ප්‍රශ්නම වගේ තමා end එකට එන්නේ.ඒකනිසා past paper ප්‍රශ්න
-          අවුරුදු 4 ක වගේ කරන්න. එවගේ තියන marking scheme වල ක්‍රම ටික අල්ලගන්න.
-        </li>
-      </ol>
+      <div class="highlight-info">
+      <p>
+        End එකෙදි මුල් paper අවුල් ගියාට එච්චර හිතන්න එපා. Moderate වෙලා හිතුවට
+        වඩා වැඩි grade එකක් හම්බෙනවා.
+      </p>
+      </div>
+
+      <div class="highlight-success">
+      <p>
+        (මම gpa 3.89 ගත්තේ අන්තිම ටිකේ කට්ටක් කාල. මොකද මන් shortnote හදන වගේ
+        වැඩ කලේ අන්තිම කාලේ නිසා. ඔයල මේ ටික මුල ඉදල කලොත් gpa 4.0 වලට යන්න අනිව
+        පුලුවන්)
+      </p>
+      </div>
+      <br />
+
     </div>
-
-    <br />
-    <p style="background-color: burlywood">
-      End එකෙදි මුල් paper අවුල් ගියාට එච්චර හිතන්න එපා. Moderate වෙලා හිතුවට
-      වඩා වැඩි grade එකක් හම්බෙනවා.
-    </p>
-    <p style="background-color: thistle">
-      (මම gpa 3.89 ගත්තේ අන්තිම ටිකේ කට්ටක් කාල. මොකද මන් shortnote හදන වගේ වැඩ
-      කලේ අන්තිම කාලේ නිසා. ඔයල මේ ටික මුල ඉදල කලොත් gpa 4.0 වලට යන්න අනිව
-      පුලුවන්) <br /><br /><br />
-    </p>
-    <br />
-    <script>
-      // Get the button
-      let mybutton = document.getElementById("myBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
+    <!-- SCRIPTS -->
+    <script src="theme-toggle.js"></script>
+    <script src="scroll-to-top.js"></script>
+   
   </body>
 </html>
