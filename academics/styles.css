@@ -65,7 +65,6 @@ body {
   color: var(--text-primary);
   background-color: var(--bg-primary);
   transition: var(--transition);
-  padding-top: 70px;
 }
 
 /* ============================================
@@ -139,7 +138,6 @@ li {
    HEADER & NAVIGATION
    ============================================ */
 .header {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -377,7 +375,6 @@ button {
    ============================================ */
 @media (max-width: 768px) {
   body {
-    padding-top: 65px;
     font-size: 15px;
   }
 
@@ -439,7 +436,6 @@ button {
 @media (max-width: 480px) {
   body {
     font-size: 14px;
-    padding-top: 60px;
   }
 
   .header {
