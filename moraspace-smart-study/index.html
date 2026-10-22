@@ -116,7 +116,7 @@
                 <!-- AQI Card -->
                 <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-2">
-                        <div class="bg-green-100 p-2 rounded-lg text-green-600">
+                        <div id="apaya-aqi-icon-box" class="p-2 rounded-lg transition-colors duration-300">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
                         </div>
                         <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider">AQI</h3>
@@ -233,7 +233,7 @@
                 <!-- AQI Card -->
                 <div class="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-2">
-                        <div class="bg-yellow-100 p-2 rounded-lg text-yellow-600">
+                        <div id="centra-aqi-icon-box" class="p-2 rounded-lg transition-colors duration-300">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
                         </div>
                         <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider">AQI</h3>
@@ -451,7 +451,7 @@
                 iconBox.classList.add('bg-red-100', 'text-red-600');
             }
         }
-        
+
         function updateRegionTheme(areaPrefix, score) {
             const scoreSpan = document.getElementById(`${areaPrefix}-overall`);
             scoreSpan.innerText = score;
@@ -591,17 +591,10 @@
                     ? 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800' 
                     : 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500';
     
-                    
-
-                // Optional: Update text status colors based on AQI
-                const apayaAqiStatus = document.getElementById('apaya-aqi-status');
-                apayaAqiStatus.innerText = data.apaya.aqi < 50 ? 'Good' : 'Moderate';
-                apayaAqiStatus.className = data.apaya.aqi < 50 ? 'text-sm font-semibold text-green-600' : 'text-sm font-semibold text-yellow-600';
-
-                const centraAqiStatus = document.getElementById('centra-aqi-status');
-                centraAqiStatus.innerText = data.centra.aqi < 50 ? 'Good' : 'Moderate';
-                centraAqiStatus.className = data.centra.aqi < 50 ? 'text-sm font-semibold text-green-600' : 'text-sm font-semibold text-yellow-600';
-
+                
+                    // Replace the old Optional AQI block with this:
+                updateAqiDisplay('apaya', data.apaya.aqi);
+                updateAqiDisplay('centra', data.centra.aqi);
                 
 
             } catch (error) {
@@ -629,7 +622,7 @@
         }
 
         fetchBackendData();
-        setInterval(fetchBackendData, 15000);
+        setInterval(fetchBackendData, 5000);
     </script>
 </body>
 </html>
