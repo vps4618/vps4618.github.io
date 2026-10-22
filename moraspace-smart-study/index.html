@@ -85,10 +85,10 @@
 
         <!-- Study Area 1: Apaya -->
         <section class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div class="bg-gradient-to-r from-emerald-50 to-white px-6 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div id="apaya-header" class="bg-gradient-to-r from-emerald-50 to-white px-6 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                     <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                        <svg class="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        <svg id="apaya-icon" class="w-6 h-6 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                         Apaya Area
                     </h2>
 
@@ -105,7 +105,7 @@
                 </div>
                 <div class="flex items-center bg-emerald-100 px-4 py-2 rounded-full border border-emerald-200">
                     <div class="text-emerald-800 font-semibold text-sm flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        <svg id="apaya-score-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         Overall Score: <span id="apaya-overall" class="metric-value">__</span>/100
                     </div>
                 </div>
@@ -202,10 +202,10 @@
 
         <!-- Study Area 2: Centra -->
         <section class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div class="bg-gradient-to-r from-orange-50 to-white px-6 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div id="centra-header" class="bg-gradient-to-r from-orange-50 to-white px-6 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                     <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                        <svg class="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        <svg id="centra-icon" class="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
                         Centra Area
                     </h2>
                     
@@ -222,7 +222,7 @@
                 </div>
                 <div class="flex items-center bg-orange-100 px-4 py-2 rounded-full border border-orange-200">
                     <div class="text-orange-800 font-semibold text-sm flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        <svg id="centra-score-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
                         Overall Score: <span id="centra-overall" class="metric-value">__</span>/100
                     </div>
                 </div>
@@ -430,6 +430,52 @@
     </main>
 
     <script>
+        function updateRegionTheme(areaPrefix, score) {
+            const scoreSpan = document.getElementById(`${areaPrefix}-overall`);
+            scoreSpan.innerText = score;
+            
+            // Target elements
+            const innerDiv = scoreSpan.parentElement;
+            const outerDiv = innerDiv.parentElement;
+            const header = document.getElementById(`${areaPrefix}-header`);
+            const headerIcon = document.getElementById(`${areaPrefix}-icon`);
+            const scoreIcon = document.getElementById(`${areaPrefix}-score-icon`); // The Trend Arrow SVG
+            
+            // Reset base classes to clear old colors
+            header.className = 'px-6 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-colors duration-300 bg-gradient-to-r to-white';
+            headerIcon.className = 'w-6 h-6 transition-colors duration-300';
+            outerDiv.className = 'flex items-center px-4 py-2 rounded-full border transition-colors duration-300';
+            innerDiv.className = 'font-semibold text-sm flex items-center gap-2 transition-colors duration-300';
+            
+            // SVG Paths
+            const pathUp = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>';
+            const pathRight = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>';
+            const pathDown = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>';
+
+            // Apply new colors and SVGs based on score
+            if (score >= 75) {
+                header.classList.add('from-emerald-50');
+                headerIcon.classList.add('text-emerald-500');
+                outerDiv.classList.add('bg-emerald-100', 'border-emerald-200');
+                innerDiv.classList.add('text-emerald-800');
+                if(scoreIcon) scoreIcon.innerHTML = pathUp;
+
+            } else if (score >= 50) {
+                header.classList.add('from-orange-50');
+                headerIcon.classList.add('text-orange-500');
+                outerDiv.classList.add('bg-orange-100', 'border-orange-200');
+                innerDiv.classList.add('text-orange-800');
+                if(scoreIcon) scoreIcon.innerHTML = pathRight;
+
+            } else {
+                header.classList.add('from-red-50');
+                headerIcon.classList.add('text-red-500');
+                outerDiv.classList.add('bg-red-100', 'border-red-200');
+                innerDiv.classList.add('text-red-800');
+                if(scoreIcon) scoreIcon.innerHTML = pathDown;
+            }
+        }
+
         // Toggles between Dashboard and Team views
         function toggleView(view) {
             const dashboard = document.getElementById('dashboard-view');
@@ -476,8 +522,10 @@
                 document.getElementById('apaya-feels-like').innerText = data.apaya.feelsLike;
                 document.getElementById('apaya-humidity').innerText = data.apaya.humidity;
                 document.getElementById('apaya-noise').innerText = data.apaya.noise;
-                document.getElementById('apaya-students').innerText = data.apaya.students;
-                document.getElementById('apaya-overall').innerText = data.apaya.overall;
+
+                // Replace the manual innerText updates with this:
+                updateRegionTheme('apaya', data.apaya.overall);
+                updateRegionTheme('centra', data.centra.overall);
 
                 document.getElementById('centra-aqi').innerText = data.centra.aqi;
                 document.getElementById('centra-temp').innerText = data.centra.temp;
@@ -526,6 +574,12 @@
                 apayaAqiStatus.innerText = data.apaya.aqi < 50 ? 'Good' : 'Moderate';
                 apayaAqiStatus.className = data.apaya.aqi < 50 ? 'text-sm font-semibold text-green-600' : 'text-sm font-semibold text-yellow-600';
 
+                const centraAqiStatus = document.getElementById('centra-aqi-status');
+                centraAqiStatus.innerText = data.centra.aqi < 50 ? 'Good' : 'Moderate';
+                centraAqiStatus.className = data.centra.aqi < 50 ? 'text-sm font-semibold text-green-600' : 'text-sm font-semibold text-yellow-600';
+
+                
+
             } catch (error) {
                 console.error("Failed to fetch dashboard data:", error);
                 refreshText.innerText = 'Error!';
@@ -550,6 +604,7 @@
             }
         }
 
+        fetchBackendData();
         setInterval(fetchBackendData, 15000);
     </script>
 </body>
