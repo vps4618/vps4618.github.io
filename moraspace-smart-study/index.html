@@ -430,6 +430,28 @@
     </main>
 
     <script>
+        function updateAqiDisplay(areaPrefix, aqi) {
+            const aqiText = document.getElementById(`${areaPrefix}-aqi-status`);
+            const iconBox = document.getElementById(`${areaPrefix}-aqi-icon-box`);
+            
+            // Clear existing color classes
+            iconBox.className = 'p-2 rounded-lg transition-colors duration-300';
+            
+            if (aqi <= 50) {
+                aqiText.innerText = 'Good';
+                aqiText.className = 'text-sm font-semibold text-green-600';
+                iconBox.classList.add('bg-green-100', 'text-green-600');
+            } else if (aqi <= 100) {
+                aqiText.innerText = 'Moderate';
+                aqiText.className = 'text-sm font-semibold text-yellow-600';
+                iconBox.classList.add('bg-yellow-100', 'text-yellow-600');
+            } else {
+                aqiText.innerText = 'Poor';
+                aqiText.className = 'text-sm font-semibold text-red-600';
+                iconBox.classList.add('bg-red-100', 'text-red-600');
+            }
+        }
+        
         function updateRegionTheme(areaPrefix, score) {
             const scoreSpan = document.getElementById(`${areaPrefix}-overall`);
             scoreSpan.innerText = score;
@@ -522,6 +544,9 @@
                 document.getElementById('apaya-feels-like').innerText = data.apaya.feelsLike;
                 document.getElementById('apaya-humidity').innerText = data.apaya.humidity;
                 document.getElementById('apaya-noise').innerText = data.apaya.noise;
+                
+                // ADD THIS MISSING LINE:
+                document.getElementById('apaya-students').innerText = data.apaya.students;
 
                 // Replace the manual innerText updates with this:
                 updateRegionTheme('apaya', data.apaya.overall);
@@ -533,7 +558,6 @@
                 document.getElementById('centra-humidity').innerText = data.centra.humidity;
                 document.getElementById('centra-noise').innerText = data.centra.noise;
                 document.getElementById('centra-students').innerText = data.centra.students;
-                document.getElementById('centra-overall').innerText = data.centra.overall;
 
 
 
