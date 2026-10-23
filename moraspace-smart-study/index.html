@@ -122,8 +122,8 @@
                         <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider">AQI</h3>
                     </div>
                     <div class="flex items-baseline gap-2">
-                        <span id="apaya-aqi" class="text-3xl font-bold text-gray-900 metric-value">__</span>
-                        <span id="apaya-aqi-status" class="text-sm font-semibold text-green-600">Good</span>
+                        <span id="apaya-aqi" class="text-3xl font-bold text-gray-900 metric-value">__</span><span class="text-sm text-gray-500">%</span>
+                        <span id="apaya-aqi-status" class="text-sm font-semibold text-green-600">__</span>
                     </div>
                 </div>
 
@@ -239,7 +239,7 @@
                         <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider">AQI</h3>
                     </div>
                     <div class="flex items-baseline gap-2">
-                        <span id="centra-aqi" class="text-3xl font-bold text-gray-900 metric-value">__</span>
+                        <span id="centra-aqi" class="text-3xl font-bold text-gray-900 metric-value">__</span><span class="text-sm text-gray-500">%</span>
                         <span id="centra-aqi-status" class="text-sm font-semibold text-yellow-600">__</span>
                     </div>
                 </div>
@@ -430,6 +430,33 @@
     </main>
 
     <script>
+        function updateAqiDisplay(areaPrefix, aqiPercent, aqiLabel) {
+            const aqiScore = document.getElementById(`${areaPrefix}-aqi`);
+            const aqiText = document.getElementById(`${areaPrefix}-aqi-status`);
+            const iconBox = document.getElementById(`${areaPrefix}-aqi-icon-box`);
+            
+            // Map the percentage score
+            aqiScore.innerText = aqiPercent;
+            
+            // Map the exact label sent from the backend ("Excellent", "Good", etc.)
+            aqiText.innerText = aqiLabel;
+            
+            // Clear existing color classes
+            iconBox.className = 'p-2 rounded-lg transition-colors duration-300';
+            
+            // Because this is a 0-100% score where Higher = Better
+            if (aqiPercent >= 75) {
+                aqiText.className = 'text-sm font-semibold text-green-600';
+                iconBox.classList.add('bg-green-100', 'text-green-600');
+            } else if (aqiPercent >= 50) {
+                aqiText.className = 'text-sm font-semibold text-yellow-600';
+                iconBox.classList.add('bg-yellow-100', 'text-yellow-600');
+            } else {
+                aqiText.className = 'text-sm font-semibold text-red-600';
+                iconBox.classList.add('bg-red-100', 'text-red-600');
+            }
+        }
+
         function updateAqiDisplay(areaPrefix, aqi) {
             const aqiText = document.getElementById(`${areaPrefix}-aqi-status`);
             const iconBox = document.getElementById(`${areaPrefix}-aqi-icon-box`);
@@ -539,7 +566,6 @@
                 const data = await response.json();
 
                 // 3. Update the DOM Elements
-                document.getElementById('apaya-aqi').innerText = data.apaya.aqi;
                 document.getElementById('apaya-temp').innerText = data.apaya.temp;
                 document.getElementById('apaya-feels-like').innerText = data.apaya.feelsLike;
                 document.getElementById('apaya-humidity').innerText = data.apaya.humidity;
@@ -552,7 +578,6 @@
                 updateRegionTheme('apaya', data.apaya.overall);
                 updateRegionTheme('centra', data.centra.overall);
 
-                document.getElementById('centra-aqi').innerText = data.centra.aqi;
                 document.getElementById('centra-temp').innerText = data.centra.temp;
                 document.getElementById('centra-feels-like').innerText = data.centra.feelsLike;
                 document.getElementById('centra-humidity').innerText = data.centra.humidity;
@@ -564,9 +589,22 @@
                 // Add these lines right after updating the apaya-students element
                 document.getElementById('apaya-capacity').innerText = data.apaya.capacity;
 
+               // Updated Wi-Fi parsing for Apaya
                 const apayaWifi = document.getElementById('apaya-wifi');
-                apayaWifi.innerText = data.apaya.wifi ? '📶 Fast WiFi' : '📵 No WiFi';
-                apayaWifi.className = data.apaya.wifi 
+                // Check if it's truthy and not an empty string
+                const hasApayaWifi = data.apaya.wifi && data.apaya.wifi !== "None";
+                
+                apayaWifi.innerText = hasApayaWifi ? `📶 ${data.apaya.wifi} WiFi` : '📵 No WiFi';
+                apayaWifi.className = hasApayaWifi 
+                    ? 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800' 
+                    : 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500';
+
+                // Updated Wi-Fi parsing for Centra
+                const centraWifi = document.getElementById('centra-wifi');
+                const hasCentraWifi = data.centra.wifi && data.centra.wifi !== "None";
+                
+                centraWifi.innerText = hasCentraWifi ? `📶 ${data.centra.wifi} WiFi` : '📵 No WiFi';
+                centraWifi.className = hasCentraWifi 
                     ? 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800' 
                     : 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500';
 
@@ -579,12 +617,6 @@
                 // Repeat for Centra
                 document.getElementById('centra-capacity').innerText = data.centra.capacity;
 
-                const centraWifi = document.getElementById('centra-wifi');
-                centraWifi.innerText = data.centra.wifi ? '📶 Fast WiFi' : '📵 No WiFi';
-                centraWifi.className = data.centra.wifi 
-                    ? 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800' 
-                    : 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500';
-
                 const centraPower = document.getElementById('centra-power');
                 centraPower.innerText = data.centra.power ? '🔌 Power Available' : '🔋 No Power';
                 centraPower.className = data.centra.power 
@@ -592,9 +624,9 @@
                     : 'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500';
     
                 
-                    // Replace the old Optional AQI block with this:
-                updateAqiDisplay('apaya', data.apaya.aqi);
-                updateAqiDisplay('centra', data.centra.aqi);
+                // Replace the old Optional AQI block with this:
+                updateAqiDisplay('apaya', data.apaya.custom_aqi_percent, data.apaya.custom_aqi_label);
+                updateAqiDisplay('centra', data.centra.custom_aqi_percent, data.centra.custom_aqi_label);
                 
 
             } catch (error) {
