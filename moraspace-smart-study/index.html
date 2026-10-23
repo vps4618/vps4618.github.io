@@ -315,6 +315,17 @@
                 </div>
             </div>
         </section>
+
+        <!-- Smart Recommendations Section -->
+        <section class="bg-purple-50 rounded-2xl shadow-sm border border-purple-100 overflow-hidden p-6 mt-8">
+            <h2 class="text-xl font-bold text-purple-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Best Times to Study
+            </h2>
+            <div id="recommendations-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="text-sm text-purple-600">Analyzing historical occupancy patterns...</div>
+            </div>
+        </section>
         
         </div>
 
@@ -605,6 +616,30 @@
                 updateAqiDisplay('apaya', data.apaya.custom_aqi_percent, data.apaya.custom_aqi_label);
                 updateAqiDisplay('centra', data.centra.custom_aqi_percent, data.centra.custom_aqi_label);
                 
+                // Fetch Recommendations
+                const recResponse = await fetch('https://smartstudy-backend-psi.vercel.app/api/recommendations');
+                if (recResponse.ok) {
+                    const recData = await recResponse.json();
+                    const container = document.getElementById('recommendations-container');
+                    container.innerHTML = ''; // Clear loading text
+                    
+                    recData.recommendations.forEach(rec => {
+                        // Color code based on activity level
+                        let badgeColor = rec.level === 'Quiet' ? 'bg-green-100 text-green-800 border-green-200' : 
+                                         rec.level === 'Moderate' ? 'bg-yellow-100 text-yellow-800 border-yellow-200' : 'bg-red-100 text-red-800 border-red-200';
+                                         
+                        container.innerHTML += `
+                            <div class="bg-white rounded-xl p-4 border border-purple-100 shadow-sm flex flex-col gap-2">
+                                <div class="flex justify-between items-start">
+                                    <h3 class="font-bold text-gray-900">${rec.area_name}</h3>
+                                    <span class="text-xs px-2 py-1 rounded-full border font-medium ${badgeColor}">${rec.level}</span>
+                                </div>
+                                <div class="text-lg font-mono text-purple-600">${rec.time_window}</div>
+                                <div class="text-sm text-gray-500">Avg. ${rec.typical_count} students</div>
+                            </div>
+                        `;
+                    });
+                }
 
             } catch (error) {
                 console.error("Failed to fetch dashboard data:", error);
