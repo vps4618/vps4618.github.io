@@ -635,7 +635,7 @@
                                     <span class="text-xs px-2 py-1 rounded-full border font-medium ${badgeColor}">${rec.level}</span>
                                 </div>
                                 <div class="text-lg font-mono text-purple-600">${rec.time_window}</div>
-                                <div class="text-sm text-gray-500">Avg. ${rec.typical_count} students</div>
+                                <div class="text-sm text-gray-500">Avg. ${Math.round(rec.typical_count)} students</div>
                             </div>
                         `;
                     });
