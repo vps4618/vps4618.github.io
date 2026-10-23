@@ -456,29 +456,6 @@
                 iconBox.classList.add('bg-red-100', 'text-red-600');
             }
         }
-
-        function updateAqiDisplay(areaPrefix, aqi) {
-            const aqiText = document.getElementById(`${areaPrefix}-aqi-status`);
-            const iconBox = document.getElementById(`${areaPrefix}-aqi-icon-box`);
-            
-            // Clear existing color classes
-            iconBox.className = 'p-2 rounded-lg transition-colors duration-300';
-            
-            if (aqi <= 50) {
-                aqiText.innerText = 'Good';
-                aqiText.className = 'text-sm font-semibold text-green-600';
-                iconBox.classList.add('bg-green-100', 'text-green-600');
-            } else if (aqi <= 100) {
-                aqiText.innerText = 'Moderate';
-                aqiText.className = 'text-sm font-semibold text-yellow-600';
-                iconBox.classList.add('bg-yellow-100', 'text-yellow-600');
-            } else {
-                aqiText.innerText = 'Poor';
-                aqiText.className = 'text-sm font-semibold text-red-600';
-                iconBox.classList.add('bg-red-100', 'text-red-600');
-            }
-        }
-
         function updateRegionTheme(areaPrefix, score) {
             const scoreSpan = document.getElementById(`${areaPrefix}-overall`);
             scoreSpan.innerText = score;
