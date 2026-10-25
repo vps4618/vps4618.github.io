@@ -68,6 +68,12 @@
                         <span id="refresh-text" class="text-sm font-medium text-blue-700">Refresh Data</span>
                     </button>
 
+                    <!-- Admin Dashboard Button -->
+                    <a href="admin.html" class="group flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 cursor-pointer border border-transparent">
+                        <svg class="w-4 h-4 text-slate-500 group-hover:text-slate-700 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span class="text-sm font-medium text-slate-600 group-hover:text-slate-800 transition-colors">Admin</span>
+                    </a>
+                    
                     <!-- Team View Toggle Button -->
                     <button onclick="toggleView('team')" class="group flex items-center gap-1.5 px-3 py-1.5 rounded-full hover:bg-brand-50 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 cursor-pointer border border-transparent">
                         <span class="text-sm font-medium text-gray-600 group-hover:text-brand-600 transition-colors">TeamGizmo</span>
@@ -147,7 +153,7 @@
                         <div class="bg-red-100 p-2 rounded-lg text-red-600">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
                         </div>
-                        <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider">Feels Like</h3>
+                        <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wider">Heat Index</h3>
                     </div>
                     <div class="flex items-baseline gap-1">
                         <span id="apaya-feels-like" class="text-3xl font-bold text-gray-900 metric-value">__</span><span class="text-xl font-bold text-gray-900">°</span>
@@ -326,7 +332,139 @@
                 <div class="text-sm text-purple-600">Analyzing historical occupancy patterns...</div>
             </div>
         </section>
+
+
+        <!-- Historical Occupancy Trends Section -->
+        <section class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden p-8 mt-8">
+            <!-- Header -->
+            <div class="flex flex-col sm:flex-row justify-between sm:items-start gap-4 mb-10">
+                <div>
+                    <p class="text-xs font-bold text-blue-600 tracking-widest uppercase mb-2">Analytics & Insights</p>
+                    <h2 class="text-3xl font-bold text-gray-900">Historical Occupancy Trends</h2>
+                </div>
+                <div class="flex items-center gap-3">
+                    <select id="trend-area-selector" onchange="fetchTrendsData()" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-3 py-2 outline-none cursor-pointer shadow-sm transition-colors hover:bg-gray-100">
+                        <option value="apaya">Apaya Area</option>
+                        <option value="centra">Centra Area</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Trend Bars -->
+            <div class="space-y-5 mb-10">
+                <!-- 08:00 - 10:00 -->
+                <div class="flex items-center gap-6">
+                    <div class="w-32 text-sm font-medium text-gray-800">08:00 - 10:00</div>
+                    <div class="flex-grow bg-gray-100 rounded-full h-5">
+                        <div id="trend-bar-1" class="h-5 rounded-full transition-all duration-1000 bg-gray-300" style="width: 0%"></div>
+                    </div>
+                    <div id="trend-val-1" class="w-12 text-right text-base font-bold text-gray-900">0%</div>
+                </div>
+                
+                <!-- 10:00 - 13:00 -->
+                <div class="flex items-center gap-6">
+                    <div class="w-32 text-sm font-medium text-gray-800">10:00 - 13:00</div>
+                    <div class="flex-grow bg-gray-100 rounded-full h-5">
+                        <div id="trend-bar-2" class="h-5 rounded-full transition-all duration-1000 bg-gray-300" style="width: 0%"></div>
+                    </div>
+                    <div id="trend-val-2" class="w-12 text-right text-base font-bold text-gray-900">0%</div>
+                </div>
+
+                <!-- 13:00 - 16:00 -->
+                <div class="flex items-center gap-6">
+                    <div class="w-32 text-sm font-medium text-gray-800">13:00 - 16:00</div>
+                    <div class="flex-grow bg-gray-100 rounded-full h-5">
+                        <div id="trend-bar-3" class="h-5 rounded-full transition-all duration-1000 bg-gray-300" style="width: 0%"></div>
+                    </div>
+                    <div id="trend-val-3" class="w-12 text-right text-base font-bold text-gray-900">0%</div>
+                </div>
+
+                <!-- 16:00 - 19:00 -->
+                <div class="flex items-center gap-6">
+                    <div class="w-32 text-sm font-medium text-gray-800">16:00 - 19:00</div>
+                    <div class="flex-grow bg-gray-100 rounded-full h-5">
+                        <div id="trend-bar-4" class="h-5 rounded-full transition-all duration-1000 bg-gray-300" style="width: 0%"></div>
+                    </div>
+                    <div id="trend-val-4" class="w-12 text-right text-base font-bold text-gray-900">0%</div>
+                </div>
+            </div>
+
+            <!-- Predictive Utility Note -->
+            <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-xl">
+                <p class="text-gray-600 text-sm">
+                    <span class="font-bold text-slate-800">Predictive Utility:</span> 
+                    Enables students to plan ahead and avoid peak study congestion hours.
+                </p>
+            </div>
+        </section>
         
+        <!-- Live Campus Map Section -->
+        <section class="bg-white rounded-3xl shadow-sm border border-gray-200 overflow-hidden p-4 sm:p-8 mt-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Live Campus Map</h2>
+            
+            <!-- Mobile Scroll Wrapper: Allows swiping left/right on small screens -->
+            <div class="w-full overflow-x-auto pb-4">
+                
+                <!-- Map Container: Forced minimum width ensures pins never misalign -->
+                <div class="relative min-w-[800px] max-w-5xl mx-auto rounded-2xl overflow-hidden bg-gray-50 border-2 border-gray-100 aspect-[2/1] sm:min-h-[500px]">
+                    
+                    <!-- The Background Map Image -->
+                    <img src="map.jpg" alt="Campus Map" class="w-full h-full object-cover opacity-90 pointer-events-none" />
+
+                    <!-- Apaya Area Marker -->
+                    <div class="absolute top-[80%] left-[55%] transform -translate-x-1/2 -translate-y-1/2 z-10 hover:scale-105 transition-transform cursor-default">
+                        <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-3 w-40 relative">
+                            <div class="font-bold text-gray-900 text-sm border-b border-gray-100 pb-1 mb-2 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                Apaya
+                            </div>
+                            <div class="flex justify-between items-center text-xs mb-1.5">
+                                <span class="text-gray-500 font-medium">Students:</span>
+                                <span id="map-apaya-students" class="font-bold text-gray-900 metric-value">--</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs mb-1.5">
+                                <span class="text-gray-500 font-medium">Free Spaces:</span>
+                                <span id="map-apaya-free" class="font-bold text-emerald-600 metric-value">--</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-gray-500 font-medium">AQI Score:</span>
+                                <span id="map-apaya-aqi" class="font-bold text-blue-600 metric-value">--%</span>
+                            </div>
+                            <!-- Speech Bubble Triangle -->
+                            <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-b border-r border-gray-200 rotate-45"></div>
+                        </div>
+                    </div>
+
+                    <!-- Centra Area Marker -->
+                    <div class="absolute top-[10%] left-[20%] transform -translate-x-1/2 -translate-y-1/2 z-10 hover:scale-105 transition-transform cursor-default">
+                        <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-3 w-40 relative">
+                            <div class="font-bold text-gray-900 text-sm border-b border-gray-100 pb-1 mb-2 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                                Centra
+                            </div>
+                            <div class="flex justify-between items-center text-xs mb-1.5">
+                                <span class="text-gray-500 font-medium">Students:</span>
+                                <span id="map-centra-students" class="font-bold text-gray-900 metric-value">--</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs mb-1.5">
+                                <span class="text-gray-500 font-medium">Free Spaces:</span>
+                                <span id="map-centra-free" class="font-bold text-emerald-600 metric-value">--</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-gray-500 font-medium">AQI Score:</span>
+                                <span id="map-centra-aqi" class="font-bold text-blue-600 metric-value">--%</span>
+                            </div>
+                            <!-- Speech Bubble Triangle -->
+                            <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-b border-r border-gray-200 rotate-45"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <p class="text-center text-xs text-gray-400 mt-3 sm:hidden">Swipe left and right to explore the map</p>
+        </section>
+    
         </div>
 
 
@@ -441,6 +579,49 @@
     </main>
 
     <script>
+
+        function updateTrendBar(barId, valId, percent) {
+            const bar = document.getElementById(barId);
+            const val = document.getElementById(valId);
+            
+            const roundedPct = Math.round(percent);
+            val.innerText = roundedPct + '%';
+            bar.style.width = roundedPct + '%';
+            
+            // Reset color classes
+            bar.className = 'h-5 rounded-full transition-all duration-1000';
+            
+            if (roundedPct >= 75) {
+                bar.classList.add('bg-red-500');
+            } else if (roundedPct >= 50) {
+                bar.classList.add('bg-amber-500');
+            } else {
+                bar.classList.add('bg-emerald-500');
+            }
+        }
+
+        async function fetchTrendsData() {
+            // Read the currently selected area from the dropdown
+            const selectedArea = document.getElementById('trend-area-selector').value;
+            
+            try {
+                // Pass the selected area as a query parameter to the backend
+                const trendsResponse = await fetch(`https://smartstudy-backend-psi.vercel.app/api/trends?area=${selectedArea}`);
+                
+                if (trendsResponse.ok) {
+                    const trendsData = await trendsResponse.json();
+                    
+                    // Update the bars with the area-specific data
+                    updateTrendBar('trend-bar-1', 'trend-val-1', trendsData.shift_1);
+                    updateTrendBar('trend-bar-2', 'trend-val-2', trendsData.shift_2);
+                    updateTrendBar('trend-bar-3', 'trend-val-3', trendsData.shift_3);
+                    updateTrendBar('trend-bar-4', 'trend-val-4', trendsData.shift_4);
+                }
+            } catch (error) {
+                console.error("Failed to fetch area trends:", error);
+            }
+        }
+
         function updateAqiDisplay(areaPrefix, aqiPercent, aqiLabel) {
             const aqiScore = document.getElementById(`${areaPrefix}-aqi`);
             const aqiText = document.getElementById(`${areaPrefix}-aqi-status`);
@@ -616,6 +797,22 @@
                 updateAqiDisplay('apaya', data.apaya.custom_aqi_percent, data.apaya.custom_aqi_label);
                 updateAqiDisplay('centra', data.centra.custom_aqi_percent, data.centra.custom_aqi_label);
                 
+
+                // ----------------------------------------------------
+                // Update the Custom Campus Map Pins
+                // ----------------------------------------------------
+                // Apaya Map Pin
+                document.getElementById('map-apaya-students').innerText = data.apaya.students;
+                document.getElementById('map-apaya-free').innerText = data.apaya.capacity - data.apaya.students;
+                document.getElementById('map-apaya-aqi').innerText = data.apaya.custom_aqi_percent + '%';
+
+                // Centra Map Pin
+                document.getElementById('map-centra-students').innerText = data.centra.students;
+                document.getElementById('map-centra-free').innerText = data.centra.capacity - data.centra.students;
+                document.getElementById('map-centra-aqi').innerText = data.centra.custom_aqi_percent + '%';
+
+
+
                 // Fetch Recommendations
                 const recResponse = await fetch('https://smartstudy-backend-psi.vercel.app/api/recommendations');
                 if (recResponse.ok) {
@@ -640,6 +837,15 @@
                         `;
                     });
                 }
+
+                // Fetch Historical Trends (combining data from all areas)
+                const trendsResponse = await fetch('https://smartstudy-backend-psi.vercel.app/api/trends');
+                if (trendsResponse.ok) {
+                    const trendsData = await trendsResponse.json();
+                            // Refresh the trends using the currently selected area dropdown
+                            fetchTrendsData();
+                }
+
 
             } catch (error) {
                 console.error("Failed to fetch dashboard data:", error);
