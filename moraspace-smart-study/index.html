@@ -233,31 +233,30 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                         
                         <!-- Cards... -->
-                        <div onclick="showAqiModal('apaya')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
-                            <div class="flex items-center gap-3 mb-2">
+                        <div onclick="showChartModal('apaya', 'aqi')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">    <div class="flex items-center gap-3 mb-2">
                                 <div id="apaya-aqi-icon-box" class="p-2 rounded-lg transition-colors duration-300"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg></div>
                                 <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">AQI</h3>
                             </div>
                             <div class="flex items-baseline gap-2"><span id="apaya-aqi" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">%</span><span id="apaya-aqi-status" class="text-sm font-semibold">__</span></div>
                         </div>
 
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('apaya', 'temp')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-orange-100 dark:bg-orange-900/40 p-2 rounded-lg text-orange-600 dark:text-orange-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Actual Temp</h3></div>
                             <div class="flex items-baseline gap-1"><span id="apaya-temp" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-xl font-bold text-gray-900 dark:text-white">°</span><span class="text-sm text-gray-500 dark:text-gray-400">C</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('apaya', 'feels_like')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-red-100 dark:bg-red-900/40 p-2 rounded-lg text-red-600 dark:text-red-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Heat Index</h3></div>
                             <div class="flex items-baseline gap-1"><span id="apaya-feels-like" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-xl font-bold text-gray-900 dark:text-white">°</span><span class="text-sm text-gray-500 dark:text-gray-400">C</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('apaya', 'humidity')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-blue-100 dark:bg-blue-900/40 p-2 rounded-lg text-blue-600 dark:text-blue-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Humidity</h3></div>
                             <div class="flex items-baseline gap-1"><span id="apaya-humidity" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">%</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('apaya', 'noise')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-purple-100 dark:bg-purple-900/40 p-2 rounded-lg text-purple-600 dark:text-purple-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Noise</h3></div>
                             <div class="flex items-baseline gap-1"><span id="apaya-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('apaya', 'students')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-indigo-100 dark:bg-indigo-900/40 p-2 rounded-lg text-indigo-600 dark:text-indigo-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Avg Students</h3></div>
                             <div class="flex items-baseline gap-1"><span id="apaya-students" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">/ <span id="apaya-capacity" class="metric-value">__</span> seats</span></div>
                         </div>
@@ -292,27 +291,27 @@
                 <div id="centra-section" class="hidden p-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                         <!-- Cards... -->
-                        <div onclick="showAqiModal('centra')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
+                        <div onclick="showChartModal('centra', 'aqi')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div id="centra-aqi-icon-box" class="p-2 rounded-lg transition-colors duration-300"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">AQI</h3></div>
                             <div class="flex items-baseline gap-2"><span id="centra-aqi" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">%</span><span id="centra-aqi-status" class="text-sm font-semibold">__</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('centra', 'temp')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-orange-100 dark:bg-orange-900/40 p-2 rounded-lg text-orange-600 dark:text-orange-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Actual Temp</h3></div>
                             <div class="flex items-baseline gap-1"><span id="centra-temp" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-xl font-bold text-gray-900 dark:text-white">°</span><span class="text-sm text-gray-500 dark:text-gray-400">C</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('centra', 'feels_like')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-red-100 dark:bg-red-900/40 p-2 rounded-lg text-red-600 dark:text-red-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Heat Index</h3></div>
                             <div class="flex items-baseline gap-1"><span id="centra-feels-like" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-xl font-bold text-gray-900 dark:text-white">°</span><span class="text-sm text-gray-500 dark:text-gray-400">C</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('centra', 'humidity')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-blue-100 dark:bg-blue-900/40 p-2 rounded-lg text-blue-600 dark:text-blue-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Humidity</h3></div>
                             <div class="flex items-baseline gap-1"><span id="centra-humidity" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">%</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('centra', 'noise')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-purple-100 dark:bg-purple-900/40 p-2 rounded-lg text-purple-600 dark:text-purple-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Noise</h3></div>
                             <div class="flex items-baseline gap-1"><span id="centra-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('centra', 'students')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-indigo-100 dark:bg-indigo-900/40 p-2 rounded-lg text-indigo-600 dark:text-indigo-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Avg Students</h3></div>
                             <div class="flex items-baseline gap-1"><span id="centra-students" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">/ <span id="centra-capacity" class="metric-value">__</span> seats</span></div>
                         </div>
@@ -346,27 +345,27 @@
 
                 <div id="library-section" class="hidden p-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                        <div onclick="showAqiModal('library')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
+                        <div onclick="showChartModal('library', 'aqi')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div id="library-aqi-icon-box" class="p-2 rounded-lg transition-colors duration-300"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">AQI</h3></div>
                             <div class="flex items-baseline gap-2"><span id="library-aqi" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">%</span><span id="library-aqi-status" class="text-sm font-semibold">__</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('library', 'temp')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-orange-100 dark:bg-orange-900/40 p-2 rounded-lg text-orange-600 dark:text-orange-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Actual Temp</h3></div>
                             <div class="flex items-baseline gap-1"><span id="library-temp" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-xl font-bold text-gray-900 dark:text-white">°</span><span class="text-sm text-gray-500 dark:text-gray-400">C</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('library', 'feels_like')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-red-100 dark:bg-red-900/40 p-2 rounded-lg text-red-600 dark:text-red-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Heat Index</h3></div>
                             <div class="flex items-baseline gap-1"><span id="library-feels-like" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-xl font-bold text-gray-900 dark:text-white">°</span><span class="text-sm text-gray-500 dark:text-gray-400">C</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('library', 'humidity')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-blue-100 dark:bg-blue-900/40 p-2 rounded-lg text-blue-600 dark:text-blue-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Humidity</h3></div>
                             <div class="flex items-baseline gap-1"><span id="library-humidity" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">%</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('library', 'noise')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-purple-100 dark:bg-purple-900/40 p-2 rounded-lg text-purple-600 dark:text-purple-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Noise</h3></div>
                             <div class="flex items-baseline gap-1"><span id="library-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span></div>
                         </div>
-                        <div class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <div onclick="showChartModal('library', 'students')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-indigo-100 dark:bg-indigo-900/40 p-2 rounded-lg text-indigo-600 dark:text-indigo-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Avg Students</h3></div>
                             <div class="flex items-baseline gap-1"><span id="library-students" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">/ <span id="library-capacity" class="metric-value">__</span> seats</span></div>
                         </div>
@@ -548,19 +547,19 @@
             </div>
         </div>
     </main>
-
-    <!-- AQI Distribution & Chart Modal -->
-    <div id="aqi-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity p-4">
+<!-- Dynamic Chart Modal -->
+    <div id="chart-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity p-4">
         <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 w-full max-w-3xl p-6 relative animate-fade-in max-h-[90vh] overflow-y-auto">
+            
             <!-- Close Button -->
-            <button onclick="closeAqiModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-full p-1.5 transition-colors focus:outline-none">
+            <button onclick="closeChartModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 rounded-full p-1.5 transition-colors focus:outline-none">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
-            <h2 id="aqi-modal-title" class="text-xl font-bold text-gray-900 dark:text-white mb-6 capitalize text-center">Area AQI Details</h2>
+            <h2 id="chart-modal-title" class="text-xl font-bold text-gray-900 dark:text-white mb-6 capitalize text-center">Loading Analytics...</h2>
             
-            <!-- 1. Custom AQI Weight Distribution -->
-            <div class="mb-8">
+            <!-- Custom AQI Weight Distribution (Only visible when AQI is clicked) -->
+            <div id="aqi-weight-container" class="hidden mb-8">
                 <h3 class="text-sm font-bold text-gray-700 dark:text-gray-300 mb-3 text-center">Custom AQI Weight Distribution</h3>
                 <div class="flex h-8 w-full rounded-full overflow-hidden shadow-inner font-bold text-xs text-white mb-3">
                     <div class="bg-gray-500 flex items-center justify-center w-[30%] transition-all hover:opacity-90">30%</div>
@@ -578,11 +577,11 @@
                 </div>
             </div>
 
-            <!-- 2. 24-Hour Custom AQI Percent Variation -->
+            <!-- Chart Canvas -->
             <div>
-                <h3 class="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 text-center">24-Hour Custom AQI Percent Variation</h3>
+                <h3 id="chart-modal-subtitle" class="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2 text-center">24-Hour Variation</h3>
                 <div class="w-full bg-gray-50 dark:bg-gray-900 rounded-xl p-2 sm:p-4 border border-gray-100 dark:border-gray-700">
-                    <canvas id="aqiChart" height="200"></canvas>
+                    <canvas id="dynamicChart" height="250"></canvas>
                 </div>
             </div>
         </div>
@@ -630,80 +629,90 @@
             }
         }
 
-        // --- AQI MODAL & CHART LOGIC ---
-        let aqiChartInstance = null;
+        // --- DYNAMIC CHART MODAL LOGIC ---
+        let currentChartInstance = null;
 
-        async function showAqiModal(area) {
-            const modal = document.getElementById('aqi-modal');
-            const title = document.getElementById('aqi-modal-title');
+        async function showChartModal(area, metricType) {
+            const modal = document.getElementById('chart-modal');
+            const title = document.getElementById('chart-modal-title');
+            const subtitle = document.getElementById('chart-modal-subtitle');
+            const aqiWeightContainer = document.getElementById('aqi-weight-container');
             
-            title.innerText = `${area} Area - AQI Analytics`;
+            // Set Titles based on clicked metric
+            let metricName = "";
+            if (metricType === 'aqi') metricName = "Air Quality Index (AQI)";
+            if (metricType === 'temp') metricName = "Actual Temperature";
+            if (metricType === 'feels_like') metricName = "Heat Index";
+            if (metricType === 'humidity') metricName = "Humidity";
+            if (metricType === 'noise') metricName = "Noise Level";
+            if (metricType === 'students') metricName = "Student Occupancy";
+            
+            title.innerText = `${area} Area - ${metricName}`;
+            subtitle.innerText = `24-Hour Variation: ${metricName}`;
+            
+            // Only show the weight distribution if AQI was clicked
+            if (metricType === 'aqi') {
+                aqiWeightContainer.classList.remove('hidden');
+            } else {
+                aqiWeightContainer.classList.add('hidden');
+            }
+            
             modal.classList.remove('hidden');
 
             try {
-                // Fetch historical AQI data using the existing trends endpoint
-                // Note: You will need to update the backend /api/trends to return 24h AQI array.
+                // Fetch historical data
                 const response = await fetch(`https://smartstudy-backend-psi.vercel.app/api/trends?area=${area}`);
                 const data = await response.json();
                 
-                // Example fallback data if backend doesn't return the array yet
-                const aqiData = data.aqi_history || [35, 26, 28, 24, 25, 21, 26, 23, 35, 75, 58, 71, 57, 60, 46, 54, 48, 40, 45, 52, 60, 52, 60, 66, 78, 57, 64, 74, 57, 56, 49, 41, 38, 36];
-                
-                // Generate simple time labels based on the array length
-                const labels = Array.from({length: aqiData.length}, (_, i) => `${Math.floor((i * 24) / aqiData.length)}:00`);
+                // Generate time labels
+                const dataLength = data.aqi_history.length > 0 ? data.aqi_history.length : 24;
+                const labels = Array.from({length: dataLength}, (_, i) => `${Math.floor((i * 24) / dataLength)}:00`);
 
-                renderAqiChart(labels, aqiData);
+                // Route data based on metric
+                if (metricType === 'aqi') renderChart(labels, [{ label: 'AQI %', data: data.aqi_history, borderColor: '#06b6d4', bgColor: 'rgba(6, 182, 212, 0.1)' }], 0, 100);
+                if (metricType === 'temp') renderChart(labels, [{ label: 'Temp (°C)', data: data.temp_history, borderColor: '#f97316', bgColor: 'rgba(249, 115, 22, 0.1)' }], 20, 45);
+                if (metricType === 'feels_like') renderChart(labels, [{ label: 'Heat Index (°C)', data: data.feels_like_history, borderColor: '#ef4444', bgColor: 'rgba(239, 68, 68, 0.1)' }], 20, 50);
+                if (metricType === 'humidity') renderChart(labels, [{ label: 'Humidity %', data: data.humidity_history, borderColor: '#3b82f6', bgColor: 'rgba(59, 130, 246, 0.1)' }], 0, 100);
+                if (metricType === 'noise') renderChart(labels, [{ label: 'Noise (dB)', data: data.noise_history, borderColor: '#a855f7', bgColor: 'rgba(168, 85, 247, 0.1)' }], 20, 90);
+                if (metricType === 'students') renderChart(labels, [{ label: 'Occupancy', data: data.student_history, borderColor: '#10b981', bgColor: 'rgba(16, 185, 129, 0.1)' }], 0, 100); // Adjust max occupancy as needed
 
             } catch (error) {
-                console.error("Failed to load AQI chart data", error);
+                console.error("Failed to load chart data", error);
             }
         }
 
-        function closeAqiModal() {
-            document.getElementById('aqi-modal').classList.add('hidden');
+        function closeChartModal() {
+            document.getElementById('chart-modal').classList.add('hidden');
         }
 
-        function renderAqiChart(labels, dataArray) {
-            const ctx = document.getElementById('aqiChart').getContext('2d');
+        function renderChart(labels, datasetsConfig, yMin, yMax) {
+            const ctx = document.getElementById('dynamicChart').getContext('2d');
             
-            // Destroy existing chart to prevent overlap when clicking different areas
-            if (aqiChartInstance) {
-                aqiChartInstance.destroy();
+            if (currentChartInstance) {
+                currentChartInstance.destroy();
             }
 
-            aqiChartInstance = new Chart(ctx, {
+            const mappedDatasets = datasetsConfig.map(ds => ({
+                label: ds.label,
+                data: ds.data,
+                borderColor: ds.borderColor,
+                backgroundColor: ds.bgColor,
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+                pointRadius: 0,
+                pointHoverRadius: 4
+            }));
+
+            currentChartInstance = new Chart(ctx, {
                 type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'Time (15m intervals)',
-                        data: dataArray,
-                        borderColor: '#06b6d4', // Cyan color matching design
-                        backgroundColor: 'rgba(6, 182, 212, 0.1)',
-                        borderWidth: 2,
-                        fill: true,
-                        tension: 0.4,
-                        pointRadius: 0,
-                        pointHoverRadius: 4
-                    }]
-                },
+                data: { labels: labels, datasets: mappedDatasets },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
-                        y: {
-                            min: 0,
-                            max: 100,
-                            ticks: {
-                                callback: function(value) { return value + '%'; },
-                                color: '#9ca3af'
-                            },
-                            grid: { color: 'rgba(156, 163, 175, 0.2)' }
-                        },
-                        x: {
-                            ticks: { maxTicksLimit: 12, color: '#9ca3af' },
-                            grid: { display: false }
-                        }
+                        y: { min: yMin, max: yMax, ticks: { color: '#9ca3af' }, grid: { color: 'rgba(156, 163, 175, 0.2)' } },
+                        x: { ticks: { maxTicksLimit: 12, color: '#9ca3af' }, grid: { display: false } }
                     },
                     plugins: {
                         legend: { position: 'top', align: 'end', labels: { boxWidth: 12, usePointStyle: true } },
