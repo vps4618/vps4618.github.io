@@ -254,7 +254,7 @@
                         </div>
                         <div onclick="showChartModal('apaya', 'noise')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-purple-100 dark:bg-purple-900/40 p-2 rounded-lg text-purple-600 dark:text-purple-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Noise</h3></div>
-                            <div class="flex items-baseline gap-1"><span id="apaya-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span></div>
+                            <div class="flex items-baseline gap-2"><span id="apaya-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span><span id="apaya-noise-status" class="text-sm font-semibold"></span></div>
                         </div>
                         <div onclick="showChartModal('apaya', 'students')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-indigo-100 dark:bg-indigo-900/40 p-2 rounded-lg text-indigo-600 dark:text-indigo-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Avg Students</h3></div>
@@ -309,7 +309,7 @@
                         </div>
                         <div onclick="showChartModal('centra', 'noise')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-purple-100 dark:bg-purple-900/40 p-2 rounded-lg text-purple-600 dark:text-purple-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Noise</h3></div>
-                            <div class="flex items-baseline gap-1"><span id="centra-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span></div>
+                            <div class="flex items-baseline gap-2"><span id="centra-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span><span id="centra-noise-status" class="text-sm font-semibold"></span></div>
                         </div>
                         <div onclick="showChartModal('centra', 'students')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-indigo-100 dark:bg-indigo-900/40 p-2 rounded-lg text-indigo-600 dark:text-indigo-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Avg Students</h3></div>
@@ -363,7 +363,7 @@
                         </div>
                         <div onclick="showChartModal('library', 'noise')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-purple-100 dark:bg-purple-900/40 p-2 rounded-lg text-purple-600 dark:text-purple-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Noise</h3></div>
-                            <div class="flex items-baseline gap-1"><span id="library-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span></div>
+                            <div class="flex items-baseline gap-2"><span id="library-noise" class="text-3xl font-bold text-gray-900 dark:text-white metric-value">__</span><span class="text-sm text-gray-500 dark:text-gray-400">dB</span><span id="library-noise-status" class="text-sm font-semibold"></span></div>
                         </div>
                         <div onclick="showChartModal('library', 'students')" class="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:ring-2 hover:ring-blue-400 dark:hover:ring-blue-500 cursor-pointer transition-all">
                             <div class="flex items-center gap-3 mb-2"><div class="bg-indigo-100 dark:bg-indigo-900/40 p-2 rounded-lg text-indigo-600 dark:text-indigo-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div><h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Avg Students</h3></div>
@@ -752,6 +752,38 @@
             }
         }
 
+        function updateNoiseDisplay(areaPrefix, dbValue) {
+            const noiseScoreElement = document.getElementById(`${areaPrefix}-noise`);
+            const noiseStatusElement = document.getElementById(`${areaPrefix}-noise-status`);
+            
+            if (!noiseScoreElement || !noiseStatusElement) return;
+
+            noiseScoreElement.innerText = dbValue;
+            
+            let statusLabel = "";
+            let colorClass = "";
+
+            // Evaluate standard indoor noise thresholds
+            if (dbValue < 45) {
+                statusLabel = "Quiet";
+                colorClass = "text-green-600 dark:text-green-400";
+            } else if (dbValue < 60) {
+                statusLabel = "Moderate";
+                colorClass = "text-yellow-600 dark:text-yellow-400";
+            } else if (dbValue < 75) {
+                statusLabel = "Loud";
+                colorClass = "text-orange-600 dark:text-orange-400";
+            } else {
+                statusLabel = "Very Loud";
+                colorClass = "text-red-600 dark:text-red-400";
+            }
+
+            noiseStatusElement.innerText = statusLabel;
+            noiseStatusElement.className = `text-sm font-semibold ${colorClass}`;
+        }
+
+
+
         function updateAqiDisplay(areaPrefix, aqiPercent, aqiLabel) {
             const aqiScore = document.getElementById(`${areaPrefix}-aqi`);
             const aqiText = document.getElementById(`${areaPrefix}-aqi-status`);
@@ -845,7 +877,7 @@
                 document.getElementById('apaya-temp').innerText = data.apaya.temp;
                 document.getElementById('apaya-feels-like').innerText = data.apaya.feelsLike;
                 document.getElementById('apaya-humidity').innerText = data.apaya.humidity;
-                document.getElementById('apaya-noise').innerText = data.apaya.noise;
+                updateNoiseDisplay('apaya', data.apaya.noise);
                 document.getElementById('apaya-students').innerText = data.apaya.students;
 
                 updateRegionTheme('apaya', data.apaya.overall);
@@ -854,7 +886,7 @@
                 document.getElementById('centra-temp').innerText = data.centra.temp;
                 document.getElementById('centra-feels-like').innerText = data.centra.feelsLike;
                 document.getElementById('centra-humidity').innerText = data.centra.humidity;
-                document.getElementById('centra-noise').innerText = data.centra.noise;
+                updateNoiseDisplay('centra', data.centra.noise);
                 document.getElementById('centra-students').innerText = data.centra.students;
                 document.getElementById('apaya-capacity').innerText = data.apaya.capacity;
 
@@ -947,7 +979,7 @@
                  document.getElementById('library-temp').innerText = data.library.temp;
                  document.getElementById('library-feels-like').innerText = data.library.feelsLike;
                  document.getElementById('library-humidity').innerText = data.library.humidity;
-                 document.getElementById('library-noise').innerText = data.library.noise;
+                 updateNoiseDisplay('library', data.library.noise);
                  document.getElementById('library-students').innerText = data.library.students;
                  document.getElementById('library-capacity').innerText = data.library.capacity;
 
